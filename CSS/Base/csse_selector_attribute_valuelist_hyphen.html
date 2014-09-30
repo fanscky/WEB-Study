@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>属性和值选择器 - 多个值(由连字符分隔的属性值)</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="CaiKaiye@ruijie.com.cn">
+    <link href="" rel="stylesheet">
+    <!-- 下面的例子为带有包含指定值的 lang 属性的所有元素设置样式。适用于由连字符分隔的属性值：
+ -->
+    <style type="text/css">
+        [lang|=en]
+        {
+            color: red;
+        }
+    </style>
+</head>
+    
+<body>
+    <h1>可以应用样式：</h1>
+    <p lang="en">Hello!</p>
+    <p lang="en-us">Hi!</p>
+    <hr />
+
+    <h1>无法应用样式：</h1>
+    <p lang="us">Hi</p>
+    <p lang="zh">Hao!</p>
+</body>
+    
+</html>
