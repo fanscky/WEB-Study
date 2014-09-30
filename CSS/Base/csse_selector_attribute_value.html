@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>属性和值选择器</title>
+<meta name="description" content="">
+<meta name="keywords" content="HTML、CSS">
+<meta name="author" content="CaiKaiye@ruijie.com.cn">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    [title=W3School]
+    {
+        border: 5px solid blue;
+    }
+</style>
+</head>
+
+<body>
+    <h1>可以应用样式</h1>
+    <img title="W3School" src="e:\Repository\Bitbucket\PrivateLibrary_WEB-study\CSS\Base\i\w3school_logo_white.gif" />
+    <br />
+    <a title="W3School" href="http://w3school.com.cn">W3School</a>
+    <hr />
+
+    <h1>无法应用样式：</h1>
+    <p title="greeting">Hi!</p>
+    <!-- title值不为W3School，故不能应用属性和值选择器 -->
+    <a class="W3School" href="http://w3school.com.cn">W3School</a>
+    <!-- 属性为class，不为title，故不能应用属性和值选择器 -->
+</body>
+
+</html>
