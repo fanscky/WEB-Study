@@ -15,5 +15,9 @@ title="W3School" 的所有元素设置样式：
 带有包含指定值的 lang 属性的所有元素设置样式。适用于由连字符分隔的属性值：  
 ┖[csse_selector_attribute_valuelist_hyphen.html](Base/csse_selector_attribute_valuelist_hyphen.html)
 4. **设置表单的样式**  
-属性选择器在为不带有 class 或 id 的表单设置样式时特别有用：
-┖[csse_selector_attribute_form.html](Base/csse_selector_attribute_form.html)
+属性选择器在为不带有 class 或 id 的表单设置样式时特别有用：  
+┖[csse_selector_attribute_form.html](Base/csse_selector_attribute_form.html)  
+##二、CSS样式
+1. **背景色
+可以使用 background-color 属性为元素设置背景色。这个属性接受任何合法的颜色值。  
+┖[csse_background-color.html](Style/csse_background-color.html)
