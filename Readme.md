@@ -1,4 +1,4 @@
-Work Hard To Make My Life Better!!
+建站体系学习库
 =================================
 2014-9-29 By CKY
 ********************
@@ -11,25 +11,13 @@ Work Hard To Make My Life Better!!
 
 >**学习安排**
 >
->* HTML 
->* CSS
->* PHP
->* MYSQL
+> * HTML （2014.9）
+> * CSS  （2014.9.29~2014.10.3）
+> * PHP  （2014.10.4~2014.10.10）
+> * MYSQL（2014.10.11~2014.10.13）
 
 源文件库使用GIT来控制版本，远程代码托管库建立在Bitbucket上。
 [**Bitbucket git**](git@bitbucket.org:fanscky/web-study.git)
 
->**目录树**
->
->PRIVATELIBRARY_WEB-STUDY  
->│&nbsp;&nbsp;Readme.md  
->│  
->├─Advanced  
->│&nbsp;&nbsp;&nbsp;&nbsp;├─html_head  
->│&nbsp;&nbsp;&nbsp;&nbsp;├─html_scripts  
->│  
->├─Base  
->│&nbsp;&nbsp;&nbsp;&nbsp;├─backgrouds  
->│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─html_backgrounds.html  
->│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─i  
->│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─eg_bg06.gif
+库结构见[**目录树**](tree.txt)
+
