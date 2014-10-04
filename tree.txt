@@ -5,6 +5,7 @@ E:.
 ©¦  .tags_sorted_by_file
 ©¦  Readme.md
 ©¦  tree.txt
+©¦  tree.txt.rej
 ©¦  WEB-study.sublime-project
 ©¦  WEB-study.sublime-workspace
 ©¦  
@@ -34,6 +35,10 @@ E:.
 ©¦      ©¦  csse_background-repeaty.html
 ©¦      ©¦  csse_background-repeat_no-repeat.html
 ©¦      ©¦  csse_background.html
+©¦      ©¦  csse_text-align.html
+©¦      ©¦  csse_text-indent.html
+©¦      ©¦  csse_text-transform.html
+©¦      ©¦  csse_text_word-spacing.html
 ©¦      ©¦  
 ©¦      ©¸©¤i
 ©¦              eg_bg_03.gif

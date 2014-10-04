@@ -51,3 +51,16 @@ title="W3School" 的所有元素设置样式：
 本例演示如何使用简写属性来将所有背景属性设置在一个声明之中。  
 ┖[Style/csse_background.html](Style/csse_background.html)  
 ###[CSS文本](http://www.w3school.com.cn/css/css_text.asp)
+1. **缩进文本**  
+本例演示将段落的第一行缩进1cm：  
+┖[Style/csse_text-indent.html](Style/csse_text-indent.html)  
+2. **水平对齐**  
+本例演示如何对齐文本：  
+┖[Style/csse_text-align.html](Style/csse_text-align.html)  
+3. **字间隔**  
+本例演示如何增加段落中单词间的距离。  
+┖[Style/csse_text_word-spacing.html](Style/csse_text_word-spacing.html)  
+4. **字符转换**  
+本例演示转换不同元素中的文本。  
+┖[Style/csse_text-transform.html](Style/csse_text-transform.html)  
+5. 
