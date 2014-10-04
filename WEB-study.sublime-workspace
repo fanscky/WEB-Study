@@ -1,0 +1,541 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-repeat"
+			],
+			[
+				"eg_bg",
+				"eg_bg_04"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"no",
+				"noscrit"
+			]
+		]
+	},
+	"build_system": "Packages/User/PHP.sublime-build",
+	"command_palette":
+	{
+		"height": 142.0,
+		"selected_items":
+		[
+			[
+				"git:pus",
+				"Git: Push"
+			],
+			[
+				"git:com",
+				"Git: Commit"
+			],
+			[
+				"git:qa",
+				"Git: Quick Add"
+			],
+			[
+				"git:q a",
+				"Git: Quick Add"
+			],
+			[
+				"git:push",
+				"Git: Push"
+			],
+			[
+				"git:comm",
+				"Git: Commit"
+			],
+			[
+				"inst pa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"in pa",
+				"Package Control: Install Package"
+			],
+			[
+				"remov pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"rem pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"inpa",
+				"Package Control: Install Package"
+			],
+			[
+				"git:stat",
+				"Git: Status"
+			],
+			[
+				"git:sta",
+				"Git: Status"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"git:ver",
+				"Git: Version"
+			],
+			[
+				"git:add cf",
+				"Git: Add Current File"
+			],
+			[
+				"git:log",
+				"Git: Log"
+			],
+			[
+				"git:acf",
+				"Git: Add Current File"
+			],
+			[
+				"git:remote",
+				"Git: Add Remote"
+			],
+			[
+				"git:",
+				"Git: Status"
+			],
+			[
+				"git:addcf",
+				"Git: Add Current File"
+			],
+			[
+				"git:add re",
+				"Git: Add Remote"
+			],
+			[
+				"git:add remo",
+				"Git: Add Remote"
+			],
+			[
+				"git:commit",
+				"Git: Commit"
+			],
+			[
+				"git:init",
+				"Git: Init"
+			],
+			[
+				"git:add c",
+				"Git: Add Current File"
+			],
+			[
+				"git:add rem",
+				"Git: Add Remote"
+			],
+			[
+				"git:add ",
+				"Git: Add Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"git:add .",
+				"Git: Add..."
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Add Current File"
+			],
+			[
+				"",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"mpc",
+				"Markdown Preview: Copy to Clipboard"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"mp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"ctags",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"SublimeCodeIntel: Disable Live Autocompletion"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 496.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/Style/csse_background-image_2.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/Style/csse_background-image.html",
+		"/C/Program Files/Sublime Text/Data/Packages/CTags/Default.sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/CTags/Default.sublime-mousemap",
+		"/C/Program Files/Sublime Text/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/MarkdownPreview.sublime-settings",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/FileToCode_CSS.md",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Markdown (Standard).sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/MultiMarkdown.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Markdown.sublime-settings",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Readme.md",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/tree.txt",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/Base/csse_selector_attribute_att.html",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/HTML/FileToCode_HTML.md",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/ConvertToUTF8.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/ConvertToUTF8/ConvertToUTF8.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/CKY/Desktop/新电声2012年10月9日版本/源码与hex文件/new_dig_voice.c",
+		"/C/Users/CKY/Desktop/新电声2012年10月9日版本/源码与hex文件/L0101000.hex",
+		"/C/Program Files/Sublime Text/Data/Packages/DocBlockr/Base File.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/README.md",
+		"/C/Users/CKY/Desktop/新电声2012年10月9日版本/源码与hex文件/new_dig_voice.h",
+		"/C/Program Files/Sublime Text/Data/Packages/CTags/CTags.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/CTags.sublime-settings",
+		"/C/Users/CKY/Desktop/新电声2012年10月9日版本/源码与hex文件/.tags_sorted_by_file",
+		"/C/Users/CKY/Desktop/新电声2012年10月9日版本/源码与hex文件/test.sublime-project",
+		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Cache/MarkdownEditing/MarkdownEditor.tmTheme.cache",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/Main.sublime-menu",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/Terminal/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Terminal.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/Emmet/Emmet.sublime-settings",
+		"/D/temp/abc.md",
+		"/C/Program Files/Sublime Text/Data/Packages/User/ClickableUrls.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/Clickable URLs/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Side Bar.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/templates/html.tmpl",
+		"/C/Users/CKY/Desktop/test",
+		"/E/Work/SPB_Data/cdssetup/OrCAD_Capture_CIS/16.5.0/prefprop.txt",
+		"/E/Work/SPB_Data/pcbenv/allegro.ini",
+		"/C/Users/CKY/AppData/Roaming/360CloudUI/Cache/9486461/MobileHDD/安装包、补丁、工具备份/安装程序/网络相关/goagent/Goagent账号&官网.txt",
+		"/C/Users/CKY/.gitconfig",
+		"/D/Downloads/用户变量",
+		"/C/Users/CKY/Desktop/hello world.php",
+		"/C/Program Files/Sublime Text/Data/Packages/User/SublimeGit.sublime-settings",
+		"/E/Work/SPB_Data/.idlerc/recent-files.lst",
+		"/E/Temp/git test/readme.md",
+		"/E/Temp/系统升级记录.txt",
+		"/C/Users/CKY/.ssh/id_rsa.pub",
+		"/C/Users/CKY/mercurial.ini",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Git.sublime-settings",
+		"/E/Temp/git test/COMMIT_EDITMSG.COMMIT_EDITMSG",
+		"/C/Program Files/Sublime Text/Data/Packages/Git/Git.sublime-settings",
+		"/D/Downloads/Software/sublime text 3/html.tmpl",
+		"/E/Work/Tree1.txt",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_scripts/html_script.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_scripts/html_no_script.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_scripts/html_no_script",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_redirect.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_meta.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_keywords.html",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/html_base.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_title.html",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/SublimeTmpl.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/Default.sublime-commands",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_base.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Base/backgrouds/html_backgrounds.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Base/html_backgrounds.html",
+		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/html_backgrounds.html",
+		"/E/Temp/kaoji/串口log/mtfi v2.0 sit kaoji",
+		"/E/Temp/kaoji/串口log/mtfi v2.0 sit 拷机",
+		"/C/Users/CKY/Desktop/abc.md",
+		"/C/Users/CKY/Desktop/abcd.html",
+		"/C/Program Files/Sublime Text/Data/Packages/User/sublime-text-markmon.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/sublime-text-markmon/sublime-text-markmon.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/c/program files (x86)/xampp/files",
+		"/c/program files (x86)/xampp/(x86)/xampp/apache/conf/extra/httpd-ssl.conf",
+		"/C/program files (x86)/XAMPP/apache/conf/extra/httpd-ssl.conf",
+		"/c/program files (x86)/xampp/(x86)/xampp/mysql/bin/my.ini",
+		"/c/program",
+		"/c/program files (x86)/xampp/(x86)/xampp/apache/conf/httpd.conf",
+		"/c/program files (x86)/xampp/Server.xml",
+		"/c/program files (x86)/xampp/(x86)/xampp/FileZillaFTP/FileZilla",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/SmartMarkdown/SmartMarkdown.sublime-settings",
+		"/E/360yunpan/RuiJieNetwork/01_办公文档/0101_总结汇报/010101_周总结/2014年/项目进展周报/项目测试情况周汇报【201409025】.txt",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/C/Users/CKY/Desktop/asdf.md",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/C/Users/CKY/Desktop/saf.md",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/PHP.sublime-build",
+		"/C/Users/CKY/Desktop/111.php",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Installed Packages/Theme - Flatland.sublime-package",
+		"/C/Program Files/Sublime Text 3/Packages/Color Scheme - Default.sublime-package",
+		"/C/Users/CKY/Desktop/sadf.php",
+		"/C/Users/CKY/Desktop/sdf",
+		"/C/Users/CKY/Desktop/csa",
+		"/C/Users/CKY/Desktop/abc.txt",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/CKY/Desktop/test.html",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/CTags/CTags.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/CTags.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/untitled.sublime-build",
+		"/C/Program Files/Sublime Text 3/Packages/Theme - Default.sublime-package",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/fc (SL).tmTheme",
+		"/C/Program Files/Sublime Text 3/php.sublime-build",
+		"/C/Users/CKY/Desktop/test.md",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/clipboard-history-master/Default (Windows).sublime-keymap",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sublime",
+			"home",
+			"X",
+			"name",
+			"meta",
+			"body",
+			"description",
+			"keywords",
+			">\n",
+			"ddr3",
+			"No.166",
+			"No.1 ",
+			"No.1",
+			"DDR3",
+			"No.1",
+			"安装",
+			"2014-09-24",
+			"2014-09-24 18:00:19",
+			"txt",
+			"open_files_in_new_window",
+			"font_size",
+			"\\",
+			"keys",
+			"keyss",
+			"menu",
+			"me",
+			"line_padding_top",
+			"line_padding_bottom",
+			"line padding",
+			"sda1",
+			"sta1",
+			"file type",
+			"reload",
+			"open",
+			"reload"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\\\"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 166.0
+	},
+	"output.find_results":
+	{
+		"height": 144.0
+	},
+	"output.git":
+	{
+		"height": 146.0
+	},
+	"output.git-commit":
+	{
+		"height": 146.0
+	},
+	"output.git-init":
+	{
+		"height": 146.0
+	},
+	"output.git-push":
+	{
+		"height": 146.0
+	},
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
