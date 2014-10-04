@@ -18,6 +18,7 @@ title="W3School" 的所有元素设置样式：
 属性选择器在为不带有 class 或 id 的表单设置样式时特别有用：  
 ┖[csse_selector_attribute_form.html](Base/csse_selector_attribute_form.html)  
 ##二、CSS样式
+###[CSS背景](http://www.w3school.com.cn/css/css_background.asp)
 1. **背景色**  
 可以使用 background-color 属性为元素设置背景色。这个属性接受任何合法的颜色值。  
 ┖[csse_background-color.html](Style/csse_background-color.html)
@@ -29,4 +30,24 @@ title="W3School" 的所有元素设置样式：
 ┖[Style/csse_background-image_2.html](Style/csse_background-image_2.html)  
 如何重复背景图像  
 本例演示如何重复背景图像。  
-[Style/csse_background-repeat.html](Style/csse_background-repeat.html)  
+┖[Style/csse_background-repeat.html](Style/csse_background-repeat.html)  
+本例演示如何垂直地重复背景图像。  
+┖[Style/csse_background-repeat.html](Style/csse_background-repeat.html)  
+本例演示如何水平地重复背景图像。  
+┖[Style/csse_background-repeatx.html](Style/csse_background-repeatx.html)  
+本例演示如何仅显示一次背景图像。  
+┖[Style/csse_background-repeat_no-repeat.html](Style/csse_background-repeat_no-repeat.htmls)  
+本例演示如何仅显示一次背景图像。  
+┖[Style/csse_background-repeat_no-repeat.html](Style/csse_background-repeat_no-repeat.htmls)
+3. **背景定位**  
+本例演示如何在页面上放置背景图像。  
+┖[Style/csse_background-position.html](Style/csse_background-position.html)  
+本例演示如何在页面上放置背景图像。  
+┖[Style/csse_background-position_pixel.html](Style/csse_background-position_pixel.html)  
+4. **背景关联**  
+本例演示如何设置固定的背景图像。图像不会随着页面的其他部分滚动。  
+┖[Style/csse_background-attachment.html](Style/csse_background-attachment.html)  
+5. **所有背景属性在一个声明之中**  
+本例演示如何使用简写属性来将所有背景属性设置在一个声明之中。  
+┖[Style/csse_background.html](Style/csse_background.html)  
+###[CSS文本](http://www.w3school.com.cn/css/css_text.asp)
