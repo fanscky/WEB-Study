@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>当 white-space 属性设置为 pre 时，浏览器不会合并空白符</title>
+    <meta name="author" content="CaiKaiye@ruijie.com.cn">
+    <style type="text/css">
+        p {white-space: pre;}
+    </style>
+</head>
+    
+<body>
+    <p>This     paragraph has     many
+    spaces        in  it.</p>
+    <p>注释：当 white-space 属性设置为 pre时，浏览器不会合并所有的空白符，并不会忽略换行符。</p>
+</body>
+    
+</html>

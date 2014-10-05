@@ -63,4 +63,13 @@ title="W3School" 的所有元素设置样式：
 4. **字符转换**  
 本例演示转换不同元素中的文本。  
 ┖[Style/csse_text-transform.html](Style/csse_text-transform.html)  
-5. 
+5. **文本装饰**  
+本例演示如何向文本添加修饰。  
+┖[Style/csse_text-decoration.html](Style/csse_text-decoration.html)  
+6. **处理空白符**  
+white-space: normal  
+┖[Style/csse_text-decoration.html](Style/csse_text-decoration.html)   
+white-space: pre  
+┖[Style/csse_text_white-space_pre.html](Style/csse_text_white-space_pre.html)   
+white-space: nowrap  
+┖[Style/csse_text_white-space.html](Style/csse_text_white-space.html)   
