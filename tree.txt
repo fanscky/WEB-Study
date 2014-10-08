@@ -1,6 +1,87 @@
-�ļ��� PATH �б�
-�����к�Ϊ 000E-8F81
-E:\REPOSITORY\BITBUCKET\PRIVATELIBRARY_WEB-STUDY\-F
-��Ч��·�� - \REPOSITORY\BITBUCKET\PRIVATELIBRARY_WEB-STUDY\-F
-û�����ļ��� 
-
+文件夹 PATH 列表
+卷序列号为 000E-8F81
+E:.
+│  .tags
+│  .tags_sorted_by_file
+│  Readme.md
+│  tree.txt
+│  WEB-study.sublime-project
+│  WEB-study.sublime-workspace
+│  
+├─CSS
+│  │  FileToCode_CSS.md
+│  │  
+│  ├─Base
+│  │  │  csse_selector_attribute_att.html
+│  │  │  csse_selector_attribute_form.html
+│  │  │  csse_selector_attribute_value.html
+│  │  │  csse_selector_attribute_valuelist_hyphen.html
+│  │  │  csse_selector_attribute_valuelist_space.html
+│  │  │  
+│  │  └─i
+│  │          w3school_logo_white.gif
+│  │          
+│  └─Style
+│      │  csse_background-attachment.html
+│      │  csse_background-color.html
+│      │  csse_background-image.html
+│      │  csse_background-image_2.html
+│      │  csse_background-position.html
+│      │  csse_background-position_percent.html
+│      │  csse_background-position_pixel.html
+│      │  csse_background-repeat.html
+│      │  csse_background-repeatx.html
+│      │  csse_background-repeaty.html
+│      │  csse_background-repeat_no-repeat.html
+│      │  csse_background.html
+│      │  csse_text-align.html
+│      │  csse_text-decoration.html
+│      │  csse_text-indent.html
+│      │  csse_text-transform.html
+│      │  csse_text_white-space.html
+│      │  csse_text_white-space_normal.html
+│      │  csse_text_white-space_pre.html
+│      │  csse_text_word-spacing.html
+│      │  
+│      └─i
+│              eg_bg_03.gif
+│              eg_bg_04.gif
+│              eg_bg_07.gif
+│              
+├─HTML
+│  │  FileToCode_HTML.md
+│  │  
+│  ├─Advanced
+│  │  ├─html_head
+│  │  │      html_base.html
+│  │  │      html_keywords.html
+│  │  │      html_meta.html
+│  │  │      html_redirect.html
+│  │  │      html_title.html
+│  │  │      
+│  │  └─html_scripts
+│  │          html_no_script.html
+│  │          html_script.html
+│  │          
+│  └─Base
+│      └─backgrouds
+│          │  html_backgrounds.html
+│          │  
+│          └─i
+│                  eg_bg_06.gif
+│                  
+├─Javascript
+│      FileToCode_Javascript.md
+│      
+└─PHP
+    │  FileToCode_PHP.md
+    │  
+    └─Base
+            demo_php_syntax.php
+            demo_php_syntax_case1.php
+            demo_php_syntax_case2.php
+            demo_php_syntax_comments.php
+            demo_php_var1.php
+            demo_php_var2.php
+            demo_php_var_local.php
+            

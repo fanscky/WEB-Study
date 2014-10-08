@@ -24,9 +24,21 @@
 	"build_system": "Packages/User/PHP.sublime-build",
 	"command_palette":
 	{
-		"height": 142.0,
+		"height": 92.0,
 		"selected_items":
 		[
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"git:pull",
+				"Git: Pull"
+			],
+			[
+				"git:log",
+				"Git: Log"
+			],
 			[
 				"git:pus",
 				"Git: Push"
@@ -84,20 +96,12 @@
 				"Git: Status"
 			],
 			[
-				"install pa",
-				"Package Control: Install Package"
-			],
-			[
 				"git:ver",
 				"Git: Version"
 			],
 			[
 				"git:add cf",
 				"Git: Add Current File"
-			],
-			[
-				"git:log",
-				"Git: Log"
 			],
 			[
 				"git:acf",
@@ -224,7 +228,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 496.0
+		"width": 504.0
 	},
 	"console":
 	{
@@ -246,6 +250,11 @@
 	},
 	"file_history":
 	[
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/SublimeTmpl.sublime-settings",
+		"/C/Program Files/Sublime Text/Data/Packages/User/SublimeTmpl.sublime-settings",
+		"/E/360yunpan/RuiJieNetwork/Repository/Bitbucket/PrivateLibrary_WEB-study/Javascript/FileToCode_Javascript.md",
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/Style/csse_background-image_2.html",
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/CSS/Style/csse_background-image.html",
 		"/C/Program Files/Sublime Text/Data/Packages/CTags/Default.sublime-keymap",
@@ -282,7 +291,6 @@
 		"/C/Program Files/Sublime Text/Data/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
 		"/C/Program Files/Sublime Text/Data/Cache/MarkdownEditing/MarkdownEditor.tmTheme.cache",
 		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/Main.sublime-menu",
-		"/C/Program Files/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Program Files/Sublime Text/Data/Packages/Terminal/Terminal.sublime-settings",
 		"/C/Program Files/Sublime Text/Data/Packages/Terminal/Default (Windows).sublime-keymap",
 		"/C/Program Files/Sublime Text/Data/Packages/User/Terminal.sublime-settings",
@@ -320,7 +328,6 @@
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_keywords.html",
 		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/html_base.html",
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_title.html",
-		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/SublimeTmpl.sublime-settings",
 		"/C/Program Files/Sublime Text/Data/Packages/SublimeTmpl/Default.sublime-commands",
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Advanced/html_head/html_base.html",
 		"/E/Repository/Bitbucket/PrivateLibrary_WEB-study/Base/backgrouds/html_backgrounds.html",
@@ -370,10 +377,7 @@
 		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/fc (SL).tmTheme",
 		"/C/Program Files/Sublime Text 3/php.sublime-build",
 		"/C/Users/CKY/Desktop/test.md",
-		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/clipboard-history-master/Default (Windows).sublime-keymap",
-		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
-		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu"
+		"/C/Users/CKY/AppData/Roaming/Sublime Text 3/Packages/clipboard-history-master/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
@@ -493,6 +497,10 @@
 	{
 		"height": 146.0
 	},
+	"output.git-pull":
+	{
+		"height": 164.0
+	},
 	"output.git-push":
 	{
 		"height": 146.0
@@ -532,7 +540,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
