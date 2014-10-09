@@ -19,6 +19,6 @@
 源文件库使用GIT来控制版本，远程代码托管库建立在Bitbucket上。
 [**Bitbucket git**](git@bitbucket.org:fanscky/web-study.git)
 
-库结构见[**目录树**](tree.txt)
+库结构见[**目录树**](http://192.168.215.116/w3c_php_test/tree.txt)
 
 --更新时间：2014-9-30
