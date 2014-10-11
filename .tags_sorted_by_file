@@ -1,3 +1,93 @@
+age	PHP\Base\demo_php_array_assoc.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
+age	PHP\Base\demo_php_array_assoc_loop.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
+x	PHP\Base\demo_php_array_assoc_loop.php	/^foreach ($age as $x => $x_value) {$/;"	v
+cars	PHP\Base\demo_php_array_length.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+cars	PHP\Base\demo_php_array_num.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+arrlength	PHP\Base\demo_php_array_num_loop.php	/^$arrlength = count($cars);$/;"	v
+cars	PHP\Base\demo_php_array_num_loop.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+GREETING	PHP\Base\demo_php_constant1.php	/^define("GREETING", "Welcome to W3School.com.cn!");$/;"	d
+GREETING	PHP\Base\demo_php_constant2.php	/^define("GREETING", "Welcome to W3School.com.cn!",true);$/;"	d
+cars	PHP\Base\demo_php_datatypes_array.php	/^$cars=array("Volvo","BMW","SAAB");$/;"	v
+x	PHP\Base\demo_php_datatypes_float.php	/^    $x = 10.365;$/;"	v
+x	PHP\Base\demo_php_datatypes_float.php	/^    $x=2.4e3;$/;"	v
+x	PHP\Base\demo_php_datatypes_float.php	/^    $x=8E-5;$/;"	v
+x	PHP\Base\demo_php_datatypes_integer.php	/^    $x = -345;$/;"	v
+x	PHP\Base\demo_php_datatypes_integer.php	/^    $x = 047;$/;"	v
+x	PHP\Base\demo_php_datatypes_integer.php	/^    $x = 0x8C;$/;"	v
+x	PHP\Base\demo_php_datatypes_integer.php	/^    $x = 5985;$/;"	v
+x	PHP\Base\demo_php_datatypes_null.php	/^$x = "Hello World";$/;"	v
+x	PHP\Base\demo_php_datatypes_null.php	/^$x = null;$/;"	v
+Car	PHP\Base\demo_php_datatypes_object.php	/^    function Car($color="green") {$/;"	f
+Car	PHP\Base\demo_php_datatypes_object.php	/^class Car$/;"	c
+color	PHP\Base\demo_php_datatypes_object.php	/^        $this->color = $color;$/;"	v
+color	PHP\Base\demo_php_datatypes_object.php	/^    var $color;$/;"	v
+herbie	PHP\Base\demo_php_datatypes_object.php	/^$herbie = new Car("white");$/;"	v
+print_vars	PHP\Base\demo_php_datatypes_object.php	/^function print_vars($obj) {$/;"	f
+prop	PHP\Base\demo_php_datatypes_object.php	/^    foreach (get_object_vars($obj) as $prop => $val) {$/;"	v
+what_color	PHP\Base\demo_php_datatypes_object.php	/^    function what_color() {$/;"	f
+x	PHP\Base\demo_php_datatypes_string.php	/^        $x = "Hello world!";$/;"	v
+x	PHP\Base\demo_php_datatypes_string.php	/^        $x = 'Hello PHP!';$/;"	v
+cars	PHP\Base\demo_php_echo2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
+txt1	PHP\Base\demo_php_echo2.php	/^    $txt1="Learn PHP";$/;"	v
+txt2	PHP\Base\demo_php_echo2.php	/^    $txt2="W3School.com.cn";$/;"	v
+writeMsg	PHP\Base\demo_php_function1.php	/^function writeMsg() {$/;"	f
+familyName	PHP\Base\demo_php_function2.php	/^function familyName($fname) {$/;"	f
+familyName	PHP\Base\demo_php_function3.php	/^function familyName($fname, $year)$/;"	f
+setHeight	PHP\Base\demo_php_function4.php	/^function setHeight($minheigh=50)$/;"	f
+sum	PHP\Base\demo_php_function5.php	/^function sum($x, $y)$/;"	f
+z	PHP\Base\demo_php_function5.php	/^    $z = $x + $y;$/;"	v
+t	PHP\Base\demo_php_if.php	/^$t = date("H");$/;"	v
+t	PHP\Base\demo_php_if_else.php	/^$t = date("H");$/;"	v
+t	PHP\Base\demo_php_if_elseif.php	/^$t = date("H");$/;"	v
+x	PHP\Base\demo_php_loop_do_while.php	/^$x = 1;$/;"	v
+x	PHP\Base\demo_php_loop_do_while2.php	/^    $x = 6;$/;"	v
+color	PHP\Base\demo_php_loop_foreach.php	/^$color = array("red", "green", "blue", "yellow");$/;"	v
+x	PHP\Base\demo_php_loop_while.php	/^$x = 1;$/;"	v
+x	PHP\Base\demo_php_operator_arithmetic.php	/^    $x = 10;$/;"	v
+y	PHP\Base\demo_php_operator_arithmetic.php	/^    $y = 6;$/;"	v
+x	PHP\Base\demo_php_operator_array.php	/^$x = array("a" => "red", "b" => "green");$/;"	v
+y	PHP\Base\demo_php_operator_array.php	/^$y = array("c" => "blue", "d" => "yellow");$/;"	v
+z	PHP\Base\demo_php_operator_array.php	/^$z = $x + $y;$/;"	v
+i	PHP\Base\demo_php_operator_assignment.php	/^    $i = 5;$/;"	v
+j	PHP\Base\demo_php_operator_assignment.php	/^    $j = 10;$/;"	v
+k	PHP\Base\demo_php_operator_assignment.php	/^    $k = 15;$/;"	v
+x	PHP\Base\demo_php_operator_assignment.php	/^    $x = 10;$/;"	v
+y	PHP\Base\demo_php_operator_assignment.php	/^    $y = 20;$/;"	v
+z	PHP\Base\demo_php_operator_assignment.php	/^    $z = 50;$/;"	v
+a	PHP\Base\demo_php_operator_comparison.php	/^$a = 50;$/;"	v
+b	PHP\Base\demo_php_operator_comparison.php	/^$b = 90;$/;"	v
+x	PHP\Base\demo_php_operator_comparison.php	/^$x = 100;$/;"	v
+y	PHP\Base\demo_php_operator_comparison.php	/^$y = "100";$/;"	v
+i	PHP\Base\demo_php_operator_increment.php	/^$i = 5;$/;"	v
+x	PHP\Base\demo_php_operator_increment.php	/^$x = 10;$/;"	v
+y	PHP\Base\demo_php_operator_increment.php	/^$y = 10;$/;"	v
+z	PHP\Base\demo_php_operator_increment.php	/^$z = 5;$/;"	v
+a	PHP\Base\demo_php_operator_string.php	/^$a = "Hello";$/;"	v
+b	PHP\Base\demo_php_operator_string.php	/^$b = $a . "world!";$/;"	v
+x	PHP\Base\demo_php_operator_string.php	/^$x = "Hello";$/;"	v
+cars	PHP\Base\demo_php_print2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
+txt1	PHP\Base\demo_php_print2.php	/^    $txt1="Learn PHP";$/;"	v
+txt2	PHP\Base\demo_php_print2.php	/^    $txt2="W3School.com.cn";$/;"	v
+favcolor	PHP\Base\demo_php_switch.php	/^$favcolor = "blue";$/;"	v
+color	PHP\Base\demo_php_syntax_case2.php	/^    $color="red";$/;"	v
+x	PHP\Base\demo_php_var1.php	/^    $x=5;$/;"	v
+y	PHP\Base\demo_php_var1.php	/^    $y=6;$/;"	v
+z	PHP\Base\demo_php_var1.php	/^    $z=$x+$y;$/;"	v
+txt	PHP\Base\demo_php_var2.php	/^    $txt="Hello World!";$/;"	v
+x	PHP\Base\demo_php_var2.php	/^    $x=5;$/;"	v
+y	PHP\Base\demo_php_var2.php	/^    $y=10.5;$/;"	v
+myTest	PHP\Base\demo_php_var_global.php	/^    function myTest() {$/;"	f
+x	PHP\Base\demo_php_var_global.php	/^    $x=5;$/;"	v
+y	PHP\Base\demo_php_var_global.php	/^        $y=$x+$y;$/;"	v
+y	PHP\Base\demo_php_var_global.php	/^    $y=10;$/;"	v
+myTest	PHP\Base\demo_php_var_global2.php	/^    function myTest() {$/;"	f
+x	PHP\Base\demo_php_var_global2.php	/^    $x=5;$/;"	v
+y	PHP\Base\demo_php_var_global2.php	/^    $y=10;$/;"	v
+myTest	PHP\Base\demo_php_var_local.php	/^    function myTest() {$/;"	f
+x	PHP\Base\demo_php_var_local.php	/^    $x=5; \/\/ global scope;$/;"	v
+y	PHP\Base\demo_php_var_local.php	/^        $y=10;  \/\/ local scope;$/;"	v
+myTest	PHP\Base\demo_php_var_static.php	/^    function myTest() {$/;"	f
+x	PHP\Base\demo_php_var_static.php	/^        static $x=0;$/;"	v
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//

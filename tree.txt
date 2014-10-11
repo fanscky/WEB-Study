@@ -79,16 +79,45 @@ E:.
     └─Base
         │  .buildpath
         │  .project
+        │  demo_php_array_assoc.php
+        │  demo_php_array_assoc_loop.php
+        │  demo_php_array_length.php
+        │  demo_php_array_num.php
+        │  demo_php_array_num_loop.php
+        │  demo_php_constant1.php
+        │  demo_php_constant2.php
         │  demo_php_datatypes_array.php
         │  demo_php_datatypes_float.php
         │  demo_php_datatypes_integer.php
+        │  demo_php_datatypes_length.php
         │  demo_php_datatypes_null.php
         │  demo_php_datatypes_object.php
+        │  demo_php_datatypes_pos.php
         │  demo_php_datatypes_string.php
         │  demo_php_echo1.php
         │  demo_php_echo2.php
+        │  demo_php_function1.php
+        │  demo_php_function2.php
+        │  demo_php_function3.php
+        │  demo_php_function4.php
+        │  demo_php_function5.php
+        │  demo_php_if.php
+        │  demo_php_if_else.php
+        │  demo_php_if_elseif.php
+        │  demo_php_loop_do_while.php
+        │  demo_php_loop_do_while2.php
+        │  demo_php_loop_for.php
+        │  demo_php_loop_foreach.php
+        │  demo_php_loop_while.php
+        │  demo_php_operator_arithmetic.php
+        │  demo_php_operator_array.php
+        │  demo_php_operator_assignment.php
+        │  demo_php_operator_comparison.php
+        │  demo_php_operator_increment.php
+        │  demo_php_operator_string.php
         │  demo_php_print.php
         │  demo_php_print2.php
+        │  demo_php_switch.php
         │  demo_php_syntax.php
         │  demo_php_syntax_case1.php
         │  demo_php_syntax_case2.php
