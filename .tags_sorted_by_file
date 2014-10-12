@@ -1,3 +1,5 @@
+age	PHP\Base\demo_php_array_asort.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter"=> "43");$/;"	v
+x	PHP\Base\demo_php_array_asort.php	/^foreach ($age as $x => $x_value) {$/;"	v
 age	PHP\Base\demo_php_array_assoc.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 age	PHP\Base\demo_php_array_assoc_loop.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 x	PHP\Base\demo_php_array_assoc_loop.php	/^foreach ($age as $x => $x_value) {$/;"	v
@@ -5,6 +7,14 @@ cars	PHP\Base\demo_php_array_length.php	/^$cars = array("Volvo", "BMW", "SAAB");
 cars	PHP\Base\demo_php_array_num.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 arrlength	PHP\Base\demo_php_array_num_loop.php	/^$arrlength = count($cars);$/;"	v
 cars	PHP\Base\demo_php_array_num_loop.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+cars	PHP\Base\demo_php_array_rsort_alpha.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+clength	PHP\Base\demo_php_array_rsort_alpha.php	/^$clength = count($cars);$/;"	v
+arrlength	PHP\Base\demo_php_array_rsort_num.php	/^$arrlength = count($numbers);$/;"	v
+numbers	PHP\Base\demo_php_array_rsort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
+cars	PHP\Base\demo_php_array_sort_alpha.php	/^$cars = array("Volvo", "BMW", "SABB");$/;"	v
+clength	PHP\Base\demo_php_array_sort_alpha.php	/^$clength = count($cars);$/;"	v
+arrlength	PHP\Base\demo_php_array_sort_num.php	/^$arrlength = count($numbers);$/;"	v
+numbers	PHP\Base\demo_php_array_sort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
 GREETING	PHP\Base\demo_php_constant1.php	/^define("GREETING", "Welcome to W3School.com.cn!");$/;"	d
 GREETING	PHP\Base\demo_php_constant2.php	/^define("GREETING", "Welcome to W3School.com.cn!",true);$/;"	d
 cars	PHP\Base\demo_php_datatypes_array.php	/^$cars=array("Volvo","BMW","SAAB");$/;"	v

@@ -1,0 +1,959 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #ffffff;
+}
+
+.markdown-body .highlight .c {
+  color: #999988;
+  font-style: italic;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .k {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.markdown-body .highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+
+.markdown-body .highlight .go {
+  color: #888888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .kc {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kd {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kn {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kp {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kr {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .m {
+  color: #009999;
+}
+
+.markdown-body .highlight .s {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .n {
+  color: #333333;
+}
+
+.markdown-body .highlight .na {
+  color: teal;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086b3;
+}
+
+.markdown-body .highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: teal;
+}
+
+.markdown-body .highlight .ni {
+  color: purple;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555555;
+}
+
+.markdown-body .highlight .nt {
+  color: navy;
+}
+
+.markdown-body .highlight .nv {
+  color: teal;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbbbbb;
+}
+
+.markdown-body .highlight .mf {
+  color: #009999;
+}
+
+.markdown-body .highlight .mh {
+  color: #009999;
+}
+
+.markdown-body .highlight .mi {
+  color: #009999;
+}
+
+.markdown-body .highlight .mo {
+  color: #009999;
+}
+
+.markdown-body .highlight .sb {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .sc {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .sd {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .s2 {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .se {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .sh {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .si {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .sx {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .sr {
+  color: #009926;
+}
+
+.markdown-body .highlight .s1 {
+  color: #dd1144;
+}
+
+.markdown-body .highlight .ss {
+  color: #990073;
+}
+
+.markdown-body .highlight .bp {
+  color: #999999;
+}
+
+.markdown-body .highlight .vc {
+  color: teal;
+}
+
+.markdown-body .highlight .vg {
+  color: teal;
+}
+
+.markdown-body .highlight .vi {
+  color: teal;
+}
+
+.markdown-body .highlight .il {
+  color: #009999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+</style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>FileToCode_CSS</title></head><body><article class="markdown-body"><h1>
+<a name="user-content-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%BA%90%E7%A0%81%E5%AF%B9%E5%BA%94%E8%A1%A8" class="anchor" href="#%E6%96%87%E4%BB%B6%E4%B8%8E%E6%BA%90%E7%A0%81%E5%AF%B9%E5%BA%94%E8%A1%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>文件与源码对应表</h1>
+
+<hr>
+
+<h2>
+<a name="user-content-%E4%B8%80%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B" class="anchor" href="#%E4%B8%80%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、基础教程</h2>
+
+<h3>
+<a name="user-content-1-css%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8" class="anchor" href="#1-css%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.w3school.com.cn/css/css_syntax_attribute_selector.asp">1. CSS属性选择器</a>
+</h3>
+
+<hr>
+
+<h4>
+<a name="user-content-11-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8" class="anchor" href="#11-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1. 属性选择器</h4>
+
+<p>带有 title 属性的所有元素设置<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Base/csse_selector_attribute_att.html">csse_selector_attribute_att.html</a></p>
+
+<h4>
+<a name="user-content-12-%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8" class="anchor" href="#12-%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2. 属性和值选择器</h4>
+
+<p>title="W3School" 的所有元素设置样式：<br>
+┣<a href="http://192.168.215.116/w3c_web_test/CSS/Base/csse_selector_attribute_value.html">csse_selector_attribute_value.html</a>
+┖source:(img) \i\w3school_logo_white.gif</p>
+
+<h4>
+<a name="user-content-13-%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8---%E5%A4%9A%E4%B8%AA%E5%80%BC" class="anchor" href="#13-%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8---%E5%A4%9A%E4%B8%AA%E5%80%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3. 属性和值选择器 - 多个值</h4>
+
+<p>包含指定值的 title 属性的所有元素设置样式。适用于由空格分隔的属性值：<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Base/csse_selector_attribute_valuelist_space.html">csse_selector_attribute_valuelist_space.html</a><br>
+带有包含指定值的 lang 属性的所有元素设置样式。适用于由连字符分隔的属性值：<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Base/csse_selector_attribute_valuelist_hyphen.html">csse_selector_attribute_valuelist_hyphen.html</a></p>
+
+<h4>
+<a name="user-content-14-%E8%AE%BE%E7%BD%AE%E8%A1%A8%E5%8D%95%E7%9A%84%E6%A0%B7%E5%BC%8F" class="anchor" href="#14-%E8%AE%BE%E7%BD%AE%E8%A1%A8%E5%8D%95%E7%9A%84%E6%A0%B7%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.4 设置表单的样式</h4>
+
+<p>属性选择器在为不带有 class 或 id 的表单设置样式时特别有用：<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Base/csse_selector_attribute_form.html">csse_selector_attribute_form.html</a>  </p>
+
+<h2>
+<a name="user-content-%E4%BA%8Ccss%E6%A0%B7%E5%BC%8F" class="anchor" href="#%E4%BA%8Ccss%E6%A0%B7%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、CSS样式</h2>
+
+<h3>
+<a name="user-content-2-css%E8%83%8C%E6%99%AF" class="anchor" href="#2-css%E8%83%8C%E6%99%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.w3school.com.cn/css/css_background.asp">2. CSS背景</a>
+</h3>
+
+<h4>
+<a name="user-content-21-%E8%83%8C%E6%99%AF%E8%89%B2" class="anchor" href="#21-%E8%83%8C%E6%99%AF%E8%89%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 背景色</h4>
+
+<p>可以使用 background-color 属性为元素设置背景色。这个属性接受任何合法的颜色值。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-color.html">csse_background-color.html</a></p>
+
+<h4>
+<a name="user-content-22-%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87" class="anchor" href="#22-%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2. 背景图片</h4>
+
+<p>要把图像放入背景，需要使用 background-image 属性。background-image 属性的默认值是 none，表示背景上没有放置任何图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-image.html">csse_background-image.html</a>  </p>
+
+<p>大多数背景都应用到 body 元素，不过并不仅限于此。</p>
+
+<p>下面例子为一个段落应用了一个背景，而不会对文档的其他部分应用背景：
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-image_2.html">csse_background-image_2.html</a>  </p>
+
+<p>如何重复背景图像<br>
+本例演示如何重复背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-repeat.html">csse_background-repeat.html</a></p>
+
+<p>本例演示如何垂直地重复背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-repeat.html">csse_background-repeat.html</a></p>
+
+<p>本例演示如何水平地重复背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-repeatx.html">csse_background-repeatx.html</a></p>
+
+<p>本例演示如何仅显示一次背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-repeat_no-repeat.htmls">csse_background-repeat_no-repeat.html</a></p>
+
+<p>本例演示如何仅显示一次背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-repeat_no-repeat.htmls">csse_background-repeat_no-repeat.html</a></p>
+
+<h4>
+<a name="user-content-23-%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D" class="anchor" href="#23-%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3. 背景定位</h4>
+
+<p>本例演示如何在页面上放置背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-position.html">csse_background-position.html</a></p>
+
+<p>本例演示如何在页面上放置背景图像。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-position_pixel.html">csse_background-position_pixel.html</a></p>
+
+<h4>
+<a name="user-content-24-%E8%83%8C%E6%99%AF%E5%85%B3%E8%81%94" class="anchor" href="#24-%E8%83%8C%E6%99%AF%E5%85%B3%E8%81%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.4. 背景关联</h4>
+
+<p>本例演示如何设置固定的背景图像。图像不会随着页面的其他部分滚动。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background-attachment.html">csse_background-attachment.html</a></p>
+
+<h4>
+<a name="user-content-25-%E6%89%80%E6%9C%89%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%A3%B0%E6%98%8E%E4%B9%8B%E4%B8%AD" class="anchor" href="#25-%E6%89%80%E6%9C%89%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%A3%B0%E6%98%8E%E4%B9%8B%E4%B8%AD" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.5. 所有背景属性在一个声明之中</h4>
+
+<p>本例演示如何使用简写属性来将所有背景属性设置在一个声明之中。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_background.html">csse_background.html</a></p>
+
+<h3>
+<a name="user-content-css%E6%96%87%E6%9C%AC" class="anchor" href="#css%E6%96%87%E6%9C%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.w3school.com.cn/css/css_text.asp">CSS文本</a>
+</h3>
+
+<ol>
+<li>
+<strong>缩进文本</strong><br>
+本例演示将段落的第一行缩进1cm：<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text-indent.html">csse_text-indent.html</a><br>
+</li>
+<li>
+<strong>水平对齐</strong><br>
+本例演示如何对齐文本：<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text-align.html">csse_text-align.html</a><br>
+</li>
+<li>
+<strong>字间隔</strong><br>
+本例演示如何增加段落中单词间的距离。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text_word-spacing.html">csse_text_word-spacing.html</a><br>
+</li>
+<li>
+<strong>字符转换</strong><br>
+本例演示转换不同元素中的文本。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text-transform.html">csse_text-transform.html</a><br>
+</li>
+<li>
+<strong>文本装饰</strong><br>
+本例演示如何向文本添加修饰。<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text-decoration.html">csse_text-decoration.html</a><br>
+</li>
+<li>
+<strong>处理空白符</strong><br>
+white-space: normal<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text-decoration.html">csse_text-decoration.html</a><br>
+white-space: pre<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text_white-space_pre.html">csse_text_white-space_pre.html</a><br>
+white-space: nowrap<br>
+┖<a href="http://192.168.215.116/w3c_web_test/CSS/Style/csse_text_white-space.html">csse_text_white-space.html</a><br>
+</li>
+</ol>
+</article></body></html>

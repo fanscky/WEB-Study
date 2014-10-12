@@ -10,17 +10,24 @@ GREETING	.\PHP\Base\demo_php_constant1.php	/^define("GREETING", "Welcome to W3Sc
 GREETING	.\PHP\Base\demo_php_constant2.php	/^define("GREETING", "Welcome to W3School.com.cn!",true);$/;"	d
 a	.\PHP\Base\demo_php_operator_comparison.php	/^$a = 50;$/;"	v
 a	.\PHP\Base\demo_php_operator_string.php	/^$a = "Hello";$/;"	v
+age	.\PHP\Base\demo_php_array_asort.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter"=> "43");$/;"	v
 age	.\PHP\Base\demo_php_array_assoc.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 age	.\PHP\Base\demo_php_array_assoc_loop.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 arrlength	.\PHP\Base\demo_php_array_num_loop.php	/^$arrlength = count($cars);$/;"	v
+arrlength	.\PHP\Base\demo_php_array_rsort_num.php	/^$arrlength = count($numbers);$/;"	v
+arrlength	.\PHP\Base\demo_php_array_sort_num.php	/^$arrlength = count($numbers);$/;"	v
 b	.\PHP\Base\demo_php_operator_comparison.php	/^$b = 90;$/;"	v
 b	.\PHP\Base\demo_php_operator_string.php	/^$b = $a . "world!";$/;"	v
 cars	.\PHP\Base\demo_php_array_length.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_array_num.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_array_num_loop.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+cars	.\PHP\Base\demo_php_array_rsort_alpha.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
+cars	.\PHP\Base\demo_php_array_sort_alpha.php	/^$cars = array("Volvo", "BMW", "SABB");$/;"	v
 cars	.\PHP\Base\demo_php_datatypes_array.php	/^$cars=array("Volvo","BMW","SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_echo2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_print2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
+clength	.\PHP\Base\demo_php_array_rsort_alpha.php	/^$clength = count($cars);$/;"	v
+clength	.\PHP\Base\demo_php_array_sort_alpha.php	/^$clength = count($cars);$/;"	v
 color	.\PHP\Base\demo_php_datatypes_object.php	/^        $this->color = $color;$/;"	v
 color	.\PHP\Base\demo_php_datatypes_object.php	/^    var $color;$/;"	v
 color	.\PHP\Base\demo_php_loop_foreach.php	/^$color = array("red", "green", "blue", "yellow");$/;"	v
@@ -37,6 +44,8 @@ myTest	.\PHP\Base\demo_php_var_global.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_global2.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_local.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_static.php	/^    function myTest() {$/;"	f
+numbers	.\PHP\Base\demo_php_array_rsort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
+numbers	.\PHP\Base\demo_php_array_sort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
 print_vars	.\PHP\Base\demo_php_datatypes_object.php	/^function print_vars($obj) {$/;"	f
 prop	.\PHP\Base\demo_php_datatypes_object.php	/^    foreach (get_object_vars($obj) as $prop => $val) {$/;"	v
 setHeight	.\PHP\Base\demo_php_function4.php	/^function setHeight($minheigh=50)$/;"	f
@@ -51,6 +60,7 @@ txt2	.\PHP\Base\demo_php_echo2.php	/^    $txt2="W3School.com.cn";$/;"	v
 txt2	.\PHP\Base\demo_php_print2.php	/^    $txt2="W3School.com.cn";$/;"	v
 what_color	.\PHP\Base\demo_php_datatypes_object.php	/^    function what_color() {$/;"	f
 writeMsg	.\PHP\Base\demo_php_function1.php	/^function writeMsg() {$/;"	f
+x	.\PHP\Base\demo_php_array_asort.php	/^foreach ($age as $x => $x_value) {$/;"	v
 x	.\PHP\Base\demo_php_array_assoc_loop.php	/^foreach ($age as $x => $x_value) {$/;"	v
 x	.\PHP\Base\demo_php_datatypes_float.php	/^    $x = 10.365;$/;"	v
 x	.\PHP\Base\demo_php_datatypes_float.php	/^    $x=2.4e3;$/;"	v
