@@ -1,11 +1,14 @@
 # 文件与源码对应表
------
+------------------------------------------------------------------------
 
 ## 一、基础教程
 
+------------------------------------------------------------------------
+
 ### [1.1. PHP 语法](http://www.w3school.com.cn/php/php_syntax.asp)  
 
------------
+------------------------------------------------------------------------
+
 ####  1.1.1. 基础 PHP 语法
   我的第一张 PHP 页面  
   ┖[demo_php_syntax.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php)
@@ -26,10 +29,10 @@
   ┖[demo_php_syntax_comments.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php)  
 <br>
 
----
+------------------------------------------------------------------------
 
 ### [1.2. PHP变量](http://www.w3school.com.cn/php/php_variables.asp)
--------
+------------------------------------------------------------------------
 #### 1.2.1. 类似代数
   请把变量视为存储数据的容器。  
   ┖[demo_php_var1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php)
@@ -56,11 +59,11 @@
 <br>
 
 
-----------
+------------------------------------------------------------------------
 
 ### [1.3. PHP Echo / Print](http://www.w3school.com.cn/php/php_echo_print.asp)  
 
------------
+------------------------------------------------------------------------
 
 在 PHP 中，有两种基本的输出方法：**echo** 和 **print**。  
 
@@ -87,11 +90,12 @@
   ┖[demo_php_print2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php)  
 <br>
 
-----
+------------------------------------------------------------------------
 
 ### [1.4. PHP 数据类型](http://www.w3school.com.cn/php/php_datatypes.asp)
 
---------------
+------------------------------------------------------------------------
+
 字符串、整数、浮点数、逻辑、数组、对象、NULL。
 
 #### 1.4.1. PHP 字符串
@@ -137,11 +141,12 @@
   ┖[demo_php_datatypes_null.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php)  
 <br>
 
------
+------------------------------------------------------------------------
 
 ### [1.5.PHP字符串函数](http://www.w3school.com.cn/php/php_string.asp)
 
----------
+------------------------------------------------------------------------
+
 #### 1.5.1. PHP strlen() 函数
   strlen() 函数返回字符串的长度，以字符计。  
   下例返回字符串 "Hello world!" 的长度：  
@@ -154,11 +159,12 @@
   ┖[demo_php_datatypes_pos.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php)  
 <br>
 
------
+------------------------------------------------------------------------
 
 ### [1.6. PHP参量](http://www.w3school.com.cn/php/php_constants.asp)
 
----------------
+------------------------------------------------------------------------
+
   **设置PHP常量**  
   如需设置常量，请使用 define() 函数 - 它使用三个参数：  
   * &nbsp;&nbsp;&nbsp;&nbsp;*首个参数定义常量的名称*  
@@ -170,11 +176,11 @@
   ┖[demo_php_constant2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php)  
 <br>
 
------
+------------------------------------------------------------------------
 
 ### [1.7. PHP运算符](http://www.w3school.com.cn/php/php_operators.asp)
 
------
+------------------------------------------------------------------------
 
 #### 1.7.1. PHP算数运算符
 
@@ -268,11 +274,12 @@
   下例展示了使用不同数组运算符的不同结果：  
   ┖[demo_php_operator_array.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php)  
 
------
+------------------------------------------------------------------------
 
 ### [1.8. PHP If...Else](http://www.w3school.com.cn/php/php_if_else.asp)
 
------
+------------------------------------------------------------------------
+
 条件语用于基于不同条件执行不同的动作
 
 #### 1.8.1. PHP - if语句
@@ -320,11 +327,11 @@ if 语句用于**在指定条件为 true 时**执行代码。
 下例将输出 "Have a good morning!"，如果当前时间 (HOUR) 小于 10，如果当前时间小于 20，则输出 "Have a good day!"。否则将输出 "Have a good night!"：  
 ┖[demo_php_if_elseif.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_elseif.php)
 
------
+------------------------------------------------------------------------
 
 ### [1.9. PHP Switch](http://www.w3school.com.cn/php/php_switch.asp)
 
--------
+------------------------------------------------------------------------
 
 switch 语句用于基于不同条件执行不同动作。
 
@@ -341,11 +348,11 @@ switch 语句用于基于不同条件执行不同动作。
 **实例**  
 ┖[demo_php_switch.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_switch.php)
 
------
+------------------------------------------------------------------------
 
 ### [1.10. PHP While 循环](http://www.w3school.com.cn/php/php_looping.asp)
 
------
+------------------------------------------------------------------------
 
 在 PHP 中，我们有以下循环语句：
 
@@ -388,11 +395,11 @@ _请注意，do while 循环只在执行循环内的语句之后才对条件进�
 下面的例子把 $x 设置为 6，然后运行循环，随后对条件进行检查：
 ┖[demo_php_loop_do_while2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_do_while2.php)
 
------
+------------------------------------------------------------------------
 
 ### [1.11. PHP for 循环](http://www.w3school.com.cn/php/php_looping_for.asp)
 
----------
+------------------------------------------------------------------------
 
 PHP for 循环执行代码块指定的次数。
 
@@ -431,11 +438,11 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 **实例：**  
 ┖[demo_php_loop_foreach.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_foreach.php)
 
------
+------------------------------------------------------------------------
 
 ### [1.12. PHP函数](http://www.w3school.com.cn/php/php_functions.asp)
 
----------------
+------------------------------------------------------------------------
 
 <font color="red">**PHP 的真正力量来自它的函数：它拥有超过 1000 个内建的函数。**</font>
 
@@ -496,11 +503,11 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 **实例：**  
 ┖[demo_php_function5.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function5.php)
 
------
+------------------------------------------------------------------------
 
 ### [1.13 PHP 数组](http://www.w3school.com.cn/php/php_arrays.asp)
 
------------
+------------------------------------------------------------------------
 
 **数组能够在单独的变量名中存储一个或多个值**
 
@@ -592,7 +599,11 @@ count() 函数用于返回数组的长度（元素数）：
 **实例：**  
 ┖[demo_php_array_assoc_loop.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_assoc_loop.php)
 
+------------------------------------------------------------------------
+
 ### [1.14 数组排序](http://www.w3school.com.cn/php/php_arrays_sort.asp)
+
+------------------------------------------------------------------------
 
 **数组中的元素能够以字母或数字顺序进行升序或降序排序。**
 
@@ -607,7 +618,7 @@ count() 函数用于返回数组的长度（元素数）：
 + arsort() - 根据值，以降序对关联数组进行排序
 + krsort() - 根据键，以降序对关联数组进行排序
 
-#### 1.14.2 对数组进行升序排序 - sort()
+#### 1.14.2. 对数组进行升序排序 - sort()
 
 下面的例子按照字母升序对数组 $cars 中的元素进行排序：  
 ┖[demo_php_array_sort_alpha.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_alpha.php)
@@ -615,7 +626,7 @@ count() 函数用于返回数组的长度（元素数）：
 下面的例子按照数字升序对数组 $numbers 中的元素进行排序：  
 ┖[demo_php_array_sort_num.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_num.php)
 
-#### 1.14.3 对数组进行降序排序 - rsort()
+#### 1.14.3. 对数组进行降序排序 - rsort()
 
 下面的例子按照字母降序对数组 $cars 中的元素进行排序：  
 ┖[demo_php_array_rsort_alpha.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_alpha.php)
@@ -623,22 +634,115 @@ count() 函数用于返回数组的长度（元素数）：
 下面的例子按照数字降序对数组 $numbers 中的元素进行排序：  
 ┖[demo_php_array_rsort_num.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_num.php)
 
-#### 1.14.4 根据值对数组进行升序排序 - asort()
+#### 1.14.4. 根据值对数组进行升序排序 - asort()
 
 下面的例子根据值对关联数组进行升序排序：  
 ┖[demo_php_array_asort.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_asort.php)
 
-#### 1.14.5 根据键对数组进行升序排序 - ksort()
+#### 1.14.5. 根据键对数组进行升序排序 - ksort()
 
 下面的例子根据键对关联数组进行升序排序：  
 ┖[demo_php_array_ksort.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_ksort.php)
 
-#### 1.14.6 根据值对数组进行降序排序 - arsort()
+#### 1.14.6. 根据值对数组进行降序排序 - arsort()
 
 下面的例子根据值对关联数组进行降序排序：  
 ┖[demo_php_array_arsort.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_arsort.php)
 
-#### 1.14.6 根据键对数组进行降序排序 - krsort()
+#### 1.14.7. 根据键对数组进行降序排序 - krsort()
 
 下面的例子根据键对关联数组进行降序排序：  
 ┖[demo_php_array_krsort.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_krsort.php)
+
+------------------------------------------------------------------------
+
+### [1.15 PHP 全局变量 - 超全局变量](http://www.w3school.com.cn/php/php_superglobals.asp)
+
+------------------------------------------------------------------------
+
+**超全局变量在 PHP 4.1.0 中引入，是在全部作用域中始终可用的内置变量。**
+
+#### 1.15.1. PHP 全局变量 - 超全局变量
+
+PHP 中许多预定义变量都是“超全局的”，这意味着它们在一个脚本的全部作用域中都可用。在函数或方法中无需执行 global $variable;就可以访问他们。
+
+这些超全局变量是：
+
++ $GLOBALS
++ $_SERVER
++ $_REQUEST
++ $_POST
++ $_GET
++ $_FILES
++ $_ENV
++ $_COOKIE
++ $_SESSION
+
+本节会介绍一些超全局变量，并会在稍后的章节讲解其他的超全局变量。
+
+#### 1.15.2. $GLOBALS -- 引用全局作用域中可用 的全部变量
+
+$GLOBALS 这种全局变量用于在PHP脚本中的任意位置访问全局变量（从函数或方法中均可）。
+
+PHP 在名为 $GLOBALS[index] 的数组中存储了所有全局变量。变量的名字就是数组的键。
+
+下面的例子展示了如何使用超级全局变量 $GLOBALS:
+
+**实例**  
+┖[demo_php_global_global.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_global.php)
+
+#### 1.15.3. PHP $_SERVER
+
+$_SERVER 这种超全局变量保存关于包头、路径和脚本位置的信息。
+
+下面的例子展示了如何使用 $_SERVER中的某些元素：  
+┖[demo_php_global_server.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_server.php)
+
+下表列出了您能够在 $_SERVER 中访问的最重要的元素：
+
+#### 1.15.4. PHP $_REQUEST
+
+PHP $_REQUEST 用于收集 HTML 表单提交的数据。
+
+下面的例子展示了一个包含输入字段及提交按钮的表单。当用户通过点击提交按钮来提交表单数据时, 表单数据将发送到 <form> 标签的 action 属性中指定的脚本文件。在这个例子中，我们指定文件本身来处理表单数据。如果您需要使用其他的 PHP 文件来处理表单数据，请修改为您选择的文件名即可。然后，我们可以使用超级全局变量 $_REQUEST 来收集 input 字段的值：
+
+**实例：**  
+┖[demo_php_global_request.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_request.php)
+
+#### 1.15.5. PHP $_POST
+
+PHP $_POST 广泛用于收集提交 method="post" 的 HTML 表单后的表单数据。
+
+$_POST 也常用于传递变量。
+
+下面的例子展示了一个包含输入字段和提交按钮的表单。当用户点击提交按钮来提交数据后，表单数据会发送到 <form> 标签的 action 属性中指定的文件。在本例中，我们指定文件本身来处理表单数据。如果您希望使用另一个 PHP 页面来处理表单数据，请用更改为您选择的文件名。然后，我们可以使用超全局变量 $_POST 来收集输入字段的值：
+
+**实例：**  
+┖[demo_php_global_post.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_post.php)
+
+#### 1.15.6. PHP $_GET
+
+PHP $_GET 也可用于收集提交 HTML 表单 (method="get") 之后的表单数据。
+
+$_GET 也可以收集 URL 中的发送的数据。
+
+假设我们有一张页面含有带参数的超链接：  
+┖[demo_php_global_get.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_get.php)
+
+------------------------------------------------------------------------
+
+##二、PHP 表单处理
+
+------------------------------------------------------------------------
+
+###[2.1. PHP 表单处理](http://www.w3school.com.cn/php/php_forms.asp)
+
+------------------------------------------------------------------------
+
+PHP 超全局变量 $`_`GET 和 $`_`POST 用于收集表单数据（form-data)。
+
+####2.1.1. PHP - 一个简单的HTML表单
+
+下面的例子显示了一个简单的 HTML 表单，它包含两个输入字段和一个提交按钮：  
+┖[demo_php_form_post.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_post.php)
+
