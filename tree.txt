@@ -1,145 +1,162 @@
-æ–‡ä»¶å¤¹ PATH åˆ—è¡¨
-å·åºåˆ—å·ä¸º 000E-8F81
+ÎÄ¼ş¼Ğ PATH ÁĞ±í
+¾íĞòÁĞºÅÎª 000E-8F81
 E:.
-â”‚  .tags
-â”‚  .tags_sorted_by_file
-â”‚  Readme.html
-â”‚  Readme.md
-â”‚  tree.txt
-â”‚  WEB-study.sublime-project
-â”‚  WEB-study.sublime-workspace
-â”‚  
-â”œâ”€CSS
-â”‚  â”‚  FileToCode_CSS.html
-â”‚  â”‚  FileToCode_CSS.md
-â”‚  â”‚  
-â”‚  â”œâ”€Base
-â”‚  â”‚  â”‚  csse_selector_attribute_att.html
-â”‚  â”‚  â”‚  csse_selector_attribute_form.html
-â”‚  â”‚  â”‚  csse_selector_attribute_value.html
-â”‚  â”‚  â”‚  csse_selector_attribute_valuelist_hyphen.html
-â”‚  â”‚  â”‚  csse_selector_attribute_valuelist_space.html
-â”‚  â”‚  â”‚  
-â”‚  â”‚  â””â”€i
-â”‚  â”‚          w3school_logo_white.gif
-â”‚  â”‚          
-â”‚  â””â”€Style
-â”‚      â”‚  csse_background-attachment.html
-â”‚      â”‚  csse_background-color.html
-â”‚      â”‚  csse_background-image.html
-â”‚      â”‚  csse_background-image_2.html
-â”‚      â”‚  csse_background-position.html
-â”‚      â”‚  csse_background-position_percent.html
-â”‚      â”‚  csse_background-position_pixel.html
-â”‚      â”‚  csse_background-repeat.html
-â”‚      â”‚  csse_background-repeatx.html
-â”‚      â”‚  csse_background-repeaty.html
-â”‚      â”‚  csse_background-repeat_no-repeat.html
-â”‚      â”‚  csse_background.html
-â”‚      â”‚  csse_text-align.html
-â”‚      â”‚  csse_text-decoration.html
-â”‚      â”‚  csse_text-indent.html
-â”‚      â”‚  csse_text-transform.html
-â”‚      â”‚  csse_text_white-space.html
-â”‚      â”‚  csse_text_white-space_normal.html
-â”‚      â”‚  csse_text_white-space_pre.html
-â”‚      â”‚  csse_text_word-spacing.html
-â”‚      â”‚  
-â”‚      â””â”€i
-â”‚              eg_bg_03.gif
-â”‚              eg_bg_04.gif
-â”‚              eg_bg_07.gif
-â”‚              
-â”œâ”€HTML
-â”‚  â”‚  FileToCode_HTML.html
-â”‚  â”‚  FileToCode_HTML.md
-â”‚  â”‚  
-â”‚  â”œâ”€Advanced
-â”‚  â”‚  â”œâ”€html_head
-â”‚  â”‚  â”‚      html_base.html
-â”‚  â”‚  â”‚      html_keywords.html
-â”‚  â”‚  â”‚      html_meta.html
-â”‚  â”‚  â”‚      html_redirect.html
-â”‚  â”‚  â”‚      html_title.html
-â”‚  â”‚  â”‚      
-â”‚  â”‚  â””â”€html_scripts
-â”‚  â”‚          html_no_script.html
-â”‚  â”‚          html_script.html
-â”‚  â”‚          
-â”‚  â””â”€Base
-â”‚      â””â”€backgrouds
-â”‚          â”‚  html_backgrounds.html
-â”‚          â”‚  
-â”‚          â””â”€i
-â”‚                  eg_bg_06.gif
-â”‚                  
-â”œâ”€Javascript
-â”‚      FileToCode_Javascript.html
-â”‚      FileToCode_Javascript.md
-â”‚      
-â””â”€PHP
-    â”‚  FileToCode_PHP.html
-    â”‚  FileToCode_PHP.md
-    â”‚  
-    â””â”€Base
-        â”‚  .buildpath
-        â”‚  .project
-        â”‚  demo_php_array_asort.php
-        â”‚  demo_php_array_assoc.php
-        â”‚  demo_php_array_assoc_loop.php
-        â”‚  demo_php_array_length.php
-        â”‚  demo_php_array_num.php
-        â”‚  demo_php_array_num_loop.php
-        â”‚  demo_php_array_rsort_alpha.php
-        â”‚  demo_php_array_rsort_num.php
-        â”‚  demo_php_array_sort_alpha.php
-        â”‚  demo_php_array_sort_num.php
-        â”‚  demo_php_constant1.php
-        â”‚  demo_php_constant2.php
-        â”‚  demo_php_datatypes_array.php
-        â”‚  demo_php_datatypes_float.php
-        â”‚  demo_php_datatypes_integer.php
-        â”‚  demo_php_datatypes_length.php
-        â”‚  demo_php_datatypes_null.php
-        â”‚  demo_php_datatypes_object.php
-        â”‚  demo_php_datatypes_pos.php
-        â”‚  demo_php_datatypes_string.php
-        â”‚  demo_php_echo1.php
-        â”‚  demo_php_echo2.php
-        â”‚  demo_php_function1.php
-        â”‚  demo_php_function2.php
-        â”‚  demo_php_function3.php
-        â”‚  demo_php_function4.php
-        â”‚  demo_php_function5.php
-        â”‚  demo_php_if.php
-        â”‚  demo_php_if_else.php
-        â”‚  demo_php_if_elseif.php
-        â”‚  demo_php_loop_do_while.php
-        â”‚  demo_php_loop_do_while2.php
-        â”‚  demo_php_loop_for.php
-        â”‚  demo_php_loop_foreach.php
-        â”‚  demo_php_loop_while.php
-        â”‚  demo_php_operator_arithmetic.php
-        â”‚  demo_php_operator_array.php
-        â”‚  demo_php_operator_assignment.php
-        â”‚  demo_php_operator_comparison.php
-        â”‚  demo_php_operator_increment.php
-        â”‚  demo_php_operator_string.php
-        â”‚  demo_php_print.php
-        â”‚  demo_php_print2.php
-        â”‚  demo_php_switch.php
-        â”‚  demo_php_syntax.php
-        â”‚  demo_php_syntax_case1.php
-        â”‚  demo_php_syntax_case2.php
-        â”‚  demo_php_syntax_comments.php
-        â”‚  demo_php_var1.php
-        â”‚  demo_php_var2.php
-        â”‚  demo_php_var_global.php
-        â”‚  demo_php_var_global2.php
-        â”‚  demo_php_var_local.php
-        â”‚  demo_php_var_static.php
-        â”‚  
-        â””â”€.settings
-                org.eclipse.php.core.prefs
-                org.eclipse.php.debug.core.Debug_Process_Preferences.prefs
-                
+©¦  .tags
+©¦  .tags_sorted_by_file
+©¦  Readme.html
+©¦  Readme.md
+©¦  tree.txt
+©¦  WEB-study.sublime-project
+©¦  WEB-study.sublime-workspace
+©¦  
+©À©¤CSS
+©¦  ©¦  FileToCode_CSS.html
+©¦  ©¦  FileToCode_CSS.md
+©¦  ©¦  
+©¦  ©À©¤Base
+©¦  ©¦  ©¦  csse_selector_attribute_att.html
+©¦  ©¦  ©¦  csse_selector_attribute_form.html
+©¦  ©¦  ©¦  csse_selector_attribute_value.html
+©¦  ©¦  ©¦  csse_selector_attribute_valuelist_hyphen.html
+©¦  ©¦  ©¦  csse_selector_attribute_valuelist_space.html
+©¦  ©¦  ©¦  
+©¦  ©¦  ©¸©¤i
+©¦  ©¦          w3school_logo_white.gif
+©¦  ©¦          
+©¦  ©¸©¤Style
+©¦      ©¦  csse_background-attachment.html
+©¦      ©¦  csse_background-color.html
+©¦      ©¦  csse_background-image.html
+©¦      ©¦  csse_background-image_2.html
+©¦      ©¦  csse_background-position.html
+©¦      ©¦  csse_background-position_percent.html
+©¦      ©¦  csse_background-position_pixel.html
+©¦      ©¦  csse_background-repeat.html
+©¦      ©¦  csse_background-repeatx.html
+©¦      ©¦  csse_background-repeaty.html
+©¦      ©¦  csse_background-repeat_no-repeat.html
+©¦      ©¦  csse_background.html
+©¦      ©¦  csse_text-align.html
+©¦      ©¦  csse_text-decoration.html
+©¦      ©¦  csse_text-indent.html
+©¦      ©¦  csse_text-transform.html
+©¦      ©¦  csse_text_white-space.html
+©¦      ©¦  csse_text_white-space_normal.html
+©¦      ©¦  csse_text_white-space_pre.html
+©¦      ©¦  csse_text_word-spacing.html
+©¦      ©¦  
+©¦      ©¸©¤i
+©¦              eg_bg_03.gif
+©¦              eg_bg_04.gif
+©¦              eg_bg_07.gif
+©¦              
+©À©¤HTML
+©¦  ©¦  FileToCode_HTML.html
+©¦  ©¦  FileToCode_HTML.md
+©¦  ©¦  
+©¦  ©À©¤Advanced
+©¦  ©¦  ©À©¤html_head
+©¦  ©¦  ©¦      html_base.html
+©¦  ©¦  ©¦      html_keywords.html
+©¦  ©¦  ©¦      html_meta.html
+©¦  ©¦  ©¦      html_redirect.html
+©¦  ©¦  ©¦      html_title.html
+©¦  ©¦  ©¦      
+©¦  ©¦  ©¸©¤html_scripts
+©¦  ©¦          html_no_script.html
+©¦  ©¦          html_script.html
+©¦  ©¦          
+©¦  ©¸©¤Base
+©¦      ©¸©¤backgrouds
+©¦          ©¦  html_backgrounds.html
+©¦          ©¦  
+©¦          ©¸©¤i
+©¦                  eg_bg_06.gif
+©¦                  
+©À©¤Javascript
+©¦      FileToCode_Javascript.html
+©¦      FileToCode_Javascript.md
+©¦      
+©¸©¤PHP
+    ©¦  FileToCode_PHP.html
+    ©¦  FileToCode_PHP.md
+    ©¦  
+    ©À©¤Base
+    ©¦  ©¦  .buildpath
+    ©¦  ©¦  .project
+    ©¦  ©¦  demo_php_array_arsort.php
+    ©¦  ©¦  demo_php_array_asort.php
+    ©¦  ©¦  demo_php_array_assoc.php
+    ©¦  ©¦  demo_php_array_assoc_loop.php
+    ©¦  ©¦  demo_php_array_krsort.php
+    ©¦  ©¦  demo_php_array_ksort.php
+    ©¦  ©¦  demo_php_array_length.php
+    ©¦  ©¦  demo_php_array_num.php
+    ©¦  ©¦  demo_php_array_num_loop.php
+    ©¦  ©¦  demo_php_array_rsort_alpha.php
+    ©¦  ©¦  demo_php_array_rsort_num.php
+    ©¦  ©¦  demo_php_array_sort_alpha.php
+    ©¦  ©¦  demo_php_array_sort_num.php
+    ©¦  ©¦  demo_php_constant1.php
+    ©¦  ©¦  demo_php_constant2.php
+    ©¦  ©¦  demo_php_datatypes_array.php
+    ©¦  ©¦  demo_php_datatypes_float.php
+    ©¦  ©¦  demo_php_datatypes_integer.php
+    ©¦  ©¦  demo_php_datatypes_length.php
+    ©¦  ©¦  demo_php_datatypes_null.php
+    ©¦  ©¦  demo_php_datatypes_object.php
+    ©¦  ©¦  demo_php_datatypes_pos.php
+    ©¦  ©¦  demo_php_datatypes_string.php
+    ©¦  ©¦  demo_php_echo1.php
+    ©¦  ©¦  demo_php_echo2.php
+    ©¦  ©¦  demo_php_function1.php
+    ©¦  ©¦  demo_php_function2.php
+    ©¦  ©¦  demo_php_function3.php
+    ©¦  ©¦  demo_php_function4.php
+    ©¦  ©¦  demo_php_function5.php
+    ©¦  ©¦  demo_php_global_get.php
+    ©¦  ©¦  demo_php_global_global.php
+    ©¦  ©¦  demo_php_global_post.php
+    ©¦  ©¦  demo_php_global_request.php
+    ©¦  ©¦  demo_php_global_server.php
+    ©¦  ©¦  demo_php_if.php
+    ©¦  ©¦  demo_php_if_else.php
+    ©¦  ©¦  demo_php_if_elseif.php
+    ©¦  ©¦  demo_php_loop_do_while.php
+    ©¦  ©¦  demo_php_loop_do_while2.php
+    ©¦  ©¦  demo_php_loop_for.php
+    ©¦  ©¦  demo_php_loop_foreach.php
+    ©¦  ©¦  demo_php_loop_while.php
+    ©¦  ©¦  demo_php_operator_arithmetic.php
+    ©¦  ©¦  demo_php_operator_array.php
+    ©¦  ©¦  demo_php_operator_assignment.php
+    ©¦  ©¦  demo_php_operator_comparison.php
+    ©¦  ©¦  demo_php_operator_increment.php
+    ©¦  ©¦  demo_php_operator_string.php
+    ©¦  ©¦  demo_php_print.php
+    ©¦  ©¦  demo_php_print2.php
+    ©¦  ©¦  demo_php_switch.php
+    ©¦  ©¦  demo_php_syntax.php
+    ©¦  ©¦  demo_php_syntax_case1.php
+    ©¦  ©¦  demo_php_syntax_case2.php
+    ©¦  ©¦  demo_php_syntax_comments.php
+    ©¦  ©¦  demo_php_var1.php
+    ©¦  ©¦  demo_php_var2.php
+    ©¦  ©¦  demo_php_var_global.php
+    ©¦  ©¦  demo_php_var_global2.php
+    ©¦  ©¦  demo_php_var_local.php
+    ©¦  ©¦  demo_php_var_static.php
+    ©¦  ©¦  test_get.php
+    ©¦  ©¦  
+    ©¦  ©¸©¤.settings
+    ©¦          org.eclipse.php.core.prefs
+    ©¦          org.eclipse.php.debug.core.Debug_Process_Preferences.prefs
+    ©¦          
+    ©¸©¤Form
+            demo_form_validation_required.php
+            demo_php_form_get.php
+            demo_php_form_post.php
+            demo_php_form_validation_escapechar.php
+            welcome.php
+            welcome_get.php
+            

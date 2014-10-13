@@ -5,278 +5,347 @@
 
 ------------------------------------------------------------------------
 
-### [1.1. PHP 语法](http://www.w3school.com.cn/php/php_syntax.asp)  
+### [1.1. PHP 语法](http://www.w3cschool.cc/php/php-syntax.html)  
 
 ------------------------------------------------------------------------
 
 ####  1.1.1. 基础 PHP 语法
-  我的第一张 PHP 页面  
-  ┖[demo_php_syntax.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php)
+
+我的第一张 PHP 页面  
+┖[demo_php_syntax.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php)
   
 ####  1.1.2. 注释
-  PHP 支持三种注释  
-  ┖[demo_php_syntax_comments.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php)
+
+PHP 支持三种注释  
+┖[demo_php_syntax_comments.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php)
 
 ####  1.1.3. PHP 大小写敏感
-  在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。  
-  ┖[demo_php_syntax_case1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php)  
-  **变量对大小写敏感。**  
-  在 PHP 中，所有变量都对大小写敏感。  
-  ┖[demo_php_syntax_case2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php)  
+
+在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。  
+┖[demo_php_syntax_case1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php)  
+
+**变量对大小写敏感。**  
+
+在 PHP 中，所有变量都对大小写敏感。  
+┖[demo_php_syntax_case2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php)  
   
 ####  1.1.4. PHP 大小写敏感
-  在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。**所有变量都对大小写敏感。**  
-  ┖[demo_php_syntax_comments.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php)  
+
+在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。**所有变量都对大小写敏感。**  
+┖[demo_php_syntax_comments.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php)  
+
 <br>
 
 ------------------------------------------------------------------------
 
-### [1.2. PHP变量](http://www.w3school.com.cn/php/php_variables.asp)
+### [1.2. PHP变量](http://www.w3cschool.cc/php/php-variables.html)
+
 ------------------------------------------------------------------------
+
 #### 1.2.1. 类似代数
-  请把变量视为存储数据的容器。  
-  ┖[demo_php_var1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php)
+
+请把变量视为存储数据的容器。  
+┖[demo_php_var1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php)
 
 #### 1.2.2. 创建 PHP 变量
-  PHP 没有创建变量的命令。变量会在首次为其赋值时被创建：  
-  ┖[demo_php_var2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php)
+
+PHP 没有创建变量的命令。变量会在首次为其赋值时被创建：  
+┖[demo_php_var2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php)
 
 #### 1.2.3. Local 和 Global 作用域
-  函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。  
-  ┖[demo_php_var_local.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php)  
+
+函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。  
+┖[demo_php_var_local.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php)  
 
 #### 1.2.4. PHP global 关键词
-  global 关键词用于访问函数内的全局变量。  
-  要做到这一点，请在（函数内部）变量前面使用 global 关键词：    
-  ┖[demo_php_var_global.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php)  
-  PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。  
-  ┖[demo_php_var_global2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php)  
+
+global 关键词用于访问函数内的全局变量。  
+
+要做到这一点，请在（函数内部）变量前面使用 global 关键词：    
+┖[demo_php_var_global.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php)  
+
+PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。  
+┖[demo_php_var_global2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php)  
 
 #### 1.2.5. PHP static 关键词
-  通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。  
-  要完成这一点，请在您首次声明变量时使用 static 关键词    
-  ┖[demo_php_var_static.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php)  
-<br>
 
+通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。  
+
+要完成这一点，请在您首次声明变量时使用 static 关键词    
+┖[demo_php_var_static.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php)  
+
+<br>
 
 ------------------------------------------------------------------------
 
-### [1.3. PHP Echo / Print](http://www.w3school.com.cn/php/php_echo_print.asp)  
+### [1.3. PHP Echo / Print](http://www.w3cschool.cc/php/php-echo-print.html)  
 
 ------------------------------------------------------------------------
 
 在 PHP 中，有两种基本的输出方法：**echo** 和 **print**。  
 
-  >**_echo 和 print 之间的差异：_**  
-  >&nbsp;&nbsp;&nbsp;&nbsp;echo - 能够输出一个以上的字符串  
-  >&nbsp;&nbsp;&nbsp;&nbsp;print - 只能输出一个字符串，并始终返回 1  
-  >提示：echo 比 print 稍快，因为它不返回任何值。
+>**_echo 和 print 之间的差异：_**  
+
+>&nbsp;&nbsp;&nbsp;&nbsp;echo - 能够输出一个以上的字符串  
+
+>&nbsp;&nbsp;&nbsp;&nbsp;print - 只能输出一个字符串，并始终返回 1  
+
+>提示：echo 比 print 稍快，因为它不返回任何值。
 
 #### 1.3.1. PHP echo 语句
-  echo 是一个语言结构，有无括号均可使用：echo 或 echo()。  
+
+echo 是一个语言结构，有无括号均可使用：echo 或 echo()。  
+
 **echo显示字符串**  
-  下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：  
-  ┖[demo_php_echo1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php)  
+
+下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：  
+┖[demo_php_echo1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php)  
+
 **echo显示变量**  
-  下面的例子展示如何用 echo 命令来显示字符串和变量：  
-  ┖[demo_php_echo2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php)  
+
+下面的例子展示如何用 echo 命令来显示字符串和变量：  
+┖[demo_php_echo2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php)  
+
 #### 1.3.2. PHP print 语句
-  print 也是语言结构，有无括号均可使用：print 或 print()。  
-  **print显示字符串**  
-  下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：  
-  ┖[demo_php_print.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php)  
-  **print显示变量**  
-  下面的例子展示如何用 print 命令来显示字符串和变量：  
-  ┖[demo_php_print2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php)  
+
+print 也是语言结构，有无括号均可使用：print 或 print()。  
+
+**print显示字符串**  
+
+下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：  
+┖[demo_php_print.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php)  
+
+**print显示变量**  
+
+下面的例子展示如何用 print 命令来显示字符串和变量：  
+┖[demo_php_print2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php)  
+
 <br>
 
 ------------------------------------------------------------------------
 
-### [1.4. PHP 数据类型](http://www.w3school.com.cn/php/php_datatypes.asp)
+### [1.4. PHP 数据类型](http://www.w3cschool.cc/php/php-datatypes.html)
 
 ------------------------------------------------------------------------
 
 字符串、整数、浮点数、逻辑、数组、对象、NULL。
 
 #### 1.4.1. PHP 字符串
-  字符串是字符序列，比如 "Hello world!"。字符串可以是引号内的任何文本。您可以使用单引号或双引号：  
-  ┖[demo_php_datatypes_string.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php)
+
+字符串是字符序列，比如 "Hello world!"。字符串可以是引号内的任何文本。您可以使用单引号或双引号：  
+┖[demo_php_datatypes_string.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php)
 
 #### 1.4.2. PHP 整数
-  整数是没有小数的数字。  
-  >**整数规则：**  
-  >&nbsp;&nbsp;&nbsp;&nbsp;*整数必须有至少一个数字（0-9）*  
-  >&nbsp;&nbsp;&nbsp;&nbsp;*整数不能包含逗号或空格*  
-  >&nbsp;&nbsp;&nbsp;&nbsp;*整数不能有小数点*  
-  >&nbsp;&nbsp;&nbsp;&nbsp;*整数正负均可*  
-  >&nbsp;&nbsp;&nbsp;&nbsp;*可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）*  
 
-  在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：  
-  ┖[demo_php_datatypes_integer.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php)
+整数是没有小数的数字。  
+
+>**整数规则：**  
+  
+>&nbsp;&nbsp;&nbsp;&nbsp;*整数必须有至少一个数字（0-9）*  
+  
+>&nbsp;&nbsp;&nbsp;&nbsp;*整数不能包含逗号或空格*  
+  
+>&nbsp;&nbsp;&nbsp;&nbsp;*整数不能有小数点*  
+  
+>&nbsp;&nbsp;&nbsp;&nbsp;*整数正负均可*  
+  
+>&nbsp;&nbsp;&nbsp;&nbsp;*可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）*  
+
+在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：  
+┖[demo_php_datatypes_integer.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php)
 
 #### 1.4.3. PHP 浮点数
-  浮点数是有小数点或指数形式的数字。  
-  在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：  
-  ┖[demo_php_datatypes_float.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php)
+
+浮点数是有小数点或指数形式的数字。  
+
+在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：  
+┖[demo_php_datatypes_float.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php)
 
 #### 1.4.4. PHP逻辑
-  逻辑是 true 或 false。逻辑常用于条件测试。
+
+逻辑是 true 或 false。逻辑常用于条件测试。
 
 #### 1.4.5. PHP数组
-  数组在一个变量中存储多个值。  
-  在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：  
-  ┖[demo_php_datatypes_array.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php)
+
+数组在一个变量中存储多个值。  
+
+在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：  
+┖[demo_php_datatypes_array.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php)
 
 #### 1.4.6. **PHP 对象**  
-  对象是存储数据和有关如何处理数据的信息的数据类型。  
-  在 PHP 中，必须明确地声明对象。  
-  首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。  
-  然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：  
-  ┖[demo_php_datatypes_object.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php)
+
+对象是存储数据和有关如何处理数据的信息的数据类型。  
+
+在 PHP 中，必须明确地声明对象。  
+
+首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。  
+
+然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：  
+┖[demo_php_datatypes_object.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php)
 
 #### 1.4.7. PHP NULL 值
-  特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。  
-  NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。  
-  可以通过把值设置为 NULL，将变量清空：  
-  ┖[demo_php_datatypes_null.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php)  
+
+特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。  
+
+NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。  
+
+可以通过把值设置为 NULL，将变量清空：  
+┖[demo_php_datatypes_null.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php)  
 <br>
 
 ------------------------------------------------------------------------
 
-### [1.5.PHP字符串函数](http://www.w3school.com.cn/php/php_string.asp)
+### [1.5.PHP字符串函数](http://www.w3cschool.cc/php/php-string.html)
 
 ------------------------------------------------------------------------
 
 #### 1.5.1. PHP strlen() 函数
-  strlen() 函数返回字符串的长度，以字符计。  
-  下例返回字符串 "Hello world!" 的长度：  
-  ┖[demo_php_datatypes_length.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php)
+strlen() 函数返回字符串的长度，以字符计。  
+
+下例返回字符串 "Hello world!" 的长度：  
+┖[demo_php_datatypes_length.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php)
 
 #### 1.5.2. PHP strpos() 函数
-  strpos() 函数用于检索字符串内指定的字符或文本。  
-  如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。  
-  下例检索字符串 "Hello world!" 中的文本 "world"：  
-  ┖[demo_php_datatypes_pos.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php)  
+
+strpos() 函数用于检索字符串内指定的字符或文本。  
+
+如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。  
+
+下例检索字符串 "Hello world!" 中的文本 "world"：  
+┖[demo_php_datatypes_pos.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php)  
+
 <br>
 
 ------------------------------------------------------------------------
 
-### [1.6. PHP参量](http://www.w3school.com.cn/php/php_constants.asp)
+### [1.6. PHP参量](http://www.w3cschool.cc/php/php-constants.html)
 
 ------------------------------------------------------------------------
 
-  **设置PHP常量**  
-  如需设置常量，请使用 define() 函数 - 它使用三个参数：  
-  * &nbsp;&nbsp;&nbsp;&nbsp;*首个参数定义常量的名称*  
-  * &nbsp;&nbsp;&nbsp;&nbsp;*第二个参数定义常量的值*  
-  * &nbsp;&nbsp;&nbsp;&nbsp;*可选的第三个参数规定常量名是否对大小写敏感。默认是 false。*  
-  下例创建了一个对大小写敏感的常量，值为 <font color="green">"Welcome to W3School.com.cn!"：</font>  
-  ┖[demo_php_constant1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php)  
-  下例创建了一个对大小写不敏感的常量，值为 <font color="green">"Welcome to W3School.com.cn!"：</font>  
-  ┖[demo_php_constant2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php)  
+**设置PHP常量**  
+
+如需设置常量，请使用 define() 函数 - 它使用三个参数：  
+  
++ &nbsp;&nbsp;&nbsp;&nbsp;*首个参数定义常量的名称*  
+  
++ &nbsp;&nbsp;&nbsp;&nbsp;*第二个参数定义常量的值*  
+  
++ &nbsp;&nbsp;&nbsp;&nbsp;*可选的第三个参数规定常量名是否对大小写敏感。默认是 false。*  
+  
+下例创建了一个对大小写敏感的常量，值为 <font color="green">"Welcome to W3School.com.cn!"：</font>  
+┖[demo_php_constant1.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php)  
+  
+下例创建了一个对大小写不敏感的常量，值为 <font color="green">"Welcome to W3School.com.cn!"：</font>  
+┖[demo_php_constant2.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php)  
+
 <br>
 
 ------------------------------------------------------------------------
 
-### [1.7. PHP运算符](http://www.w3school.com.cn/php/php_operators.asp)
+### [1.7. PHP运算符](http://www.w3cschool.cc/php/php-operators.html)
 
 ------------------------------------------------------------------------
 
 #### 1.7.1. PHP算数运算符
 
-  运算符  |  名称  |  例子  |  结果
-  :------ |:------|:------|:-----
-  +    |加法    |$x + $y|$x与$y求和
-  -     |减法    |$x - $y|$x与$y的差数
-  *     |乘法   |$x * $y|$x与$y乘积
-  /     |除法   | $x / $y|$x与$y商数
-  %   |模数    |$x % $y|$x与$y余数
-  下例展示了使用不同算数运算符的不同结果：  
-  ┖[demo_php_operator_arithmetic.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php)
+|运算符  |  名称  |  例子   |  结果       |
+|:------ |:-------|:--------|:------------|
+|\+      |加法    | $x + $y | $x与$y求和  |
+|\-      |减法    | $x - $y | $x与$y的差数|
+|\*      |乘法    | $x * $y | $x与$y乘积  |
+|/       |除法    | $x / $y | $x与$y商数  |
+|%       |模数    | $x % $y | $x与$y余数  |
+|-       |取反    | -$x     | $x取反      |
+下例展示了使用不同算数运算符的不同结果：  
+┖[demo_php_operator_arithmetic.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php)
 
 #### 1.7.2. PHP赋值运算符
-  PHP 赋值运算符用于向变量写值。  
-  PHP 中基础的赋值运算符是 "="。这意味着右侧赋值表达式会为左侧运算数设置值。  
 
-  赋值         |等同于         |描述         
-  :----------|:-----------|:----------
-  x = y         |x = y            |右侧表达式为左侧运算数设置值。
-  x += y      |x = x + y       |加
-  x -= y       |x = x - y       |减
-  x *= y       |x = x * y       |乘
-  x /= y        |x = x / y       |除
-  x %= y      |x = x % y      |模数
+PHP 赋值运算符用于向变量写值。  
 
-  下例展示了使用不同赋值运算符的不同结果：  
-  ┖[demo_php_operator_assignment.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_assignment.php)
+PHP 中基础的赋值运算符是 "="。这意味着右侧赋值表达式会为左侧运算数设置值。  
+
+| 赋值   | 等同于    | 描述                          |
+|:-------|:----------|:------------------------------|
+| x = y  | x = y     | 右侧表达式为左侧运算数设置值。|
+| x += y | x = x + y | 加                            |
+| x -= y | x = x - y | 减                            |
+| x *= y | x = x * y | 乘                            |
+| x /= y | x = x / y | 除                            |
+| x %= y | x = x % y | 模数                          |
+
+下例展示了使用不同赋值运算符的不同结果：  
+┖[demo_php_operator_assignment.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_assignment.php)
 
 #### 1.7.3. PHP字符串运算符
 
-  运算符        |名称           |例子                                |结果     
-  :----------|:------------|:-------------------------|:-------
-  .              |串接             |$txt1="Hello" $txt2=$txt1."world!"|现在$txt2包含“Hello World”   
-  .=            |串接赋值        |$txt1="Hello" $txt1 .="world!" |现在$txt1包含“Hello World”  
-  下例展示了使用字符串运算符的结果：  
-  ┖[demo_php_operator_string.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_string.php)
+| 运算符 | 名称     | 例子                               | 结果                       |
+|:-------|:---------|:-----------------------------------|:---------------------------|
+| .      | 串接     | $txt1="Hello" $txt2=$txt1."world!" | 现在$txt2包含“Hello World” |
+| .=     | 串接赋值 | $txt1="Hello" $txt1 .="world!"     | 现在$txt1包含“Hello World” |
+
+下例展示了使用字符串运算符的结果：  
+┖[demo_php_operator_string.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_string.php)
 
 #### 1.7.4. PHP递增/递减运算符
 
-  运算符     |名称         |描述         |
-  :---------|:---------|:----------
-  ++$x      |前递增      |$x加一递增，然后返回$x
-  $x++      |后递增      |返回$x,然后$x加一递增  
-  --$x        |前递减      |$x减一递减，然后返回$x
-  $x--        |后递减      |返回$x，然后$x减一递减
+| 运算符 |名称    | 描述                   |
+| :------|:-------|:-----------------------|
+| ++$x   | 前递增 | $x加一递增，然后返回$x |
+| $x++   | 后递增 | 返回$x,然后$x加一递增  |
+| --$x   | 前递减 | $x减一递减，然后返回$x |
+| $x--   | 后递减 | 返回$x，然后$x减一递减 |
 
-  下例展示了使用不同递增/递减运算符的不同结果：  
-  ┖[demo_php_operator_increment.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_increment.php)
+下例展示了使用不同递增/递减运算符的不同结果：  
+┖[demo_php_operator_increment.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_increment.php)
 
 #### 1.7.5. PHP比较运算符
-  PHP 比较运算符用于比较两个值（数字或字符串）：
 
-  运算符|名称|例子|结果
-  :-----|:---|:---|:---
-  ==|等于|$x == $y|如果 $x 等于 $y，则返回true
-  ===|全等于（完全相同）|$x===$y|如果$x等于$y,且它们类型相同，则返回ture
-  !=|不等于|$x != $y|如果 $x 不等于 $y，则返回true
-  <>|不等于|$x <> $y|如果$x 不等于 $y，则返回true
-  !==|不全等（完全不同）|$x !== $y|如果 $x 不等于 $y，且他们类型不相同，则返回true
-  >|大于|$x > $y|如果 $x 大于 $y，则返回true
-  <|小于|$x < $y|如果 $x 小于 $y，则返回true
-  >=|大于或等于|$x >= $y|如果 $x 大于或者等于 $y，则返回true
-  <=|小于或等于|$x <= $y|如果 $x 小于或者等于 $y，则返回true
+PHP 比较运算符用于比较两个值（数字或字符串）：
 
-  下例展示了使用某些比较运算符的不同结果：  
-  ┖[demo_php_operator_comparison.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_comparison.php)
+| 运算符 | 名称               |例子       | 结果                                            |
+|:-------|:-------------------|:----------|:------------------------------------------------|
+| ==     | 等于               | $x == $y  | 如果 $x 等于 $y，则返回true                     |
+| ===    | 全等于（完全相同） | $x === $y | 如果$x等于$y,且它们类型相同，则返回ture         |
+| !=     | 不等于             | $x != $y  | 如果 $x 不等于 $y，则返回true                   |
+| <>     | 不等于             | $x <> $y  | 如果$x 不等于 $y，则返回true                    |
+| !==    | 不全等（完全不同） | $x !== $y | 如果 $x 不等于 $y，且他们类型不相同，则返回true |
+| >      | 大于               | $x > $y   | 如果 $x 大于 $y，则返回true                     |
+| <      | 小于               | $x < $y   | 如果 $x 小于 $y，则返回true                     |
+| >=     | 大于或等于         | $x >= $y  | 如果 $x 大于或者等于 $y，则返回true             |
+| <=     | 小于或等于         | $x <= $y  | 如果 $x 小于或者等于 $y，则返回true             |
+
+下例展示了使用某些比较运算符的不同结果：  
+┖[demo_php_operator_comparison.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_comparison.php)
 
 #### 1.7.6. PHP逻辑运算符
 
-  运算符|名称|例子|结果
-  :-----|:---|:---|:---
-  and|与|$x and $y|如果 $x 和 $y 都为true，则返回true
-  or|或|$x or $y|如果 $x 和 $y 至少有一个为true，则返回true
-  xor|异或|$x xor $y|如果 $x 和 $y 有且仅有一个为true，则返回true
-  &&|与|$x && $y|如果 $x 和 $y 都为true，则返回true
-  "双竖线"|或|$x "双竖线" $y |如果 $x 和 $y 至少有一个为true，则返回true
-  !|非|!$x|如果 $x 不为 true，则返回true
+| 运算符   |名称  | 例子           | 结果                                         |
+|:---------|:-----|:---------------|:---------------------------------------------|
+| and      | 与   | $x and $y      | 如果 $x 和 $y 都为true，则返回true           |
+| or       | 或   | $x or $y       | 如果 $x 和 $y 至少有一个为true，则返回true   |
+| xor      | 异或 | $x xor $y      | 如果 $x 和 $y 有且仅有一个为true，则返回true |
+| &&       | 与   | $x && $y       | 如果 $x 和 $y 都为true，则返回true           |
+| "双竖线" | 或   | $x "双竖线" $y | 如果 $x 和 $y 至少有一个为true，则返回true   |
+| !        | 非   | !$x            | 如果 $x 不为 true，则返回true                |
 
 #### 1.7.7. PHP数组运算符
 
-  |运算符|名称|例子|结果|
-  |:-----|:---|:---|:---|
-  |+|联合| $x + $y | $x 和 $y 的联合（但不覆盖重复的键）|
-  |==|相等| $x == $y | 如果 $x 和 $y 拥有相同的键/值对，则返回true|
-  |===|全等|$x === $y | 如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回true|
-  |!=|不相等| $x != $y|如果 $x 不等于 $y，则返回true|
-  |<>|不相等| $x <> $y | 如果 $x 不等于 $y,则返回true|
-  |！==|不全等| $x !== $y | 如果 $x 与 $y 完全不同，则返回true|
+| 运算符 | 名称   | 例子      | 结果                                                            |
+|:-------|:-------|:----------|:----------------------------------------------------------------|
+| +      | 联合   | $x + $y   | $x 和 $y 的联合（但不覆盖重复的键）                             |
+| ==     | 相等   | $x == $y  | 如果 $x 和 $y 拥有相同的键/值对，则返回true                     |
+| ===    | 全等   | $x === $y | 如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回true |
+| !=     | 不相等 | $x != $y  | 如果 $x 不等于 $y，则返回true                                   |
+| <>     | 不相等 | $x <> $y  | 如果 $x 不等于 $y,则返回true                                    |
+| !==    | 不全等 | $x !== $y | 如果 $x 与 $y 完全不同，则返回true                              |
 
-  下例展示了使用不同数组运算符的不同结果：  
-  ┖[demo_php_operator_array.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php)  
+下例展示了使用不同数组运算符的不同结果：  
+┖[demo_php_operator_array.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php)  
 
 ------------------------------------------------------------------------
 
-### [1.8. PHP If...Else](http://www.w3school.com.cn/php/php_if_else.asp)
+### [1.8. PHP If...Else](http://www.w3cschool.cc/php/php-if-else.html)
 
 ------------------------------------------------------------------------
 
@@ -301,7 +370,7 @@ if 语句用于**在指定条件为 true 时**执行代码。
 
 **语法**
 
-    if (条件） {
+    if (条件) {
         条件为 true 时执行的代码；
     } else {
         条件为 false 时执行的代码；
@@ -329,7 +398,7 @@ if 语句用于**在指定条件为 true 时**执行代码。
 
 ------------------------------------------------------------------------
 
-### [1.9. PHP Switch](http://www.w3school.com.cn/php/php_switch.asp)
+### [1.9. PHP Switch](http://www.w3cschool.cc/php/php-switch.html)
 
 ------------------------------------------------------------------------
 
@@ -340,9 +409,13 @@ switch 语句用于基于不同条件执行不同动作。
 
 **工作原理**
 > 1. 对表达式（通常是变量）进行一次计算；
+
 > 2. 把表达式的值与结构中 case 的值进行比较；
+
 > 3. 如果存在匹配，则执行与 case 关联的代码；
+
 > 4. 代码执行后，**break语句**阻止代码跳入下一个 case 中继续执行；
+
 > 5. 如果没有 case 为真，则使用default语句。
 
 **实例**  
@@ -350,15 +423,18 @@ switch 语句用于基于不同条件执行不同动作。
 
 ------------------------------------------------------------------------
 
-### [1.10. PHP While 循环](http://www.w3school.com.cn/php/php_looping.asp)
+### [1.10. PHP While 循环](http://www.w3cschool.cc/php/php-looping.html)
 
 ------------------------------------------------------------------------
 
 在 PHP 中，我们有以下循环语句：
 
 + while - 只要制定条件为真，则循环代码块；
+
 + do...while - 先执行一次代码块，然后只要制定条件为真则重复循环
+
 + for - 循环代码块制定次数
+
 + foreach - 遍历数组中的每个元素并循环代码块
 
 #### 1.10.1. PHP while循环
@@ -397,7 +473,7 @@ _请注意，do while 循环只在执行循环内的语句之后才对条件进�
 
 ------------------------------------------------------------------------
 
-### [1.11. PHP for 循环](http://www.w3school.com.cn/php/php_looping_for.asp)
+### [1.11. PHP for 循环](http://www.w3cschool.cc/php/php-looping-for.html)
 
 ------------------------------------------------------------------------
 
@@ -416,7 +492,9 @@ PHP for 循环执行代码块指定的次数。
 _参数:_
 
 + init counter: 初始化循环计数器的值
+
 + test counter:评估每个循环迭代。如果值为TRUE，继续循环。如果它的值为FALSE，循环结束。
+
 + increment counter:增加循环计数器的值
 
 **实例：**  
@@ -440,7 +518,7 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 
 ------------------------------------------------------------------------
 
-### [1.12. PHP函数](http://www.w3school.com.cn/php/php_functions.asp)
+### [1.12. PHP函数](http://www.w3cschool.cc/php/php-functions.html)
 
 ------------------------------------------------------------------------
 
@@ -449,8 +527,11 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 #### 1.12.1. PHP 用户定义函数
 
 + 除了内建的 PHP 函数，我们可以创建我们自己的函数。
+
 + 函数是可以在程序中重复使用的语句块。
+
 + 页面加载时函数不会立即执行。
+
 + 函数只有在被调用时才会执行。
 
 #### 1.12.2 在 PHP 创建用户定义函数
@@ -462,10 +543,10 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
     function functionName() {
       被执行的代码;
     }
-    
-*<font color="green">注释：函数名能够以字母或下划线开头（而非数字）。*</font>
+ 
+_<font color="green">注释：函数名能够以字母或下划线开头（而非数字）。</font>_
 
-*<font color="green">注释：函数名对大小写不敏感。*</font>
+_<font color="green">注释：函数名对大小写不敏感。</font>_
 
 **<font color="blue">提示:</font>** 函数名应该能够反映函数所执行的任务
 
@@ -477,6 +558,7 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 #### 1.12.3 PHP 函数参数
 
 + 可以通过参数向函数传递信息。参数类似变量。
+
 + 参数被定义在函数名之后，括号内部。您可以添加任意多参数，只要用逗号隔开即可。
 
 **实例1：**
@@ -505,7 +587,7 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 
 ------------------------------------------------------------------------
 
-### [1.13 PHP 数组](http://www.w3school.com.cn/php/php_arrays.asp)
+### [1.13 PHP 数组](http://www.w3cschool.cc/php/php-arrays.html)
 
 ------------------------------------------------------------------------
 
@@ -525,7 +607,7 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
     $cars1="Volvo";
     $cars2="BMW";
     $cars3="SAAB";
-    
+
 不过，假如您希望对变量进行遍历并找出特定的那个值？或者如果您需要存储 300 个汽车品牌，而不是 3 个呢？
 
 解决方法是创建数组！
@@ -537,11 +619,13 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 在 PHP 中，array()函数用于创建数组：
 
     array();
-    
+
 在PHP中，有三种数组类型：
 
 + **索引数组** - 带有数字索引的数组
+
 + **关联数组** - 带有指定键的数组
+
 + **多维数组** - 包含一个或多个数组的数组
 
 #### 1.13.3. PHP 索引数组
@@ -551,7 +635,7 @@ foreach 循环只适用于数组，并用于遍历数组中的每个键/值对�
 索引是自动分配的（索引从0开始）：
 
     $cars = array("Volvo", "BMW", "SAAB");
-    
+
 或者也可以手动分配索引：
 
     $cars[0] = "Volvo";
@@ -586,7 +670,7 @@ count() 函数用于返回数组的长度（元素数）：
     $age['Peter']="35";
     $age['Ben']="37";
     $age['Joe']="43";
-    
+
 随后可以在脚本中使用指定键：
 
 **实例：**  
@@ -601,7 +685,7 @@ count() 函数用于返回数组的长度（元素数）：
 
 ------------------------------------------------------------------------
 
-### [1.14 数组排序](http://www.w3school.com.cn/php/php_arrays_sort.asp)
+### [1.14 数组排序](http://www.w3cschool.cc/php/php-arrays-sort.html)
 
 ------------------------------------------------------------------------
 
@@ -612,10 +696,15 @@ count() 函数用于返回数组的长度（元素数）：
 在本节中，我们将学习如下 PHP 数组排序函数：
 
 + sort() - 以升序对数组排序
+
 + rsort() - 以降序对数组排序
+
 + asort() - 根据值，以升序对关联数组进行排序
+
 + ksort() - 根据键，以升序对关联数组进行排序
+
 + arsort() - 根据值，以降序对关联数组进行排序
+
 + krsort() - 根据键，以降序对关联数组进行排序
 
 #### 1.14.2. 对数组进行升序排序 - sort()
@@ -656,7 +745,7 @@ count() 函数用于返回数组的长度（元素数）：
 
 ------------------------------------------------------------------------
 
-### [1.15 PHP 全局变量 - 超全局变量](http://www.w3school.com.cn/php/php_superglobals.asp)
+### [1.15 PHP 全局变量 - 超全局变量](http://www.w3cschool.cc/php/php-superglobals.html)
 
 ------------------------------------------------------------------------
 
@@ -669,13 +758,21 @@ PHP 中许多预定义变量都是“超全局的”，这意味着它们在一�
 这些超全局变量是：
 
 + $GLOBALS
+
 + $_SERVER
+
 + $_REQUEST
+
 + $_POST
+
 + $_GET
+
 + $_FILES
+
 + $_ENV
+
 + $_COOKIE
+
 + $_SESSION
 
 本节会介绍一些超全局变量，并会在稍后的章节讲解其他的超全局变量。
@@ -697,8 +794,6 @@ $_SERVER 这种超全局变量保存关于包头、路径和脚本位置的信�
 
 下面的例子展示了如何使用 $_SERVER中的某些元素：  
 ┖[demo_php_global_server.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_server.php)
-
-下表列出了您能够在 $_SERVER 中访问的最重要的元素：
 
 #### 1.15.4. PHP $_REQUEST
 
@@ -735,7 +830,7 @@ $_GET 也可以收集 URL 中的发送的数据。
 
 ------------------------------------------------------------------------
 
-###[2.1. PHP 表单处理](http://www.w3school.com.cn/php/php_forms.asp)
+###[2.1. PHP 表单处理](http://www.w3cschool.cc/php/php-forms.html)
 
 ------------------------------------------------------------------------
 
@@ -743,6 +838,221 @@ PHP 超全局变量 $`_`GET 和 $`_`POST 用于收集表单数据（form-data)�
 
 ####2.1.1. PHP - 一个简单的HTML表单
 
+**POST实例：**
+
 下面的例子显示了一个简单的 HTML 表单，它包含两个输入字段和一个提交按钮：  
 ┖[demo_php_form_post.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_post.php)
 
+当用户填写此表单并点击提交按钮后，表单数据会发送到名为 "welcome.php" 的 PHP 文件供处理。表单数据是通过 HTTP POST 方法发送的。
+
+**GET实例：**
+
+使用 HTTP GET 方法也能得到相同的结果：
+┖[demo_php_form_get.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_get.php)
+
+上面的代码很简单。不过，最重要的内容被漏掉了。您需要对表单数据进行验证，以防止脚本出现漏洞。
+
+<font color="red">**注意：**</font>在处理 PHP 表单时请关注安全！
+
+本页未包含任何表单验证程序，它只向我们展示如何发送并接收表单数据。
+
+#### 2.1.2. GET vs. POST
+
+GET 和 POST 都创建数组（例如，array( key => value, key2 => value2, key3 => value3, ...)）。此数组包含键/值对，其中的键是表单控件的名称，而值是来自用户的输入数据。
+
+GET 和 POST 被视作 $_GET 和 $_POST。它们是超全局变量，这意味着对它们的访问无需考虑作用域 - 无需任何特殊代码，您能够从任何函数、类或文件访问它们。
+
+$_GET 是通过 URL 参数传递到当前脚本的变量数组。
+
+$_POST 是通过 HTTP POST 传递到当前脚本的变量数组。
+
+#### 2.1.3. 何时使用GET？
+
+通过 GET 方法从表单发送的信息 **对任何人都是可见的**（所有变量名和值都显示在 URL 中）。GET 对所发送信息的数量也有限制。限制在大于 2000 个字符。
+
+<font color="blue">不过，由于变量显示在 URL 中，把页面添加到书签中也更为方便。</font>
+
+GET 可用于发送非敏感的数据。
+
+**注释：**绝不能使用 GET 来发送密码或其他敏感信息！
+
+#### 2.1.4. 何时使用POST？
+
+通过 POST 方法从表单发送的信息对 **其他人是不可见的**（所有名称/值会被嵌入 HTTP 请求的主体中），并且对所发送信息的数量也 **无限制。**
+
+此外 POST 支持高阶功能，比如在向服务器上传文件时进行 multi-part 二进制输入。
+
+不过，由于变量未显示在 URL 中，也就无法将页面添加到书签。
+
+**提示：**开发者偏爱 POST 来发送表单数据。
+
+------------------------------------------------------------------------
+
+### [2.2. 表单验证](http://www.w3cschool.cc/php/php-form-validation.html)
+
+------------------------------------------------------------------------
+
+**本节和下一节讲解如何使用 PHP 来验证表单数据。**
+
+#### 2.2.1. PHP 表单验证
+
+<font color="orange">提示：</font>在处理 PHP 表单时请重视安全性！
+
+这些页面将展示如何安全地处理 PHP 表单。对 HTML 表单数据进行适当的验证对于防范黑客和垃圾邮件很重要！
+
+首先，这个表单的纯 HTML 代码：
+
+**文本字段**
+
+name、email 和 website 属于文本输入元素，comment 字段是文本框。HTML 代码是这样的：
+
+
+    Name: <input type="text" name="name">
+    E-mail: <input type="text" name="email">
+    Website: <input type="text" name="website">
+    Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+
+**单选按键**
+
+gender 字段是单选按钮，HTML 代码是这样的：
+
+    Gender:
+    <input type="radio" name="gender" value="female">Female
+    <input type="radio" name="gender" value="male">Male
+
+**表单元素**
+
+表单的 HTML 代码是这样的：
+
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+当提交此表单时，通过 method="post" 发送表单数据。
+
+**什么是 $\_SERVER["PHP\_SELF"]变量**
+
+$\_SERVER["PHP\_SELF"] 是一种超全局变量，它返回当前执行脚本的文件名。
+
+因此，$\_SERVER["PHP\_SELF"] 将表单数据发送到页面本身，而不是跳转到另一张页面。这样，用户就能够在表单页面获得错误提示信息。
+
+**什么是 htmlspecialchars() 函数**
+
+htmlspecialchars()函数把特殊字符转换为HTML实体。这意味着 < 和 > 之类的 HTML 字符会被替换为 `&lt;` 和 `&gt;` 。这样可防止攻击者通过在表单中注入 HTML 或 JavaScript 代码（跨站点脚本攻击）对代码进行利用。
+
+**通过 PHP 验证表单数据**
+
+我们要做的第一件事是通过 PHP 的 htmlspecialchars() 函数传递所有变量。
+
+在我们使用 htmlspecialchars() 函数后，如果用户试图在文本字段中提交以下内容：
+
+    <script>location.href('http://www.hacked.com')</script>
+
+代码不会执行，因为会被保存为转义代码，就像这样：
+
+    &lt;script&gt;location.href('http://www.hacked.com')&lt;/script&gt; 
+
+现在这条代码显示在页面上或 e-mail 中是安全的。
+
+在用户提交该表单时，我们还要做两件事：
+
++ （通过 PHP trim() 函数）去除用户输入数据中不必要的字符（多余的空格、制表符、换行）
+
++ （通过 PHP stripslashes() 函数）删除用户输入数据中的反斜杠（\）
+
+接下来我们创建一个检查函数（相比一遍遍地写代码，这样效率更好）。
+
+我们把函数命名为 test_input()。
+
+现在，我们能够通过 test_input() 函数检查每个 $_POST 变量，脚本是这样的：
+
+    <?php
+    // 定义变量并设置为空值
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $name = test_input($_POST["name"]);
+      $email = test_input($_POST["email"]);
+      $website = test_input($_POST["website"]);
+      $comment = test_input($_POST["comment"]);
+      $gender = test_input($_POST["gender"]);
+    }
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+    ?>
+
+**实例**
+┖[demo_php_form_validation_escapechar.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_validation_escapechar.php)
+
+请注意在脚本开头，我们检查表单是否使用 $\_SERVER["REQUEST\_METHOD"] 进行提交。如果 REQUEST_METHOD 是 POST，那么表单已被提交 - 并且应该对其进行验证。如果未提交，则跳过验证并显示一个空白表单。
+
+不过，在上面的例子中，所有输入字段都是可选的。即使用户未输入任何数据，脚本也能正常工作。
+
+下一步是制作必填输入字段，并创建需要时使用的错误消息。
+
+------------------------------------------------------------------------
+
+### [2.3. 表单 - 必需字段](http://www.w3cschool.cc/php/php-form-required.html)
+
+------------------------------------------------------------------------
+
+**本节展示如何制作必填输入字段，并创建需要时所用的错误信息。**
+
+**PHP - 必需字段**
+
+在上一章节我们已经介绍了表的验证规则，我们可以看到"Name", "E-mail", 和 "Gender" 字段是必须的，各字段不能为空。
+
+| 字段   | 验证规则                                                |
+|:-------|:--------------------------------------------------------|
+|Name    | 必需。 + 只能包含字母和空格                             |
+|E-mail  | 必需。 + 必需包含一个有效的电子邮件地址（包含"@"和"."） |
+|Website | 可选。 如果存在，它必须包含一个有效的URL                |
+|Comment | 可选。多行字段（文本域）。                              |
+|Gender  | 必需。 Must select one                                  |
+
+如果在前面的章节中，所有输入字段都是可选的。
+
+在以下代码中我们加入了一些新的变量: $nameErr, $emailErr, $genderErr, 和 $websiteErr.。这些错误变量将显示在必须字段上。 我们还为每个$_POST变量增加了一个if else语句。 这些语句将检查 $_POST 变量是 否为空（使用php的 empty() 函数）。如果为空，将显示对应的错误信息。 如果不为空，数据将传递给test_input() 函数：
+
+    <?php
+    // 定义变量并默认设为空值
+    $nameErr = $emailErr = $genderErr = $websiteErr = "";
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+
+      if (empty($_POST["name"]))
+        {$nameErr = "Name is required";}
+      else
+        {$name = test_input($_POST["name"]);}
+
+      if (empty($_POST["email"]))
+        {$emailErr = "Email is required";}
+      else
+        {$email = test_input($_POST["email"]);}
+
+      if (empty($_POST["website"]))
+        {$website = "";}
+      else
+        {$website = test_input($_POST["website"]);}
+
+      if (empty($_POST["comment"]))
+        {$comment = "";}
+      else
+        {$comment = test_input($_POST["comment"]);}
+
+      if (empty($_POST["gender"]))
+        {$genderErr = "Gender is required";}
+      else
+        {$gender = test_input($_POST["gender"]);}
+    }
+    ?>
+
+**PHP - 显示错误信息**
+
+在以下的HTML实例表单中，我们为每个字段中添加了一些脚本， 各个脚本会在信息输入错误时显示错误信息。(如果用户未填写信息就提交表单则会输出错误信息):
+┖[demo_form_validation_required.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_required.php)
