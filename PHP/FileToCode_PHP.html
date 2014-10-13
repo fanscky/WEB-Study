@@ -1093,130 +1093,145 @@ MathJax.Hub.Config({
 <title>FileToCode_PHP</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>文件与源码对应表</h1>
 <hr />
 <h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>一、基础教程</h2>
-<h3 id="php"><a href="http://www.w3school.com.cn/php/php_syntax.asp">PHP 语法</a></h3>
-<ol>
-<li><strong>基础 PHP 语法</strong><br />
-我的第一张 PHP 页面<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php">demo_php_syntax.php</a></li>
-<li><strong>注释</strong><br />
-PHP 支持三种注释<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php">demo_php_syntax_comments.php</a>  </li>
-<li><strong>PHP 大小写敏感</strong><br />
-在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_case1.php</a><br />
+<h3 id="11-php"><a href="http://www.w3school.com.cn/php/php_syntax.asp">1.1. PHP 语法</a></h3>
+<hr />
+<h4 id="111-php"><a name="user-content-111-php" href="#111-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.1. 基础 PHP 语法</h4>
+<p>我的第一张 PHP 页面<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php">demo_php_syntax.php</a></p>
+<h4 id="112"><a name="user-content-112" href="#112" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.2. 注释</h4>
+<p>PHP 支持三种注释<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php">demo_php_syntax_comments.php</a></p>
+<h4 id="113-php"><a name="user-content-113-php" href="#113-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.3. PHP 大小写敏感</h4>
+<p>在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_case1.php</a><br />
 <strong>变量对大小写敏感。</strong><br />
-在 PHP 中，所有变量都对大小写敏感。<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php">demo_php_syntax_case2.php</a>  </li>
-<li><strong>PHP 大小写敏感</strong><br />
-在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<strong>所有变量都对大小写敏感。</strong><br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_comments.php</a>  </li>
-</ol>
-<h3 id="php_1"><a href="http://www.w3school.com.cn/php/php_variables.asp">PHP变量</a></h3>
-<ol>
-<li><strong>类似代数</strong><br />
-请把变量视为存储数据的容器。<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php">demo_php_var1.php</a></li>
-<li><strong>创建 PHP 变量</strong><br />
-PHP 没有创建变量的命令。变量会在首次为其赋值时被创建：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php">demo_php_var2.php</a></li>
-<li><strong>Local 和 Global 作用域</strong><br />
-函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php">demo_php_var_local.php</a>  </li>
-<li><strong>PHP global 关键词</strong><br />
-global 关键词用于访问函数内的全局变量。<br />
-要做到这一点，请在（函数内部）变量前面使用 global 关键词：  <br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php">demo_php_var_global.php</a><br />
-PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php">demo_php_var_global2.php</a>  </li>
-<li><strong>PHP static 关键词</strong><br />
-通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。<br />
-要完成这一点，请在您首次声明变量时使用 static 关键词  <br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php">demo_php_var_static.php</a>  </li>
-</ol>
-<h3 id="php-echo-print"><a href="http://www.w3school.com.cn/php/php_echo_print.asp">PHP Echo / Print</a></h3>
-<p>在 PHP 中，有两种基本的输出方法：echo 和 print。<br />
-<strong><em>echo 和 print 之间的差异：</em></strong><br />
+  在 PHP 中，所有变量都对大小写敏感。<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php">demo_php_syntax_case2.php</a>  </p>
+<h4 id="114-php"><a name="user-content-114-php" href="#114-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.4. PHP 大小写敏感</h4>
+<p>在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<strong>所有变量都对大小写敏感。</strong><br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_comments.php</a><br />
+<br></p>
+<hr />
+<h3 id="12-php"><a href="http://www.w3school.com.cn/php/php_variables.asp">1.2. PHP变量</a></h3>
+<hr />
+<h4 id="121"><a name="user-content-121" href="#121" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.1. 类似代数</h4>
+<p>请把变量视为存储数据的容器。<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php">demo_php_var1.php</a></p>
+<h4 id="122-php"><a name="user-content-122-php" href="#122-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.2. 创建 PHP 变量</h4>
+<p>PHP 没有创建变量的命令。变量会在首次为其赋值时被创建：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php">demo_php_var2.php</a></p>
+<h4 id="123-local-global"><a name="user-content-123-local-global" href="#123-local-global" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.3. Local 和 Global 作用域</h4>
+<p>函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php">demo_php_var_local.php</a>  </p>
+<h4 id="124-php-global"><a name="user-content-124-php-global" href="#124-php-global" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.4. PHP global 关键词</h4>
+<p>global 关键词用于访问函数内的全局变量。<br />
+  要做到这一点，请在（函数内部）变量前面使用 global 关键词：  <br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php">demo_php_var_global.php</a><br />
+  PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php">demo_php_var_global2.php</a>  </p>
+<h4 id="125-php-static"><a name="user-content-125-php-static" href="#125-php-static" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.5. PHP static 关键词</h4>
+<p>通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。<br />
+  要完成这一点，请在您首次声明变量时使用 static 关键词  <br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php">demo_php_var_static.php</a><br />
+<br></p>
+<hr />
+<h3 id="13-php-echo-print"><a href="http://www.w3school.com.cn/php/php_echo_print.asp">1.3. PHP Echo / Print</a></h3>
+<hr />
+<p>在 PHP 中，有两种基本的输出方法：<strong>echo</strong> 和 <strong>print</strong>。  </p>
+<blockquote>
+<p><strong><em>echo 和 print 之间的差异：</em></strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;echo - 能够输出一个以上的字符串<br />
 &nbsp;&nbsp;&nbsp;&nbsp;print - 只能输出一个字符串，并始终返回 1<br />
-提示：echo 比 print 稍快，因为它不返回任何值。<br />
-1. <strong>PHP echo 语句</strong><br />
-echo 是一个语言结构，有无括号均可使用：echo 或 echo()。<br />
+提示：echo 比 print 稍快，因为它不返回任何值。</p>
+</blockquote>
+<h4 id="131-php-echo"><a name="user-content-131-php-echo" href="#131-php-echo" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.3.1. PHP echo 语句</h4>
+<p>echo 是一个语言结构，有无括号均可使用：echo 或 echo()。<br />
 <strong>echo显示字符串</strong><br />
-下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php">demo_php_echo1.php</a><br />
+  下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php">demo_php_echo1.php</a><br />
 <strong>echo显示变量</strong><br />
-下面的例子展示如何用 echo 命令来显示字符串和变量：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php">demo_php_echo2.php</a><br />
-2. <strong>PHP print 语句</strong><br />
-print 也是语言结构，有无括号均可使用：print 或 print()。<br />
+  下面的例子展示如何用 echo 命令来显示字符串和变量：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php">demo_php_echo2.php</a>  </p>
+<h4 id="132-php-print"><a name="user-content-132-php-print" href="#132-php-print" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.3.2. PHP print 语句</h4>
+<p>print 也是语言结构，有无括号均可使用：print 或 print()。<br />
 <strong>print显示字符串</strong><br />
-下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php">demo_php_print.php</a><br />
+  下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php">demo_php_print.php</a><br />
 <strong>print显示变量</strong><br />
-下面的例子展示如何用 print 命令来显示字符串和变量：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php">demo_php_print2.php</a>  </p>
-<h3 id="php_2"><a href="http://www.w3school.com.cn/php/php_datatypes.asp">PHP 数据类型</a></h3>
-<p>字符串、整数、浮点数、逻辑、数组、对象、NULL。<br />
-1. <strong>PHP 字符串</strong><br />
-字符串是字符序列，比如 &ldquo;Hello world!&rdquo;。字符串可以是引号内的任何文本。您可以使用单引号或双引号：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php">demo_php_datatypes_string.php</a><br />
-2. <strong>PHP 整数</strong><br />
-整数是没有小数的数字。<br />
-<strong>整数规则：</strong><br />
+  下面的例子展示如何用 print 命令来显示字符串和变量：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php">demo_php_print2.php</a><br />
+<br></p>
+<hr />
+<h3 id="14-php"><a href="http://www.w3school.com.cn/php/php_datatypes.asp">1.4. PHP 数据类型</a></h3>
+<hr />
+<p>字符串、整数、浮点数、逻辑、数组、对象、NULL。</p>
+<h4 id="141-php"><a name="user-content-141-php" href="#141-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.1. PHP 字符串</h4>
+<p>字符串是字符序列，比如 &ldquo;Hello world!&rdquo;。字符串可以是引号内的任何文本。您可以使用单引号或双引号：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php">demo_php_datatypes_string.php</a></p>
+<h4 id="142-php"><a name="user-content-142-php" href="#142-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.2. PHP 整数</h4>
+<p>整数是没有小数的数字。  </p>
+<blockquote>
+<p><strong>整数规则：</strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<em>整数必须有至少一个数字（0-9）</em><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能包含逗号或空格</em><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能有小数点</em><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<em>整数正负均可</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）</em><br />
-在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php">demo_php_datatypes_integer.php</a><br />
-3. <strong>PHP 浮点数</strong><br />
-浮点数是有小数点或指数形式的数字。<br />
-在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php">demo_php_datatypes_float.php</a><br />
-4. <strong>PHP逻辑</strong><br />
-逻辑是 true 或 false。逻辑常用于条件测试。<br />
-5. <strong>PHP数组</strong><br />
-数组在一个变量中存储多个值。<br />
-在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php">demo_php_datatypes_array.php</a><br />
-6. <strong>PHP 对象</strong><br />
-对象是存储数据和有关如何处理数据的信息的数据类型。<br />
-在 PHP 中，必须明确地声明对象。<br />
-首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。<br />
-然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php">demo_php_datatypes_object.php</a><br />
-7. <strong>PHP NULL 值</strong><br />
-特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。<br />
-NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。<br />
-可以通过把值设置为 NULL，将变量清空：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php">demo_php_datatypes_null.php</a>  </p>
-<h3 id="php_3"><a href="http://www.w3school.com.cn/php/php_string.asp">PHP字符串函数</a></h3>
-<ol>
-<li><strong>PHP strlen() 函数</strong><br />
-strlen() 函数返回字符串的长度，以字符计。<br />
-下例返回字符串 &ldquo;Hello world!&rdquo; 的长度：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php">demo_php_datatypes_length.php</a>  </li>
-<li><strong>PHP strpos() 函数</strong><br />
-strpos() 函数用于检索字符串内指定的字符或文本。<br />
-如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。<br />
-下例检索字符串 &ldquo;Hello world!&rdquo; 中的文本 &ldquo;world&rdquo;：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php">demo_php_datatypes_pos.php</a>  </li>
-</ol>
-<h3 id="php_4"><a href="http://www.w3school.com.cn/php/php_constants.asp">PHP参量</a></h3>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）</em>  </p>
+</blockquote>
+<p>在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php">demo_php_datatypes_integer.php</a></p>
+<h4 id="143-php"><a name="user-content-143-php" href="#143-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.3. PHP 浮点数</h4>
+<p>浮点数是有小数点或指数形式的数字。<br />
+  在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php">demo_php_datatypes_float.php</a></p>
+<h4 id="144-php"><a name="user-content-144-php" href="#144-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.4. PHP逻辑</h4>
+<p>逻辑是 true 或 false。逻辑常用于条件测试。</p>
+<h4 id="145-php"><a name="user-content-145-php" href="#145-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.5. PHP数组</h4>
+<p>数组在一个变量中存储多个值。<br />
+  在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php">demo_php_datatypes_array.php</a></p>
+<h4 id="146-php"><a name="user-content-146-php" href="#146-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.6. <strong>PHP 对象</strong></h4>
+<p>对象是存储数据和有关如何处理数据的信息的数据类型。<br />
+  在 PHP 中，必须明确地声明对象。<br />
+  首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。<br />
+  然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php">demo_php_datatypes_object.php</a></p>
+<h4 id="147-php-null"><a name="user-content-147-php-null" href="#147-php-null" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.7. PHP NULL 值</h4>
+<p>特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。<br />
+  NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。<br />
+  可以通过把值设置为 NULL，将变量清空：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php">demo_php_datatypes_null.php</a><br />
+<br></p>
+<hr />
+<h3 id="15php"><a href="http://www.w3school.com.cn/php/php_string.asp">1.5.PHP字符串函数</a></h3>
+<hr />
+<h4 id="151-php-strlen"><a name="user-content-151-php-strlen" href="#151-php-strlen" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.5.1. PHP strlen() 函数</h4>
+<p>strlen() 函数返回字符串的长度，以字符计。<br />
+  下例返回字符串 &ldquo;Hello world!&rdquo; 的长度：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php">demo_php_datatypes_length.php</a></p>
+<h4 id="152-php-strpos"><a name="user-content-152-php-strpos" href="#152-php-strpos" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.5.2. PHP strpos() 函数</h4>
+<p>strpos() 函数用于检索字符串内指定的字符或文本。<br />
+  如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。<br />
+  下例检索字符串 &ldquo;Hello world!&rdquo; 中的文本 &ldquo;world&rdquo;：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php">demo_php_datatypes_pos.php</a><br />
+<br></p>
+<hr />
+<h3 id="16-php"><a href="http://www.w3school.com.cn/php/php_constants.asp">1.6. PHP参量</a></h3>
+<hr />
 <p><strong>设置PHP常量</strong><br />
-如需设置常量，请使用 define() 函数 - 它使用三个参数：<br />
-<em> &nbsp;&nbsp;&nbsp;&nbsp;</em>首个参数定义常量的名称<em><br />
-</em> &nbsp;&nbsp;&nbsp;&nbsp;<em>第二个参数定义常量的值</em><br />
-<em> &nbsp;&nbsp;&nbsp;&nbsp;</em>可选的第三个参数规定常量名是否对大小写敏感。默认是 false。*<br />
-下例创建了一个对大小写敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php">demo_php_constant1.php</a><br />
-下例创建了一个对大小写不敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php">demo_php_constant2.php</a>  </p>
-<h3 id="php_5"><a href="http://www.w3school.com.cn/php/php_operators.asp">PHP运算符</a></h3>
-<ol>
-<li><strong>PHP算数运算符</strong></li>
-</ol>
+  如需设置常量，请使用 define() 函数 - 它使用三个参数：<br />
+  * &nbsp;&nbsp;&nbsp;&nbsp;<em>首个参数定义常量的名称</em><br />
+  * &nbsp;&nbsp;&nbsp;&nbsp;<em>第二个参数定义常量的值</em><br />
+  * &nbsp;&nbsp;&nbsp;&nbsp;<em>可选的第三个参数规定常量名是否对大小写敏感。默认是 false。</em><br />
+  下例创建了一个对大小写敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php">demo_php_constant1.php</a><br />
+  下例创建了一个对大小写不敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php">demo_php_constant2.php</a><br />
+<br></p>
+<hr />
+<h3 id="17-php"><a href="http://www.w3school.com.cn/php/php_operators.asp">1.7. PHP运算符</a></h3>
+<hr />
+<h4 id="171-php"><a name="user-content-171-php" href="#171-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.1. PHP算数运算符</h4>
 <table>
 <thead>
 <tr>
@@ -1269,26 +1284,11 @@ strpos() 函数用于检索字符串内指定的字符或文本。<br />
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr>
-<td align="left">2.<strong>PHP赋值运算符</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">PHP 赋值运算符用于向变量写值。</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">PHP 中基础的赋值运算符是 &ldquo;=&rdquo;。这意味着右侧赋值表达式会为左侧运算数设置值。</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
 </tbody>
 </table>
+<h4 id="172-php"><a name="user-content-172-php" href="#172-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.2. PHP赋值运算符</h4>
+<p>PHP 赋值运算符用于向变量写值。<br />
+  PHP 中基础的赋值运算符是 &ldquo;=&rdquo;。这意味着右侧赋值表达式会为左侧运算数设置值。  </p>
 <table>
 <thead>
 <tr>
@@ -1328,40 +1328,533 @@ strpos() 函数用于检索字符串内指定的字符或文本。<br />
 <td align="left">x = x % y</td>
 <td align="left">模数</td>
 </tr>
+</tbody>
+</table>
+<p>下例展示了使用不同赋值运算符的不同结果：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_assignment.php">demo_php_operator_assignment.php</a></p>
+<h4 id="173-php"><a name="user-content-173-php" href="#173-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.3. PHP字符串运算符</h4>
+<table>
+<thead>
 <tr>
-<td align="left">下例展示了使用不同赋值运算符的不同结果：</td>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">.</td>
+<td align="left">串接</td>
+<td align="left">$txt1=&rdquo;Hello&rdquo; $txt2=$txt1.&rdquo;world!&rdquo;</td>
+<td align="left">现在$txt2包含“Hello World”</td>
+</tr>
+<tr>
+<td align="left">.=</td>
+<td align="left">串接赋值</td>
+<td align="left">$txt1=&rdquo;Hello&rdquo; $txt1 .=&rdquo;world!&rdquo;</td>
+<td align="left">现在$txt1包含“Hello World”</td>
+</tr>
+<tr>
+<td align="left">下例展示了使用字符串运算符的结果：</td>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php">demo_php_operator_arithmetic.php</a></td>
+<td align="left">┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_string.php">demo_php_operator_string.php</a></td>
 <td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">3.<strong>PHP字符串运算符</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4.<strong>PHP递增/递减运算符</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">5.<strong>PHP比较运算符</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6.<strong>PHP逻辑运算符</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">7.<strong>PHP数组运算符</strong></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 </tbody>
-</table></article></body></html>
+</table>
+<h4 id="174-php"><a name="user-content-174-php" href="#174-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.4. PHP递增/递减运算符</h4>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">++$x</td>
+<td align="left">前递增</td>
+<td align="left">$x加一递增，然后返回$x</td>
+</tr>
+<tr>
+<td align="left">$x++</td>
+<td align="left">后递增</td>
+<td align="left">返回$x,然后$x加一递增</td>
+</tr>
+<tr>
+<td align="left">&ndash;$x</td>
+<td align="left">前递减</td>
+<td align="left">$x减一递减，然后返回$x</td>
+</tr>
+<tr>
+<td align="left">$x&ndash;</td>
+<td align="left">后递减</td>
+<td align="left">返回$x，然后$x减一递减</td>
+</tr>
+</tbody>
+</table>
+<p>下例展示了使用不同递增/递减运算符的不同结果：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_increment.php">demo_php_operator_increment.php</a></p>
+<h4 id="175-php"><a name="user-content-175-php" href="#175-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.5. PHP比较运算符</h4>
+<p>PHP 比较运算符用于比较两个值（数字或字符串）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">==</td>
+<td align="left">等于</td>
+<td align="left">$x == $y</td>
+<td align="left">如果 $x 等于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">===</td>
+<td align="left">全等于（完全相同）</td>
+<td align="left">$x===$y</td>
+<td align="left">如果$x等于$y,且它们类型相同，则返回ture</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">不等于</td>
+<td align="left">$x != $y</td>
+<td align="left">如果 $x 不等于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;</td>
+<td align="left">不等于</td>
+<td align="left">$x &lt;&gt; $y</td>
+<td align="left">如果$x 不等于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">!==</td>
+<td align="left">不全等（完全不同）</td>
+<td align="left">$x !== $y</td>
+<td align="left">如果 $x 不等于 $y，且他们类型不相同，则返回true</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于</td>
+<td align="left">$x &gt; $y</td>
+<td align="left">如果 $x 大于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于</td>
+<td align="left">$x &lt; $y</td>
+<td align="left">如果 $x 小于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">大于或等于</td>
+<td align="left">$x &gt;= $y</td>
+<td align="left">如果 $x 大于或者等于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">小于或等于</td>
+<td align="left">$x &lt;= $y</td>
+<td align="left">如果 $x 小于或者等于 $y，则返回true</td>
+</tr>
+</tbody>
+</table>
+<p>下例展示了使用某些比较运算符的不同结果：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_comparison.php">demo_php_operator_comparison.php</a></p>
+<h4 id="176-php"><a name="user-content-176-php" href="#176-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.6. PHP逻辑运算符</h4>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">and</td>
+<td align="left">与</td>
+<td align="left">$x and $y</td>
+<td align="left">如果 $x 和 $y 都为true，则返回true</td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="left">或</td>
+<td align="left">$x or $y</td>
+<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
+</tr>
+<tr>
+<td align="left">xor</td>
+<td align="left">异或</td>
+<td align="left">$x xor $y</td>
+<td align="left">如果 $x 和 $y 有且仅有一个为true，则返回true</td>
+</tr>
+<tr>
+<td align="left">&amp;&amp;</td>
+<td align="left">与</td>
+<td align="left">$x &amp;&amp; $y</td>
+<td align="left">如果 $x 和 $y 都为true，则返回true</td>
+</tr>
+<tr>
+<td align="left">&ldquo;双竖线&rdquo;</td>
+<td align="left">或</td>
+<td align="left">$x &ldquo;双竖线&rdquo; $y</td>
+<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
+</tr>
+<tr>
+<td align="left">!</td>
+<td align="left">非</td>
+<td align="left">!$x</td>
+<td align="left">如果 $x 不为 true，则返回true</td>
+</tr>
+</tbody>
+</table>
+<h4 id="177-php"><a name="user-content-177-php" href="#177-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.7. PHP数组运算符</h4>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+</td>
+<td align="left">联合</td>
+<td align="left">$x + $y</td>
+<td align="left">$x 和 $y 的联合（但不覆盖重复的键）</td>
+</tr>
+<tr>
+<td align="left">==</td>
+<td align="left">相等</td>
+<td align="left">$x == $y</td>
+<td align="left">如果 $x 和 $y 拥有相同的键/值对，则返回true</td>
+</tr>
+<tr>
+<td align="left">===</td>
+<td align="left">全等</td>
+<td align="left">$x === $y</td>
+<td align="left">如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回true</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">不相等</td>
+<td align="left">$x != $y</td>
+<td align="left">如果 $x 不等于 $y，则返回true</td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;</td>
+<td align="left">不相等</td>
+<td align="left">$x &lt;&gt; $y</td>
+<td align="left">如果 $x 不等于 $y,则返回true</td>
+</tr>
+<tr>
+<td align="left">！==</td>
+<td align="left">不全等</td>
+<td align="left">$x !== $y</td>
+<td align="left">如果 $x 与 $y 完全不同，则返回true</td>
+</tr>
+</tbody>
+</table>
+<p>下例展示了使用不同数组运算符的不同结果：<br />
+  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php">demo_php_operator_array.php</a>  </p>
+<hr />
+<h3 id="18-php-ifelse"><a href="http://www.w3school.com.cn/php/php_if_else.asp">1.8. PHP If&hellip;Else</a></h3>
+<hr />
+<p>条件语用于基于不同条件执行不同的动作</p>
+<h4 id="181-php-if"><a name="user-content-181-php-if" href="#181-php-if" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.1. PHP - if语句</h4>
+<p>if 语句用于<strong>在指定条件为 true 时</strong>执行代码。  </p>
+<p><strong>语法</strong></p>
+<div class="codehilite"><pre><span class="vg">if</span><span class="p">(</span><span class="vg">条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">当条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>下面将输出&rdquo;Have a good day!&rdquo;，如果当前时间（HOUR）小于20：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if.php">demo_php_if.php</a>  </p>
+<h4 id="182-php-ifelse"><a name="user-content-182-php-ifelse" href="#182-php-ifelse" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.2. PHP - if&hellip;else</h4>
+<p>请使用 if....else 语句<strong>在条件为 true 时执行代码，在条件为 false 时执行另一段代码。</strong></p>
+<p><strong>语法</strong></p>
+<div class="codehilite"><pre><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">条件</span><span class="err">）</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span><span class="w"> </span><span class="vg">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">false</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>下例将输出 &ldquo;Have a good day!&rdquo;，如果当前时间 (HOUR) 小于 20，否则输出 &ldquo;Have a good night!&rdquo;：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_else.php">demo_php_if_else.php</a>  </p>
+<h4 id="183-php-ifelseifelse"><a name="user-content-183-php-ifelseifelse" href="#183-php-ifelseifelse" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.3. PHP - if&hellip;elseif&hellip;else</h4>
+<p>请使用 if....elseif&hellip;else 语句来选择若干代码块之一来执行。</p>
+<p><strong>语法</strong></p>
+<div class="codehilite"><pre><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span><span class="w"> </span><span class="vg">elseif</span><span class="w"> </span><span class="p">(</span><span class="vg">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span><span class="w"> </span><span class="vg">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">false</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>下例将输出 &ldquo;Have a good morning!&rdquo;，如果当前时间 (HOUR) 小于 10，如果当前时间小于 20，则输出 &ldquo;Have a good day!&rdquo;。否则将输出 &ldquo;Have a good night!&rdquo;：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_elseif.php">demo_php_if_elseif.php</a></p>
+<hr />
+<h3 id="19-php-switch"><a href="http://www.w3school.com.cn/php/php_switch.asp">1.9. PHP Switch</a></h3>
+<hr />
+<p>switch 语句用于基于不同条件执行不同动作。</p>
+<h4 id="191-switch"><a name="user-content-191-switch" href="#191-switch" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.9.1 Switch 语句</h4>
+<p>如果您希望有选择地执行若干代码块之一，请使用 Switch 语句。使用 Switch 语句可以避免冗长的 if..elseif..else 代码块。</p>
+<p><strong>工作原理</strong></p>
+<blockquote>
+<ol>
+<li>对表达式（通常是变量）进行一次计算；</li>
+<li>把表达式的值与结构中 case 的值进行比较；</li>
+<li>如果存在匹配，则执行与 case 关联的代码；</li>
+<li>代码执行后，<strong>break语句</strong>阻止代码跳入下一个 case 中继续执行；</li>
+<li>如果没有 case 为真，则使用default语句。</li>
+</ol>
+</blockquote>
+<p><strong>实例</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_switch.php">demo_php_switch.php</a></p>
+<hr />
+<h3 id="110-php-while"><a href="http://www.w3school.com.cn/php/php_looping.asp">1.10. PHP While 循环</a></h3>
+<hr />
+<p>在 PHP 中，我们有以下循环语句：</p>
+<ul>
+<li>while - 只要制定条件为真，则循环代码块；</li>
+<li>do&hellip;while - 先执行一次代码块，然后只要制定条件为真则重复循环</li>
+<li>for - 循环代码块制定次数</li>
+<li>foreach - 遍历数组中的每个元素并循环代码块</li>
+</ul>
+<h4 id="1101-php-while"><a name="user-content-1101-php-while" href="#1101-php-while" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.10.1. PHP while循环</h4>
+<p>只要指定的条件为真，while循环就会执行代码块。</p>
+<p><strong>语句</strong></p>
+<div class="codehilite"><pre><span class="vg">while</span><span class="w"> </span><span class="p">(</span><span class="vg">条件为真</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">要执行的代码</span><span class="err">；</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>下例首先把变量 $x 设置为 1（$x=1）。然后执行 while 循环，只要 $x 小于或等于 5。循环每运行一次，$x 将递增 1：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_while.php">demo_php_loop_while.php</a></p>
+<h4 id="1102-php-dowhile"><a name="user-content-1102-php-dowhile" href="#1102-php-dowhile" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.10.2 PHP do&hellip;while循环</h4>
+<p>do&hellip;while 循环首先会执行一次代码块，然后检查条件，如果指定条件为真，则重复循环。</p>
+<p><strong>语法</strong></p>
+<div class="codehilite"><pre><span class="vg">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="vg">要执行的代码</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="vg">while</span><span class="w"> </span><span class="p">(</span><span class="vg">条件为真</span><span class="p">);</span>
+</pre></div>
+
+
+<p><strong>实例1</strong></p>
+<p>下面的例子首先把变量 $x 设置为 1（$x=1）。然后，do while 循环输出一段字符串，然后对变量 $x 递增 1。随后对条件进行检查（$x 是否小于或等于 5）。只要 $x 小于或等于 5，循环将会继续运行：  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_do_while.php">demo_php_loop_do_while.php</a></p>
+<p><em>请注意，do while 循环只在执行循环内的语句之后才对条件进行测试。这意味着 do while 循环至少会执行一次语句，即使条件测试在第一次就失败了。</em></p>
+<p><strong>实例2</strong></p>
+<p>下面的例子把 $x 设置为 6，然后运行循环，随后对条件进行检查：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_do_while2.php">demo_php_loop_do_while2.php</a></p>
+<hr />
+<h3 id="111-php-for"><a href="http://www.w3school.com.cn/php/php_looping_for.asp">1.11. PHP for 循环</a></h3>
+<hr />
+<p>PHP for 循环执行代码块指定的次数。</p>
+<h4 id="1111-php-for"><a name="user-content-1111-php-for" href="#1111-php-for" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.11.1. PHP for 循环</h4>
+<p>如果您已经提前确定脚本运行的次数，可以使用 for 循环。</p>
+<p><strong>语法:</strong></p>
+<div class="codehilite"><pre><span class="vg">for</span><span class="w"> </span><span class="p">(</span><span class="vg">init</span><span class="w"> </span><span class="vg">counter</span><span class="p">;</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">counter</span><span class="p">;</span><span class="w"> </span><span class="vg">increment</span><span class="w"> </span><span class="vg">counter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="vg">code</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="vg">executed</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><em>参数:</em></p>
+<ul>
+<li>init counter: 初始化循环计数器的值</li>
+<li>test counter:评估每个循环迭代。如果值为TRUE，继续循环。如果它的值为FALSE，循环结束。</li>
+<li>increment counter:增加循环计数器的值</li>
+</ul>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_for.php">demo_php_loop_for.php</a></p>
+<h4 id="1111-php-foreach"><a name="user-content-1111-php-foreach" href="#1111-php-foreach" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.11.1. PHP foreach 循环</h4>
+<p>foreach 循环只适用于数组，并用于遍历数组中的每个键/值对。</p>
+<p><strong>语法:</strong></p>
+<div class="codehilite"><pre><span class="vg">foreach</span><span class="w"> </span><span class="p">(</span><span class="err">$</span><span class="vg">array</span><span class="w"> </span><span class="vg">as</span><span class="w"> </span><span class="err">$</span><span class="vg">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="vg">code</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="vg">executed</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>每进行一次循环迭代，当前数组元素的值就会被赋值给 $value 变量，并且数组指针会逐一地移动，直到到达最后一个数组元素。<br />
+下面的例子演示的循环将输出给定数组（$colors）的值：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_foreach.php">demo_php_loop_foreach.php</a></p>
+<hr />
+<h3 id="112-php"><a href="http://www.w3school.com.cn/php/php_functions.asp">1.12. PHP函数</a></h3>
+<hr />
+<p><font color="red"><strong>PHP 的真正力量来自它的函数：它拥有超过 1000 个内建的函数。</strong></font></p>
+<h4 id="1121-php"><a name="user-content-1121-php" href="#1121-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.1. PHP 用户定义函数</h4>
+<ul>
+<li>除了内建的 PHP 函数，我们可以创建我们自己的函数。</li>
+<li>函数是可以在程序中重复使用的语句块。</li>
+<li>页面加载时函数不会立即执行。</li>
+<li>函数只有在被调用时才会执行。</li>
+</ul>
+<h4 id="1122-php"><a name="user-content-1122-php" href="#1122-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.2 在 PHP 创建用户定义函数</h4>
+<p>用户定义的函数声明以关键字 “function” 开头：</p>
+<p><strong>语法</strong>：</p>
+<div class="codehilite"><pre><span class="vg">function</span><span class="w"> </span><span class="vg">functionName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="vg">被执行的代码</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><em><font color="green">注释：函数名能够以字母或下划线开头（而非数字）。</em></font></p>
+<p><em><font color="green">注释：函数名对大小写不敏感。</em></font></p>
+<p><strong><font color="blue">提示:</font></strong> 函数名应该能够反映函数所执行的任务</p>
+<p><strong>实例</strong></p>
+<p>在下面的例子中，我们创建名为 &ldquo;writeMsg()&rdquo; 的函数。打开的花括号（{）指示函数代码的开始，而关闭的花括号（}）指示函数的结束。此函数输出 &ldquo;Hello world!&rdquo;。如需调用该函数，只要使用函数名即可：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function1.php">demo_php_function1.php</a></p>
+<h4 id="1123-php"><a name="user-content-1123-php" href="#1123-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.3 PHP 函数参数</h4>
+<ul>
+<li>可以通过参数向函数传递信息。参数类似变量。</li>
+<li>参数被定义在函数名之后，括号内部。您可以添加任意多参数，只要用逗号隔开即可。</li>
+</ul>
+<p><strong>实例1：</strong></p>
+<p>下面的例子中的函数有一个参数（$fname）。当调用 familyName() 函数时，我们同时要传递一个名字（例如 Bill），这样会输出不同的名字，但是姓氏相同：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function2.php">demo_php_function2.php</a></p>
+<p><strong>实例2：</strong></p>
+<p>下面的例子中的函数有两个参数（$fname 和 $year）：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function3.php">demo_php_function3.php</a></p>
+<h4 id="1124-php"><a name="user-content-1124-php" href="#1124-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.4 PHP 默认参数值</h4>
+<p><strong>实例：</strong></p>
+<p>下面的例子展示了如何使用默认参数。如果我们调用没有参数的 setHeight() 函数，它的参数会取默认值：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function4.php">demo_php_function4.php</a></p>
+<h4 id="1125-php-"><a name="user-content-1125-php-" href="#1125-php-" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.5 PHP 函数 - 返回值</h4>
+<p>如需使函数返回值，请使用 return 语句：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function5.php">demo_php_function5.php</a></p>
+<hr />
+<h3 id="113-php_1"><a href="http://www.w3school.com.cn/php/php_arrays.asp">1.13 PHP 数组</a></h3>
+<hr />
+<p><strong>数组能够在单独的变量名中存储一个或多个值</strong></p>
+<p><strong>实例</strong></p>
+<p>数组在单个变量中存储多个值：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num.php">demo_php_array_num.php</a></p>
+<h4 id="1131"><a name="user-content-1131" href="#1131" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.1. 什么是数组？</h4>
+<p>数组是特殊的变量，它可以同时保存一个以上的值。</p>
+<p>如果您有一个项目列表（例如汽车品牌列表），在单个变量中存储这些品牌名称是这样的：</p>
+<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars1</span><span class="o">=</span><span class="s2">&quot;Volvo&quot;</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">cars2</span><span class="o">=</span><span class="s2">&quot;BMW&quot;</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">cars3</span><span class="o">=</span><span class="s2">&quot;SAAB&quot;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>不过，假如您希望对变量进行遍历并找出特定的那个值？或者如果您需要存储 300 个汽车品牌，而不是 3 个呢？</p>
+<p>解决方法是创建数组！</p>
+<p>数组能够在单一变量名中存储许多值，并且您能够通过引用下标号来访问某个值。</p>
+<h4 id="1132-php"><a name="user-content-1132-php" href="#1132-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.2 在 PHP 中创建数组</h4>
+<p>在 PHP 中，array()函数用于创建数组：</p>
+<div class="codehilite"><pre><span class="vg">array</span><span class="p">();</span>
+</pre></div>
+
+
+<p>在PHP中，有三种数组类型：</p>
+<ul>
+<li><strong>索引数组</strong> - 带有数字索引的数组</li>
+<li><strong>关联数组</strong> - 带有指定键的数组</li>
+<li><strong>多维数组</strong> - 包含一个或多个数组的数组</li>
+</ul>
+<h4 id="1133-php"><a name="user-content-1133-php" href="#1133-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.3. PHP 索引数组</h4>
+<p>有两种创建索引数组的方法：</p>
+<p>索引是自动分配的（索引从0开始）：</p>
+<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">array</span><span class="p">(</span><span class="s2">&quot;Volvo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;BMW&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SAAB&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>或者也可以手动分配索引：</p>
+<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Volvo&quot;</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;BMW&quot;</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SAAB&quot;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>下面的例子创建名为 $cars 的索引数组，为其分配三个元素，然后输出包含数组值的一段文本：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num.php">demo_php_array_num.php</a></p>
+<h4 id="1134-count"><a name="user-content-1134-count" href="#1134-count" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.4. 获得数组的长度 - count() 函数</h4>
+<p>count() 函数用于返回数组的长度（元素数）：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_length.php">demo_php_array_length.php</a></p>
+<h4 id="1135"><a name="user-content-1135" href="#1135" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.5. 遍历索引数组</h4>
+<p>如需遍历并输出索引数组的所有制，您可以使用 for 循环，就像这样：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num_loop.php">demo_php_array_num_loop.php</a></p>
+<h4 id="1136-php"><a name="user-content-1136-php" href="#1136-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.6. PHP 关联数组</h4>
+<p>关联数组是使用您分配给数组的指定键的数组。</p>
+<p>有两种创建关联数组的方法：</p>
+<div class="codehilite"><pre><span class="err">$</span><span class="vg">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">array</span><span class="p">(</span><span class="s2">&quot;Peter&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ben&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;37&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Joe&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;43&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>或者：</p>
+<div class="codehilite"><pre><span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Peter&#39;]=&quot;35&quot;;</span>
+<span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Ben&#39;]=&quot;37&quot;;</span>
+<span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Joe&#39;]=&quot;43&quot;;</span>
+</pre></div>
+
+
+<p>随后可以在脚本中使用指定键：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_assoc.php">demo_php_array_assoc.php</a></p>
+<h4 id="1137"><a name="user-content-1137" href="#1137" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.7. 遍历关联数组</h4>
+<p>如需遍历并输出关联数组的所有值，您可以使用 foreach 循环，就像这样：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_assoc_loop.php">demo_php_array_assoc_loop.php</a></p>
+<h3 id="114"><a href="http://www.w3school.com.cn/php/php_arrays_sort.asp">1.14 数组排序</a></h3>
+<p><strong>数组中的元素能够以字母或数字顺序进行升序或降序排序。</strong></p>
+<h4 id="1141-php-"><a name="user-content-1141-php-" href="#1141-php-" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.1. PHP - 数组的排序函数</h4>
+<p>在本节中，我们将学习如下 PHP 数组排序函数：</p>
+<ul>
+<li>sort() - 以升序对数组排序</li>
+<li>rsort() - 以降序对数组排序</li>
+<li>asort() - 根据值，以升序对关联数组进行排序</li>
+<li>ksort() - 根据键，以升序对关联数组进行排序</li>
+<li>arsort() - 根据值，以降序对关联数组进行排序</li>
+<li>krsort() - 根据键，以降序对关联数组进行排序</li>
+</ul>
+<h4 id="1142-sort"><a name="user-content-1142-sort" href="#1142-sort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.2 对数组进行升序排序 - sort()</h4>
+<p>下面的例子按照字母升序对数组 $cars 中的元素进行排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_alpha.php">demo_php_array_sort_alpha.php</a></p>
+<p>下面的例子按照数字升序对数组 $numbers 中的元素进行排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_num.php">demo_php_array_sort_num.php</a></p>
+<h4 id="1143-rsort"><a name="user-content-1143-rsort" href="#1143-rsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.3 对数组进行降序排序 - rsort()</h4>
+<p>下面的例子按照字母降序对数组 $cars 中的元素进行排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_alpha.php">demo_php_array_rsort_alpha.php</a></p>
+<p>下面的例子按照数字降序对数组 $numbers 中的元素进行排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_num.php">demo_php_array_rsort_num.php</a></p>
+<h4 id="1144-asort"><a name="user-content-1144-asort" href="#1144-asort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.4 根据值对数组进行升序排序 - asort()</h4>
+<p>下面的例子根据值对关联数组进行升序排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_asort.php">demo_php_array_asort.php</a></p>
+<h4 id="1145-ksort"><a name="user-content-1145-ksort" href="#1145-ksort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.5 根据键对数组进行升序排序 - ksort()</h4>
+<p>下面的例子根据键对关联数组进行升序排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_ksort.php">demo_php_array_ksort.php</a></p>
+<h4 id="1146-arsort"><a name="user-content-1146-arsort" href="#1146-arsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.6 根据值对数组进行降序排序 - arsort()</h4>
+<p>下面的例子根据值对关联数组进行降序排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_arsort.php">demo_php_array_arsort.php</a></p>
+<h4 id="1146-krsort"><a name="user-content-1146-krsort" href="#1146-krsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.6 根据键对数组进行降序排序 - krsort()</h4>
+<p>下面的例子根据键对关联数组进行降序排序：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_krsort.php">demo_php_array_krsort.php</a></p></article></body></html>

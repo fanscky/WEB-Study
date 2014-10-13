@@ -3,6 +3,7 @@
 E:.
 │  .tags
 │  .tags_sorted_by_file
+│  Readme.html
 │  Readme.md
 │  tree.txt
 │  WEB-study.sublime-project
