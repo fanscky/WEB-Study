@@ -256,6 +256,7 @@ strpos() 函数用于检索字符串内指定的字符或文本。
 |/       |除法    | $x / $y | $x与$y商数  |
 |%       |模数    | $x % $y | $x与$y余数  |
 |-       |取反    | -$x     | $x取反      |
+
 下例展示了使用不同算数运算符的不同结果：  
 ┖[demo_php_operator_arithmetic.php](http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php)
 
@@ -1056,3 +1057,1116 @@ htmlspecialchars()函数把特殊字符转换为HTML实体。这意味着 < 和 
 
 在以下的HTML实例表单中，我们为每个字段中添加了一些脚本， 各个脚本会在信息输入错误时显示错误信息。(如果用户未填写信息就提交表单则会输出错误信息):
 ┖[demo_form_validation_required.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_required.php)
+
+------------------------------------------------------------------------
+
+### [2.4. PHP表单 - 验证邮件和URL](http://www.w3cschool.cc/php/php-form-url-email.html)
+
+------------------------------------------------------------------------
+
+#### 2.4.1. PHP - 验证名称
+
+以下代码将通过简单的方式来检测 name 字段是否包含字母和空格，如果 name 字段值不合法，将输出错误信息：
+
+    $name = test_input($_POST["name"]);
+    if (!preg_match("/^[a-zA-Z ]*$/",$name))
+      {
+      $nameErr = "只允许字母及空格"; 
+      }
+
+    preg_match — 进行正则表达式匹配。
+    
+    语法：
+    int preg_match ( string $pattern , string $subject [, array $matches [, int $flags ]] )
+    
+    在 subject 字符串中搜索与 pattern 给出的正则表达式相匹配的内容。如果提供了 matches ，则其会被搜索的结果所填充。$matches[0] 将包含与整个模式匹配的文本，$matches[1] 将包含与第一个捕获的括号中的子模式所匹配的文本，以此类推。
+
+#### 2.4.2. PHP - 验证邮件
+
+以下代码将通过简单的方式来检测 e-mail 地址是否合法。如果 e-mail 地址不合法，将输出错误信息：
+
+    $email = test_input($_POST["email"]);
+    if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
+      {
+      $emailErr = "非法邮件地址"; 
+      }
+
+#### 2.4.3. PHP - 验证URL
+
+以下代码将检测URL地址是否合法 (以下正则表达式运行URL中含有破折号:"-")， 如果 URL 地址不合法，将输出错误信息：
+
+    $website = test_input($_POST["website"]);
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website))
+      {
+      $websiteErr = "不合法的 URL"; 
+      }
+
+#### 2.4.4. PHP - 验证 Name, E-mail, 和 URL
+┖[demo_form_validation_special.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_special.php)
+
+------------------------------------------------------------------------
+
+### [2.5. PHP完整表单实例](http://www.w3cschool.cc/php/php-form-complete.html)
+
+------------------------------------------------------------------------
+
+本章节将介绍如何让用户在点击“提交（submit）”按钮提交数据前保证所有字段正确输入。
+
+#### 2.5.1. PHP - 在表单中确保输入值
+
+在用户点击提交按钮后，为确保字段值是否输入正确，我们在HTML的input元素中插添加PHP脚本， 各字段名为: name, email, 和 website。 在评论的 textarea 字段中，我们将脚本放于 <textarea> 和 </textarea> 标签之间。 PHP脚本输出值为： $name, $email, $website, 和 $comment 变量。 
+
+然后，我们同样需要检查被选中的单选按钮， 对于这一点，我们 必须设置好checked属性(不是radio按钮的 value 属性) :
+
+    Name: <input type="text" name="name" value="<?php echo $name;?>">
+    E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+    Website: <input type="text" name="website" value="<?php echo $website;?>">
+    Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+    Gender:
+    <input type="radio" name="gender"
+    <?php if (isset($gender) && $gender=="female") echo "checked";?>
+    value="female">Female
+    <input type="radio" name="gender"
+    <?php if (isset($gender) && $gender=="male") echo "checked";?>
+    value="male">Male
+
+#### 2.5.1. PHP - 完整表单实例
+┖[demo_form_validation_complete.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_complete.php)
+
+------------------------------------------------------------------------
+
+### [2.4. PHP表单 - $_GET变量](http://www.w3cschool.cc/php/php-get.html)
+
+------------------------------------------------------------------------
+
+在 PHP 中，预定义的 $_GET 变量用于收集来自 method="get" 的表单中的值。
+
+#### 2.4.1. $_GET 变量
+
+预定义的 $_GET 变量用于收集来自 method="get" 的表单中的值。
+
+从带有 GET 方法的表单发送的信息，对任何人都是可见的（会显示在浏览器的地址栏），并且对发送信息的量也有限制。
+
+**实例**
+
+    <form action="welcome.php" method="get">
+    Name: <input type="text" name="fname">
+    Age: <input type="text" name="age">
+    <input type="submit">
+    </form>
+
+当用户点击 "Submit" 按钮时，发送到服务器的 URL 如下所示：
+
+    http://www.w3cschool.cc/welcome.php?fname=Peter&age=37
+
+"welcome.php" 文件现在可以通过 $\_GET 变量来收集表单数据了（请注意，表单域的名称会自动成为 $\_GET 数组中的键）：
+
+    Welcome <?php echo $_GET["fname"]; ?>.<br>
+    You are <?php echo $_GET["age"]; ?> years old!
+
+#### 2.4.2. 何时使用 method="get"？
+
+在 HTML 表单中使用 method="get" 时，所有的变量名和值都会显示在 URL 中。
+
+**注释：**所以在发送密码或其他敏感信息时，不应该使用这个方法！
+
+然而，正因为变量显示在 URL 中，因此可以在收藏夹中收藏该页面。在某些情况下，这是很有用的。
+
+**注释：**HTTP GET 方法不适合大型的变量值。它的值是不能超过 2000 个字符的。
+
+------------------------------------------------------------------------
+
+### [2.5. PHP表单 - $_POST变量](http://www.w3cschool.cc/php/php-post.html)
+
+------------------------------------------------------------------------
+
+在 PHP 中，预定义的 $_POST 变量用于收集来自 method="post" 的表单中的值。
+
+#### 2.5.1. $_POST 变量
+
+预定义的 $_POST 变量用于收集来自 method="post" 的表单中的值。
+
+从带有 POST 方法的表单发送的信息，对任何人都是不可见的（不会显示在浏览器的地址栏），并且对发送信息的量也没有限制。
+
+**注释：**然而，默认情况下，POST 方法的发送信息的量最大值为 8 MB（可通过设置 php.ini 文件中的 post_max_size 进行更改）。
+
+**实例**
+
+    <form action="welcome.php" method="post">
+    Name: <input type="text" name="fname">
+    Age: <input type="text" name="age">
+    <input type="submit">
+    </form>
+
+当用户点击 "Submit" 按钮时，URL 如下所示：
+
+    http://www.w3cschool.cc/welcome.php
+
+"welcome.php" 文件现在可以通过 $\_POST 变量来收集表单数据了（请注意，表单域的名称会自动成为 $\_POST 数组中的键）：
+
+    Welcome <?php echo $_POST["fname"]; ?>!<br>
+    You are <?php echo $_POST["age"]; ?> years old.
+
+#### 2.5.2. 何时使用 method="post"？
+
+从带有 POST 方法的表单发送的信息，对任何人都是不可见的，并且对发送信息的量也没有限制。
+
+然而，由于变量不显示在 URL 中，所以无法把页面加入书签。
+
+#### 2.5.3. PHP $_REQUEST 变量
+
+预定义的 $\_REQUEST 变量包含了 $\_GET、$\_POST 和 $\_COOKIE 的内容。
+
+$_REQUEST 变量可用来收集通过 GET 和 POST 方法发送的表单数据。
+
+Welcome <?php echo $_REQUEST["fname"]; ?>!<br>
+You are <?php echo $_REQUEST["age"]; ?> years old.
+
+------------------------------------------------------------------------
+
+##三、PHP 高级教程
+
+------------------------------------------------------------------------
+
+### [3.1. PHP 多维数组](http://www.w3cschool.cc/php/php-arrays-multi.html)
+
+------------------------------------------------------------------------
+
+
+一个数组中的值可以是另一个数组，另一个数组的值也可以是一个数组。依照这种方式，我们可以创建二维或者三维数组：
+
+**实例：**
+┖[demo_array_multi.php](http://192.168.215.116/w3c_web_test/PHP/Form/demo_array_multi.php)
+
+多维数组是包含一个或多个数组的数组。
+
+在多维数组中，主数组中的每一个元素也可以是一个数组，子数组中的每一个元素也可以是一个数组。
+
+**实例**
+
+在这个实例中，我们创建了一个自动分配 ID 键的多维数组：
+
+    $families = array
+    (
+    "Griffin"=>array
+    (
+    "Peter",
+    "Lois",
+    "Megan"
+    ),
+    "Quagmire"=>array
+    (
+    "Glenn"
+    ),
+    "Brown"=>array
+    (
+    "Cleveland",
+    "Loretta",
+    "Junior"
+    )
+    );
+
+上面的数组将输出如下：
+
+    Array
+    (
+    [Griffin] => Array
+    (
+    [0] => Peter
+    [1] => Lois
+    [2] => Megan
+    )
+    [Quagmire] => Array
+    (
+    [0] => Glenn
+    )
+    [Brown] => Array
+    (
+    [0] => Cleveland
+    [1] => Loretta
+    [2] => Junior
+    )
+    )
+
+让我们试着显示上面数组中的某个值：
+
+    echo "Is " . $families['Griffin'][2] . 
+    " a part of the Griffin family?";
+
+上面的代码将输出：
+
+    Is Megan a part of the Griffin family?
+
+------------------------------------------------------------------------
+
+### [3.2. PHP Date()函数](http://www.w3cschool.cc/php/php-date.html)
+
+------------------------------------------------------------------------
+
+PHP date() 函数用于格式化时间/日期。
+
+#### 3.2.1. PHP Date() 函数
+
+PHP date() 函数可把时间戳格式化为可读性更好的日期和时间。
+
+时间戳是一个字符序列，表示一定的事件发生的日期/时间。
+
+**语法**
+
+    date(format,timestamp)
+
+| 参数      | 描述                                       |
+|:----------|:-------------------------------------------|
+| format    | 必需。规定时间戳的格式。                   |
+| timestamp | 可选。规定时间戳。默认是当期的日期和时间。 |
+
+#### 3.2.2. PHP Date() - 格式化日期
+
+date() 函数的第一个必需参数 format 规定了如何格式化日期/时间。
+
+这里列出了一些可用的字符：
+
++ d - 代表月中的天（01 - 31）
+
++ m - 代表月（01 - 12）
+
++ Y - 代表年（四位数）
+
+可以在字母之间插入其他字符，比如"/"、"." 或者 "-"，这样就可以增加附加格式了：
+
+    <?php
+    echo date("Y/m/d") . "<br>";
+    echo date("Y.m.d") . "<br>";
+    echo date("Y-m-d");
+    ?>
+
+上面的代码的输出如下所示：
+
+    2009/05/11
+    2009.05.11
+    2009-05-11
+
+#### 3.2.3. PHP Date() - 添加时间戳
+
+date() 函数的第二个可选参数 timestamp 规定了一个时间戳。如果您没有提供时间戳，将使用当前的日期和时间。
+
+mktime() 函数可为指定的日期返回 Unix 时间戳。
+
+Unix 时间戳包含了 Unix 纪元（1970-01-01 00:00:00 GMT）和指定时间之间的秒数。
+
+**mktime() 语法**
+
+mktime(hour,minute,second,month,day,year,is_dst)
+
+    <?php
+    $tomorrow = mktime(0,0,0,date("m"),date("d")+1,date("Y"));
+    echo "Tomorrow is ".date("Y/m/d", $tomorrow);
+    ?>
+
+上面代码的输出如下所示：
+
+    Tomorrow is 2009/05/12
+
+------------------------------------------------------------------------
+
+### [3.3. PHP 包含文件](http://www.w3cschool.cc/php/php-includes.html)
+
+------------------------------------------------------------------------
+
+#### 3.3.1. PHP include 和 require 语句
+
+在 PHP 中，您可以在服务器执行 PHP 文件之前在该文件中插入一个文件的内容。
+
+include 和 require 语句用于在执行流中插入写在其他文件中的有用的代码。
+
+**include 和 require 除了处理错误的方式不同之外，在其他方面都是相同的：**
+
++ require 生成一个致命错误（E_COMPILE_ERROR），在错误发生后脚本会停止执行。
+
++ include 生成一个警告（E_WARNING），在错误发生后脚本会继续执行。
+
+因此，如果您希望继续执行，并向用户输出结果，即使包含文件已丢失，那么请使用 include。否则，在框架、CMS 或者复杂的 PHP 应用程序编程中，请始终使用 require 向执行流引用关键文件。这有助于提高应用程序的安全性和完整性，在某个关键文件意外丢失的情况下。
+
+包含文件省去了大量的工作。这意味着您可以为所有网页创建标准页头、页脚或者菜单文件。然后，在页头需要更新时，您只需更新这个页头包含文件即可。
+
+**语法**
+
+    include 'filename';
+
+    或者
+
+    require 'filename';
+
+**基础实例**
+
+假设您有一个标准的页头文件，名为 "header.php"。如需在页面中引用这个页头文件，请使用 include/require：
+
+    <html>
+    <body>
+    
+    <?php include 'header.php'; ?>
+    <h1>Welcome to my home page!</h1>
+    <p>Some text.</p>
+    
+    </body>
+    </html>
+
+**实例2**
+
+假设我们有一个在所有页面中使用的标准菜单文件。
+
+"menu.php":
+
+    echo '<a href="/default.php">Home</a>
+    <a href="/tutorials.php">Tutorials</a>
+    <a href="/references.php">References</a>
+    <a href="/examples.php">Examples</a> 
+    <a href="/about.php">About Us</a> 
+    <a href="/contact.php">Contact Us</a>';
+
+网站中的所有页面均应引用该菜单文件。以下是具体的做法：
+
+    <html>
+    <body>
+    
+    <div class="leftmenu">
+    <?php include 'menu.php'; ?>
+    </div>
+    
+    <h1>Welcome to my home page.</h1>
+    <p>Some text.</p>
+    
+    </body>
+    </html>
+
+**实例3**
+
+假设我们有一个定义变量的包含文件（"vars.php"）：
+
+    <?php
+    $color='red';
+    $car='BMW';
+    ?>
+
+这些变量可用在调用文件中：
+
+    <html>
+    <body>
+    
+    <h1>Welcome to my home page.</h1>
+    <?php include 'vars.php';
+    echo "I have a $color $car"; // I have a red BMW
+    ?>
+    
+    </body>
+    </html>
+
+
+------------------------------------------------------------------------
+
+### [3.4. PHP 文件处理](http://www.w3cschool.cc/php/php-file.html)
+
+------------------------------------------------------------------------
+
+fopen() 函数用于在 PHP 中打开文件。
+
+#### 3.4.1. 打开文件
+
+fopen() 函数用于在 PHP 中打开文件。
+
+此函数的第一个参数含有要打开的文件的名称，第二个参数规定了使用哪种模式来打开文件：
+
+    <html>
+    <body>
+    
+    <?php
+    $file=fopen("welcome.txt","r");
+    ?>
+    
+    </body>
+    </html>
+
+文件可能通过下列模式来打开：
+
+| 模式  | 描述                                                             |
+|:------|:-----------------------------------------------------------------|
+| r     | 只读。在文件的开头开始。                                         |
+| r+    | 读/写。在文件的开头开始。                                        |
+| w     | 只写。打开并清空文件的内容；如果文件不存在，则创建新文件。       |
+| w+    | 读/写。打开并清空文件的内容；如果文件不存在，则创建新文件。      |
+| a     | 追加。打开并向文件末尾进行写操作，如果文件不存在，则创建新文件。 |
+| a+    | 读/追加。通过向文件末尾写内容，来保持文件内容。                  |
+| x     | 只写。创建新文件。如果文件已存在，则返回 FALSE 和一个错误。      |
+| x+    | 读/写。创建新文件。如果文件已存在，则返回 FALSE 和一个错误。     |
+
+**注释：**如果 fopen() 函数无法打开指定文件，则返回 0 (false)。
+
+**实例**
+
+如果 fopen() 函数不能打开指定的文件，下面的实例会生成一段消息：
+
+    <html>
+    <body>
+    
+    <?php
+    $file=fopen("welcome.txt","r") or exit("Unable to open file!");
+    ?>
+    
+    </body>
+    </html>
+
+#### 3.4.2. 关闭文件
+
+fclose() 函数用于关闭打开的文件：
+
+    <?php
+    $file = fopen("test.txt","r");
+    
+    //some code to be executed
+    
+    fclose($file);
+    ?>
+
+#### 3.4.3. 检测 End-of-file
+
+feof() 函数检测是否已到达文件末尾（EOF）。
+
+在循环遍历未知长度的数据时，feof() 函数很有用。
+
+**注释：**在 w 、a 和 x 模式下，您无法读取打开的文件！
+
+    if (feof($file)) echo "End of file";
+
+#### 3.4.4. 逐行读取文件
+
+fgets() 函数用于从文件中逐行读取文件。
+
+**注释：**在调用该函数之后，文件指针会移动到下一行。
+
+**实例**
+
+下面的实例逐行读取文件，直到文件末尾为止：
+
+    <?php
+    $file = fopen("welcome.txt", "r") or exit("Unable to open file!");
+    //Output a line of the file until the end is reached
+    while(!feof($file))
+    {
+    echo fgets($file). "<br>";
+    }
+    fclose($file);
+    ?>
+
+#### 3.4.5. 逐字符读取文件
+
+fgetc() 函数用于从文件中逐字符地读取文件。
+
+**注释：**在调用该函数之后，文件指针会移动到下一个字符。
+
+**实例**
+
+下面的实例逐字符地读取文件，直到文件末尾为止：
+
+    <?php
+    $file=fopen("welcome.txt","r") or exit("Unable to open file!");
+    while (!feof($file))
+    {
+    echo fgetc($file);
+    }
+    fclose($file);
+    ?>
+
+------------------------------------------------------------------------
+
+### [3.5. PHP 文件上传](http://www.w3cschool.cc/php/php-file-upload.html)
+
+------------------------------------------------------------------------
+
+通过 PHP ,可以把文件上传到服务器
+
+#### 3.5.1. 创建一个文件上传表单
+
+允许用户从表单上传文件是非常有用的。
+
+请看下面这个供上传文件的 HTML 表单：
+
+    <html>
+    <body>
+    
+    <form action="upload_file.php" method="post"
+    enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+    </form>
+    
+    </body>
+    </html>
+
+有关上面的 HTML 表单的一些注意项列举如下：
+
++ ``<form>`` 标签的 enctype 属性规定了在提交表单时要使用哪种内容类型。在表单需要二进制数据时，比如文件内容，请使用 "multipart/form-data"。
+
++ ``<input> `` 标签的 type="file" 属性规定了应该把输入作为文件来处理。举例来说，当在浏览器中预览时，会看到输入框旁边有一个浏览按钮。
+
+**注释：**允许用户上传文件是一个巨大的安全风险。请仅仅允许可信的用户执行文件上传操作。
+
+#### 3.5.2. 创建上传脚本
+
+"upload_file.php" 文件含有供上传文件的代码：
+
+    <?php
+    if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Error: " . $_FILES["file"]["error"] . "<br>";
+    }
+    else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Stored in: " . $_FILES["file"]["tmp_name"];
+    }
+    ?>
+
+通过使用 PHP 的全局数组 $_FILES，你可以从客户计算机向远程服务器上传文件。
+
+第一个参数是表单的 input name，第二个下标可以是 "name"、"type"、"size"、"tmp_name" 或 "error"。如下所示：
+
++ $_FILES["file"]["name"] - 被上传文件的名称
+
++ $_FILES["file"]["type"] - 被上传文件的类型
+
++ $_FILES["file"]["size"] - 被上传文件的大小，以**字节**计
+
++ $_FILES["file"]["tmp_name"] - 存储在服务器的文件的临时副本的名称
+
++ $_FILES["file"]["error"] - 由文件上传导致的错误代码
+
+这是一种非常简单文件上传方式。基于安全方面的考虑，您应当增加有关允许哪些用户上传文件的限制。
+
+#### 3.5.3. 上传限制
+
+在这个脚本中，我们增加了对文件上传的限制。用户只能上传 .gif 和 .jpeg 文件，文件大小必须小于 20 kB：
+
+    <?php
+    $allowedExts = array("gif", "jpeg", "jpg", "png");
+    $temp = explode(".", $_FILES["file"]["name"]);
+    $extension = end($temp);
+    if ((($_FILES["file"]["type"] == "image/gif")
+    || ($_FILES["file"]["type"] == "image/jpeg")
+    || ($_FILES["file"]["type"] == "image/jpg")
+    || ($_FILES["file"]["type"] == "image/pjpeg")
+    || ($_FILES["file"]["type"] == "image/x-png")
+    || ($_FILES["file"]["type"] == "image/png"))
+    && ($_FILES["file"]["size"] < 20000)
+    && in_array($extension, $allowedExts))
+    {
+    if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Error: " . $_FILES["file"]["error"] . "<br>";
+    }
+    else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Stored in: " . $_FILES["file"]["tmp_name"];
+    }
+    }
+    else
+    {
+    echo "Invalid file";
+    }
+    ?>
+
+#### 3.5.4. 保存被上传的文件
+
+上面的实例在服务器的 PHP 临时文件夹中创建了一个被上传文件的临时副本。
+
+这个临时的副本文件会在脚本结束时消失。要保存被上传的文件，我们需要把它拷贝到另外的位置：
+
+    <?php
+    $allowedExts = array("gif", "jpeg", "jpg", "png");
+    $temp = explode(".", $_FILES["file"]["name"]);
+    $extension = end($temp);
+    if ((($_FILES["file"]["type"] == "image/gif")
+    || ($_FILES["file"]["type"] == "image/jpeg")
+    || ($_FILES["file"]["type"] == "image/jpg")
+    || ($_FILES["file"]["type"] == "image/pjpeg")
+    || ($_FILES["file"]["type"] == "image/x-png")
+    || ($_FILES["file"]["type"] == "image/png"))
+    && ($_FILES["file"]["size"] < 20000)
+    && in_array($extension, $allowedExts))
+    {
+    if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    }
+    else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+    {
+    echo $_FILES["file"]["name"] . " already exists. ";
+    }
+    else
+    {
+    move_uploaded_file($_FILES["file"]["tmp_name"],
+    "upload/" . $_FILES["file"]["name"]);
+    echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+    }
+    }
+    }
+    else
+    {
+    echo "Invalid file";
+    }
+    ?>
+
+上面的脚本检测了文件是否已存在，如果不存在，则把文件拷贝到名为 "upload" 的文件夹。
+
+------------------------------------------------------------------------
+
+### [3.6. PHP Cookies](http://www.w3cschool.cc/php/php-cookies.html)
+
+------------------------------------------------------------------------
+
+cookie 常用于识别用户。
+
+#### 3.6.1. Cookies 是什么？
+
+cookie 常用于识别用户。cookie 是一种服务器留在用户计算机上的小文件。每当同一台计算机通过浏览器请求页面时，这台计算机将会发送 cookie。通过 PHP，您能够创建并取回 cookie 的值。
+
+#### 3.6.2. 如何创建Cookie？
+
+setcookie() 函数用于设置 cookie。
+
+**注释：**<font color="red">setcookie() 函数必须位于 ``<html>`` 标签之前。</font>
+
+**语法**
+
+    setcookie(name, value, expire, path, domain);
+
+**实例1**
+
+在下面的例子中，我们将创建名为 "user" 的 cookie，并为它赋值 "Alex Porter"。我们也规定了此 cookie 在一小时后过期：
+
+    <?php
+    setcookie("user", "Alex Porter", time()+3600);
+    ?>
+
+    <html>
+    .....
+
+**注释：**在发送 cookie 时，cookie 的值会自动进行 URL 编码，在取回时进行自动解码。（为防止 URL 编码，请使用 setrawcookie() 取而代之。）
+
+**实例2**
+
+您还可以通过另一种方式设置 cookie 的过期时间。这也许比使用秒表示的方式简单。
+
+    <?php
+    $expire=time()+60*60*24*30;
+    setcookie("user", "Alex Porter", $expire);
+    ?>
+
+    <html>
+    .....
+
+在上面的实例中，过期时间被设置为一个月（60 秒 * 60 分 * 24 小时 * 30 天）。
+
+#### 3.6.3. 如何取回Cookie的值？
+
+PHP 的 $_COOKIE 变量用于取回 cookie 的值。
+
+在下面的实例中，我们取回了名为 "user" 的 cookie 的值，并把它显示在了页面上：
+
+    <?php
+    // Print a cookie
+    echo $_COOKIE["user"];
+    
+    // A way to view all cookies
+    print_r($_COOKIE);
+    ?>
+
+在下面的实例中，我们使用 isset() 函数来确认是否已设置了 cookie：
+
+    <html>
+    <body>
+    
+    <?php
+    if (isset($_COOKIE["user"]))
+    echo "Welcome " . $_COOKIE["user"] . "!<br>";
+    else
+    echo "Welcome guest!<br>";
+    ?>
+    
+    </body>
+    </html>
+
+#### 3.6.4. 如何删除 Cookie？
+
+当删除 cookie 时，您应当使过期日期变更为过去的时间点。
+
+删除的实例：
+
+    <?php
+    // set the expiration date to one hour ago
+    setcookie("user", "", time()-3600);
+    ?>
+
+#### 3.6.5. 如果浏览器不支持 Cookie 该怎么办？
+
+如果您的应用程序需要与不支持 cookie 的浏览器打交道，那么您不得不使用其他的办法在您的应用程序中的页面之间传递信息。一种方式是通过表单传递数据（有关表单和用户输入的内容，在本教程的前面章节中我们已经介绍过了）。
+
+下面的表单在用户单点击 "Submit" 按钮时，向 "welcome.php" 提交了用户输入：
+
+    <html>
+    <body>
+    
+    <form action="welcome.php" method="post">
+    Name: <input type="text" name="name">
+    Age: <input type="text" name="age">
+    <input type="submit">
+    </form>
+    
+    </body>
+    </html>
+
+取回 "welcome.php" 文件中的值，如下所示：
+
+    <html>
+    <body>
+    
+    Welcome <?php echo $_POST["name"]; ?>.<br>
+    You are <?php echo $_POST["age"]; ?> years old.
+    
+    </body>
+    </html>
+
+------------------------------------------------------------------------
+
+### [3.7. PHP Sessions](http://www.w3cschool.cc/php/php-sessions.html)
+
+------------------------------------------------------------------------
+
+PHP session 变量用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。Session 变量存储单一用户的信息，并且对于应用程序中的所有页面都是可用的。
+
+#### 3.7.1. PHP Session 变量
+
+您在计算机上操作某个应用程序时，您打开它，做些更改，然后关闭它。这很像一次对话（Session）。计算机知道您是谁。它清楚您在何时打开和关闭应用程序。然而，在因特网上问题出现了：由于 HTTP 地址无法保持状态，Web 服务器并不知道您是谁以及您做了什么。
+
+PHP session 解决了这个问题，它通过在服务器上存储用户信息以便随后使用（比如用户名称、购买商品等）。然而，会话信息是临时的，在用户离开网站后将被删除。如果您需要永久存储信息，可以把数据存储在数据库中。
+
+Session 的工作机制是：为每个访客创建一个唯一的 id (UID)，并基于这个 UID 来存储变量。UID 存储在 cookie 中，或者通过 URL 进行传导。
+
+#### 3.7.2. 开始 PHP Session
+
+在您把用户信息存储在 PHP session 中之前，首先必须启动回话。
+
+**注释：**<font color="red">session_start() 函数必须位于 ``<html>`` 标签之前：</font>
+
+    <?php session_start(); ?>
+    
+    <html>
+    <body>
+    
+    </body>
+    </html>
+
+上面的代码会向服务器注册用户的会话，以便您可以开始保存用户信息，同时会为用户会话分配一个 UID。
+
+#### 3.7.3. 存储 Session 变量
+
+存储和取回 session 变量的正确方法是使用 PHP $_SESSION 变量：
+
+    <?php
+    session_start();
+    // store session data
+    $_SESSION['views']=1;
+    ?>
+    
+    <html>
+    <body>
+    
+    <?php
+    //retrieve session data
+    echo "Pageviews=". $_SESSION['views'];
+    ?>
+    
+    </body>
+    </html>
+
+输出：
+
+    Pageviews=1
+
+在下面的实例中，我们创建了一个简单的 page-view 计数器。isset() 函数检测是否已设置 "views" 变量。如果已设置 "views" 变量，我们累加计数器。如果 "views" 不存在，则创建 "views" 变量，并把它设置为 1：
+
+    <?php
+    session_start();
+
+    if(isset($_SESSION['views']))
+    $_SESSION['views']=$_SESSION['views']+1;
+    else
+    $_SESSION['views']=1;
+    echo "Views=". $_SESSION['views'];
+    ?>
+
+#### 3.7.4. 销毁 Session
+
+如果您希望删除某些 session 数据，可以使用 unset() 或 session_destroy() 函数。
+
+unset() 函数用于释放指定的 session 变量：
+
+    <?php
+    session_start();
+    if(isset($_SESSION['views']))
+    unset($_SESSION['views']);
+    ?>
+
+您也可以通过调用 session_destroy() 函数彻底销毁 session：
+
+    <?php
+    session_destroy();
+    ?>
+
+**注释：**session_destroy() 将重置 session，您将失去所有已存储的 session 数据。
+
+------------------------------------------------------------------------
+
+### [3.8. PHP E-mail](http://www.w3cschool.cc/php/php-mail.html)
+
+------------------------------------------------------------------------
+
+PHP 允许您从脚本直接发送电子邮件。
+
+#### 3.8.1. PHP mail()函数
+
+PHP mail() 函数用于从脚本中发送电子邮件。
+
+**语法**
+
+mail(to,subject,message,headers,parameters)
+
+| 参数       | 描述                                                                          |
+|:-----------|:------------------------------------------------------------------------------|
+| to         | 必需。规定email接收者。                                                       |
+| subject    | 必需。规定email的主题。**注释：**该参数不能包含任何新行字符。                 |
+| message    | 必需。定义要发送的消息。应使用LF(\n)来分隔各行。每行应该限制在70个字符内。    |
+| headers    | 可选。规定附加的标题，比如 From、Cc和Bcc。应当使用CRLF（\r\n）分隔附加的标题。|
+| parameters | 可选。对邮件发送程序规定额外的参数。                                          |
+
+**注释：**PHP 需要一个已安装且正在运行的邮件系统，以便使邮件函数可用。所用的程序通过在 php.ini 文件中的配置设置进行定义。
+
+#### 3.8.2. PHP 简易 E-Mail
+
+通过 PHP 发送电子邮件的最简单的方式是发送一份文本email。
+
+在下面的实例中，我们首先声明变量($to, $subject, $message, $from, $headers)，然后我们在 mail() 函数中使用这些变量来发送了一封 e-mail：
+
+    <?php
+    $to = "someone@example.com";
+    $subject = "Test mail";
+    $message = "Hello! This is a simple email message.";
+    $from = "someonelse@example.com";
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    echo "Mail Sent.";
+    ?>
+
+#### 3.8.3. PHP Mail 表单
+
+通过 PHP，您能够在自己的站点制作一个反馈表单。下面的实例向指定的 e-mail 地址发送了一条文本消息：
+
+    <html>
+    <body>
+    
+    <?php
+    if (isset($_REQUEST['email']))
+    //if "email" is filled out, send email
+    {
+    //send email
+    $email = $_REQUEST['email'] ;
+    $subject = $_REQUEST['subject'] ;
+    $message = $_REQUEST['message'] ;
+    mail("someone@example.com", $subject,
+    $message, "From:" . $email);
+    echo "Thank you for using our mail form";
+    }
+    else
+    //if "email" is not filled out, display the form
+    {
+    echo "<form method='post' action='mailform.php'>
+    Email: <input name='email' type='text'><br>
+    Subject: <input name='subject' type='text'><br>
+    Message:<br>
+    <textarea name='message' rows='15' cols='40'>
+    </textarea><br>
+    <input type='submit'>
+    </form>";
+    }
+    ?>
+    
+    </body>
+    </html>
+
+实例解释：
+
++ 首先，检查是否填写了邮件输入框
+
++ 如果未填写（比如在页面被首次访问时），输出 HTML 表单
+
++ 如果已填写（在表单被填写后），从表单发送电子邮件
+
++ 当填写完表单点击提交按钮后，页面重新载入，可以看到邮件输入被重置，同时显示邮件发送成功的消息
+
+------------------------------------------------------------------------
+
+### [3.9. PHP Secure E-mails](http://www.w3cschool.cc/php/php-secure-mail.html)
+
+------------------------------------------------------------------------
+
+在上一节中的 PHP e-mail 脚本中，存在着一个漏洞。
+
+#### 3.8.3. PHP E-mail 注入
+
+首先，请看上一章中的 PHP 代码：
+
+    <html>
+    <body>
+    
+    <?php
+    if (isset($_REQUEST['email']))
+    //if "email" is filled out, send email
+    {
+    //send email
+    $email = $_REQUEST['email'] ;
+    $subject = $_REQUEST['subject'] ;
+    $message = $_REQUEST['message'] ;
+    mail("someone@example.com", "Subject: $subject",
+    $message, "From: $email" );
+    echo "Thank you for using our mail form";
+    }
+    else
+    //if "email" is not filled out, display the form
+    {
+    echo "<form method='post' action='mailform.php'>
+    Email: <input name='email' type='text'><br>
+    Subject: <input name='subject' type='text'><br>
+    Message:<br>
+    <textarea name='message' rows='15' cols='40'>
+    </textarea><br>
+    <input type='submit'>
+    </form>";
+    }
+    ?>
+    
+    </body>
+    </html>
+
+以上代码存在的问题是，未经授权的用户可通过输入表单在邮件头部插入数据。
+
+假如用户在表单中的输入框内加入如下文本到电子邮件中，会出现什么情况呢？
+
+    someone@example.com%0ACc:person2@example.com
+    %0ABcc:person3@example.com,person3@example.com,
+    anotherperson4@example.com,person5@example.com
+    %0ABTo:person6@example.com
+
+与往常一样，mail() 函数把上面的文本放入邮件头部，那么现在头部有了额外的 Cc:、Bcc: 和 To: 字段。当用户点击提交按钮时，这封 e-mail 会被发送到上面所有的地址！
+
+#### 3.8.3. PHP 防止 E-mail 注入
+
+防止 e-mail 注入的最好方法是对输入进行验证。
+
+下面的代码与上一章中的类似，不过这里我们已经增加了检测表单中 email 字段的输入验证程序：
+
+    <html>
+    <body>
+    <?php
+    function spamcheck($field)
+    {
+    //filter_var() sanitizes the e-mail
+    //address using FILTER_SANITIZE_EMAIL
+    $field=filter_var($field, FILTER_SANITIZE_EMAIL);
+    
+    //filter_var() validates the e-mail
+    //address using FILTER_VALIDATE_EMAIL
+    if(filter_var($field, FILTER_VALIDATE_EMAIL))
+    {
+    return TRUE;
+    }
+    else
+    {
+    return FALSE;
+    }
+    }
+    
+    if (isset($_REQUEST['email']))
+    {//if "email" is filled out, proceed
+    
+    //check if the email address is invalid
+    $mailcheck = spamcheck($_REQUEST['email']);
+    if ($mailcheck==FALSE)
+    {
+    echo "Invalid input";
+    }
+    else
+    {//send email
+    $email = $_REQUEST['email'] ;
+    $subject = $_REQUEST['subject'] ;
+    $message = $_REQUEST['message'] ;
+    mail("someone@example.com", "Subject: $subject",
+    $message, "From: $email" );
+    echo "Thank you for using our mail form";
+    }
+    }
+    else
+    {//if "email" is not filled out, display the form
+    echo "<form method='post' action='mailform.php'>
+    Email: <input name='email' type='text'><br>
+    Subject: <input name='subject' type='text'><br>
+    Message:<br>
+    <textarea name='message' rows='15' cols='40'>
+    </textarea><br>
+    <input type='submit'>
+    </form>";
+    }
+    ?>
+    
+    </body>
+    </html>
+
+在上面的代码中，我们使用了 PHP 过滤器来对输入进行验证：
+
++ FILTER_SANITIZE_EMAIL 过滤器从字符串中删除电子邮件的非法字符
+
++ FILTER_VALIDATE_EMAIL 过滤器验证电子邮件地址的值
+
+------------------------------------------------------------------------
+
+### [3.10. PHP 错误处理](http://www.w3cschool.cc/php/php-error.html)
+
+------------------------------------------------------------------------
+
+在 PHP 中，默认的错误处理很简单。一条错误消息会被发送到浏览器，这条消息带有文件名、行号以及描述错误的消息。
+
+#### 3.10.1. PHP 错误处理
+
+在创建脚本和 Web 应用程序时，错误处理是一个重要的部分。如果您的代码缺少错误检测编码，那么程序看上去很不专业，也为安全风险敞开了大门。
+
+以下是不同的错误处理方法：
+
++ 简单的 "die()" 语句
+
++ 自定义错误和错误触发器
+
++ 错误报告
+
+#### 3.10.2. 基本的错误处理：使 用die()函数
+

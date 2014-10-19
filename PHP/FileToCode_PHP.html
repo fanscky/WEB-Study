@@ -1,1739 +1,975 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
-  width: 45em;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
-  margin: 16px auto;
-}
+<!DOCTYPE html>
+<html>
+<head>
+<title>FileToCode_PHP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
 
-body .markdown-body
-{
-  padding: 30px;
-}
+/* RESET
+=============================================================================*/
 
-@font-face {
-  font-family: fontawesome-mini;
-  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-}
-
-@font-face {
-  font-family: octicons-anchor;
-  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-}
-
-.markdown-body {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #333333;
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-.markdown-body a {
-  background: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline: 0;
-}
-
-.markdown-body b,
-.markdown-body strong {
-  font-weight: bold;
-}
-
-.markdown-body mark {
-  background: #ff0;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body sub,
-.markdown-body sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-.markdown-body sup {
-  top: -0.5em;
-}
-.markdown-body sub {
-  bottom: -0.25em;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-.markdown-body img {
-  border: 0;
-}
-
-.markdown-body hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-.markdown-body pre {
-  overflow: auto;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-.markdown-body input {
-  color: inherit;
-  font: inherit;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-}
-
-.markdown-body html input[disabled] {
-  cursor: default;
-}
-
-.markdown-body input {
-  line-height: normal;
-}
-
-.markdown-body input[type="checkbox"] {
-  box-sizing: border-box;
   padding: 0;
-}
-
-.markdown-body table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body .codehilitetable {
-  border: 0;
-  border-spacing: 0;
-}
-
-.markdown-body .codehilitetable tr {
   border: 0;
 }
 
-.markdown-body .codehilitetable pre,
-.markdown-body div.codehilite {
-  margin: 0;
-}
+/* BODY
+=============================================================================*/
 
-.markdown-body .linenos,
-.markdown-body .code,
-.markdown-body .codehilitetable td {
-  border: 0;
-  padding: 0;
-}
-
-.markdown-body td:not(.linenos) .linenodiv {
-  padding: 0 !important;
-}
-
-.markdown-body .code {
-  width: 100%;
-}
-
-.markdown-body .linenos div pre,
-.markdown-body .linenodiv pre,
-.markdown-body .linenodiv {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-.markdown-body .code div pre,
-.markdown-body .code div {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-.markdown-body * {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.4;
-}
-
-.markdown-body a {
-  color: #4183c4;
-  text-decoration: none;
-}
-
-.markdown-body a:hover,
-.markdown-body a:focus,
-.markdown-body a:active {
-  text-decoration: underline;
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.markdown-body hr:before,
-.markdown-body hr:after {
-  display: table;
-  content: " ";
-}
-
-.markdown-body hr:after {
-  clear: both;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown-body h1 {
-  font-size: 30px;
-}
-
-.markdown-body h2 {
-  font-size: 21px;
-}
-
-.markdown-body h3 {
-  font-size: 16px;
-}
-
-.markdown-body h4 {
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
   font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.markdown-body h5 {
-  font-size: 12px;
-}
-
-.markdown-body h6 {
-  font-size: 11px;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body dd {
-  margin-left: 0;
-}
-
-.markdown-body code,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body kbd {
-  background-color: #e7e7e7;
-  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
-  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
-  background-image: linear-gradient(#fefefe, #e7e7e7);
-  background-repeat: repeat-x;
-  border-radius: 2px;
-  border: 1px solid #cfcfcf;
-  color: #000;
-  padding: 3px 5px;
-  line-height: 10px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  display: inline-block;
-}
-
-.markdown-body>*:first-child {
+body>*:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+body>*:last-child {
   margin-bottom: 0 !important;
 }
 
-.markdown-body .headeranchor-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  padding-right: 6px;
-  padding-left: 30px;
-  margin-left: -30px;
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
 }
 
-.markdown-body .headeranchor-link:focus {
-  outline: none;
-}
+/* HEADERS
+=============================================================================*/
 
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  position: relative;
-  margin-top: 1em;
-  margin-bottom: 16px;
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
   font-weight: bold;
-  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
 }
 
-.markdown-body h1 .headeranchor,
-.markdown-body h2 .headeranchor,
-.markdown-body h3 .headeranchor,
-.markdown-body h4 .headeranchor,
-.markdown-body h5 .headeranchor,
-.markdown-body h6 .headeranchor {
-  display: none;
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
   color: #000;
-  vertical-align: middle;
 }
 
-.markdown-body h1:hover .headeranchor-link,
-.markdown-body h2:hover .headeranchor-link,
-.markdown-body h3:hover .headeranchor-link,
-.markdown-body h4:hover .headeranchor-link,
-.markdown-body h5:hover .headeranchor-link,
-.markdown-body h6:hover .headeranchor-link {
-  height: 1em;
-  padding-left: 8px;
-  margin-left: -30px;
-  line-height: 1;
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
   text-decoration: none;
 }
 
-.markdown-body h1:hover .headeranchor-link .headeranchor,
-.markdown-body h2:hover .headeranchor-link .headeranchor,
-.markdown-body h3:hover .headeranchor-link .headeranchor,
-.markdown-body h4:hover .headeranchor-link .headeranchor,
-.markdown-body h5:hover .headeranchor-link .headeranchor,
-.markdown-body h6:hover .headeranchor-link .headeranchor {
-  display: inline-block;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-
-.markdown-body h5 {
-  font-size: 1em;
-}
-
-.markdown-body h6 {
-  font-size: 1em;
-  color: #777;
-}
-
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre,
-.markdown-body .admonition {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body li>p {
-  margin-top: 16px;
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.markdown-body blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-
-.markdown-body table th {
-  font-weight: bold;
-}
-
-.markdown-body table th,
-.markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-
-.markdown-body img {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body code,
-.markdown-body samp {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
-  border-radius: 3px;
-}
-
-.markdown-body code:before,
-.markdown-body code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.markdown-body .codehilite {
-  margin-bottom: 16px;
-}
-
-.markdown-body .codehilite pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-
-.markdown-body .codehilite pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-
-.markdown-body pre code:before,
-.markdown-body pre code:after {
-  content: normal;
-}
-
-/* Admonition */
-.markdown-body .admonition {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding: 0.5em 1em 0.5em 1em;
-  color: #888888;
-  background-color: #F7F7F7;
-  border: 1px solid #888888;
-}
-
-.markdown-body .admonition blockquote {
-  color: rgba(136, 136, 136, 0.5);
-  border-left: 4px solid rgba(136, 136, 136, 0.5);
-}
-
-.markdown-body .admonition table {
-  color: #333;
-}
-
-.markdown-body .admonition p {
-  padding: 0;
-  margin: 0;
-}
-
-.markdown-body .admonition-title {
-  font-weight: bold;
-  margin: 0;
-}
-
-.markdown-body .admonition-icon {
-  font: normal normal 16px fontawesome-mini;
-  line-height: 1.5;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  float: left;
-}
-
-.markdown-body .attention {
-  color: #4F8A10;
-  background-color: #DFF2BF;
-  border: 1px solid #4F8A10;
-}
-
-.markdown-body .caution {
-  color: #D63301;
-  background-color: #FFCCBA;
-  border: 1px solid #D63301;
-}
-
-.markdown-body .hint {
-  color: #00529B;
-  background-color: #BDE5F8;
-  border: 1px solid #00529B;
-}
-
-.markdown-body .danger {
-  color: #D8000C;
-  background-color: #FFBABA;
-  border: 1px solid #D8000C;
-}
-
-.markdown-body .question {
-  color: #00049b;
-  background-color: #BDC8F8;
-  border: 1px solid #00049b;
-}
-
-.markdown-body .note {
-  color: #9F6000;
-  background-color: #FEEFB3;
-  border: 1px solid #9F6000;
-}
-
-.markdown-body .attention {
-  color: #4F8A10;
-  background-color: #DFF2BF;
-  border: 1px solid #4F8A10;
-}
-
-.markdown-body .caution blockquote {
-  color: rgba(214, 51, 1, .5);
-  border-left: 4px solid rgba(214, 51, 1, .5);
-}
-
-.markdown-body .hint blockquote {
-  color: rgba(0, 82, 155, .5);
-  border-left: 4px solid rgba(0, 82, 155, .5);
-}
-
-.markdown-body .danger blockquote {
-  color: rgba(216, 0, 12, .5);
-  border-left: 4px solid rgba(216, 0, 12, .5);
-}
-
-.markdown-body .question blockquote {
-  color: rgba(0, 4, 155, .5);
-  border-left: 4px solid rgba(0, 4, 155, .5);;
-}
-
-.markdown-body .note blockquote {
-  color: rgba(159, 96, 0, .5);
-  border-left: 4px solid rgba(159, 96, 0, .5);
-}
-
-.markdown-body .admonition-icon:before {
-  content: "\f040\00a0";
-}
-
-.markdown-body .attention > .admonition-icon:before {
-  content: "\f058\00a0";
-}
-
-.markdown-body .caution > .admonition-icon:before {
-  content: "\f06a\00a0";
-}
-
-.markdown-body .hint > .admonition-icon:before {
-  content: "\f05a\00a0";
-}
-
-.markdown-body .danger > .admonition-icon:before {
-  content: "\f056\00a0";
-}
-
-.markdown-body .question > .admonition-icon:before {
-  content: "\f059\00a0";
-}
-
-.markdown-body .note > .admonition-icon:before {
-  content: "\f040\00a0";
-}
-
-/* progress bar*/
-.markdown-body .progress {
-  display: block;
-  width: 300px;
-  margin: 10px 0;
-  height: 24px;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #F8F8F8;
-  position: relative;
-  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
-}
-
-.markdown-body .progress-label {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  width: 100%; margin: 0;
-  line-height: 24px;
-  color: #333;
-  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
-  -webkit-font-smoothing: antialiased !important;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.markdown-body .progress-bar {
-  height: 24px;
-  float: left;
-  border-right: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #34c2e3;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
-  background-size: 30px 30px;
-  background-image: -webkit-linear-gradient(
-    135deg, rgba(255, 255, 255, .4) 27%,
-    transparent 27%,
-    transparent 53%, rgba(255, 255, 255, .4) 53%,
-    rgba(255, 255, 255, .4) 77%,
-    transparent 77%, transparent
-  );
-  background-image: -moz-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 53%, rgba(255, 255, 255, .4) 53%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -ms-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 53%, rgba(255, 255, 255, .4) 53%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -o-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 53%, rgba(255, 255, 255, .4) 53%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 53%, rgba(255, 255, 255, .4) 53%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-}
-
-.markdown-body .progress-100plus .progress-bar {
-  background-color: #1ee038;
-}
-
-.markdown-body .progress-80plus .progress-bar {
-  background-color: #86e01e;
-}
-
-.markdown-body .progress-60plus .progress-bar {
-  background-color: #f2d31b;
-}
-
-.markdown-body .progress-40plus .progress-bar {
-  background-color: #f2b01e;
-}
-
-.markdown-body .progress-20plus .progress-bar {
-  background-color: #f27011;
-}
-
-.markdown-body .progress-0plus .progress-bar {
-  background-color: #f63a0f;
-}
-
-.markdown-body .gloss .progress-bar {
-  box-shadow:
-    inset -1px 1px 0 rgba(255, 255, 255, .5),
-    inset 0 -4px 12px rgba(255, 255, 255, .7),
-    inset 0 4px 12px rgba(255, 255, 255, .7),
-    inset 0 -12px 0 rgba(0, 0, 0, .05),
-    inset 1px -1px 0 rgba(255, 255, 255, .2);
-}
-
-.markdown-body .candystripe-animate .progress-bar{
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-  animation: animate-stripes 3s linear infinite;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-/* Multimarkdown Critic Blocks */
-.markdown-body .critic_mark {
-  background: #ff0;
-}
-
-.markdown-body .critic_delete {
-  color: #c82829;
-  text-decoration: line-through;
-}
-
-.markdown-body .critic_insert {
-  color: #718c00 ;
+a:hover {
   text-decoration: underline;
 }
 
-.markdown-body .critic_comment {
-  color: #8e908c;
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
   font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
 }
 
-.markdown-body .headeranchor {
-  font: normal normal 16px octicons-anchor;
-  line-height: 1;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+dl dt:first-child {
+  padding: 0;
 }
 
-.headeranchor:before {
-  content: '\f05c';
+dl dt>:first-child {
+  margin-top: 0px;
 }
 
-.markdown-body .task-list-item {
-  list-style-type: none;
+dl dt>:last-child {
+  margin-bottom: 0px;
 }
 
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
 }
 
-.markdown-body .task-list-item input {
-  margin: 0 4px 0.25em -20px;
-  vertical-align: middle;
+dl dd>:first-child {
+  margin-top: 0px;
 }
 
-/* Media */
-@media only screen and (min-width: 480px) {
-  .markdown-body {
-    font-size:14px;
-  }
+dl dd>:last-child {
+  margin-bottom: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  .markdown-body {
-    font-size:16px;
-  }
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
-@media print {
-  .markdown-body * {
-    background: transparent !important;
-    color: black !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
-
-  .markdown-body {
-    font-size:12pt;
-    max-width:100%;
-    outline:none;
-    border: 0;
-  }
-
-  .markdown-body a,
-  .markdown-body a:visited {
-    text-decoration: underline;
-  }
-
-  .markdown-body .headeranchor-link {
-    display: none;
-  }
-
-  .markdown-body a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  .markdown-body abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .markdown-body .ir a:after,
-  .markdown-body a[href^="javascript:"]:after,
-  .markdown-body a[href^="#"]:after {
-    content: "";
-  }
-
-  .markdown-body pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .markdown-body pre,
-  .markdown-body blockquote {
-    border: 1px solid #999;
-    padding-right: 1em;
-    page-break-inside: avoid;
-  }
-
-  .markdown-body .progress,
-  .markdown-body .progress-bar {
-    box-shadow: none;
-  }
-
-  .markdown-body tr,
-  .markdown-body img {
-    page-break-inside: avoid;
-  }
-
-  .markdown-body img {
-    max-width: 100% !important;
-  }
-
-  .markdown-body p,
-  .markdown-body h2,
-  .markdown-body h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  .markdown-body h2,
-  .markdown-body h3 {
-    page-break-after: avoid;
-  }
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
 }
-</style><style>.codehilite pre .hll { background-color: #ffffcc }
-.codehilite pre  { background: #f8f8f8; color: #333333 }
-.codehilite pre .c { color: #999988; font-style: italic } /* Comment */
-.codehilite pre .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-.codehilite pre .k { font-weight: bold } /* Keyword */
-.codehilite pre .n { color: #333333 } /* Name */
-.codehilite pre .o { font-weight: bold } /* Operator */
-.codehilite pre .cm { color: #999988; font-style: italic } /* Comment.Multiline */
-.codehilite pre .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
-.codehilite pre .c1 { color: #999988; font-style: italic } /* Comment.Single */
-.codehilite pre .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
-.codehilite pre .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
-.codehilite pre .ge { font-style: italic } /* Generic.Emph */
-.codehilite pre .gr { color: #aa0000 } /* Generic.Error */
-.codehilite pre .gh { color: #999999 } /* Generic.Heading */
-.codehilite pre .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
-.codehilite pre .go { color: #888888 } /* Generic.Output */
-.codehilite pre .gp { color: #555555 } /* Generic.Prompt */
-.codehilite pre .gs { font-weight: bold } /* Generic.Strong */
-.codehilite pre .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.codehilite pre .gt { color: #aa0000 } /* Generic.Traceback */
-.codehilite pre .kc { font-weight: bold } /* Keyword.Constant */
-.codehilite pre .kd { font-weight: bold } /* Keyword.Declaration */
-.codehilite pre .kn { font-weight: bold } /* Keyword.Namespace */
-.codehilite pre .kp { font-weight: bold } /* Keyword.Pseudo */
-.codehilite pre .kr { font-weight: bold } /* Keyword.Reserved */
-.codehilite pre .kt { color: #445588; font-weight: bold } /* Keyword.Type */
-.codehilite pre .m { color: #009999 } /* Literal.Number */
-.codehilite pre .s { color: #dd1144 } /* Literal.String */
-.codehilite pre .na { color: #008080 } /* Name.Attribute */
-.codehilite pre .nb { color: #0086b3 } /* Name.Builtin */
-.codehilite pre .nc { color: #445588; font-weight: bold } /* Name.Class */
-.codehilite pre .no { color: #008080 } /* Name.Constant */
-.codehilite pre .nd { color: #333333 } /* Name.Decorator */
-.codehilite pre .ni { color: #800080 } /* Name.Entity */
-.codehilite pre .ne { color: #990000; font-weight: bold } /* Name.Exception */
-.codehilite pre .nf { color: #990000; font-weight: bold } /* Name.Function */
-.codehilite pre .nl { color: #333333 } /* Name.Label */
-.codehilite pre .nn { color: #555555 } /* Name.Namespace */
-.codehilite pre .nx { color: #333333 } /* Name.Other */
-.codehilite pre .py { color: #333333 } /* Name.Property */
-.codehilite pre .nt { color: #000080 } /* Name.Tag */
-.codehilite pre .nv { color: #008080 } /* Name.Variable */
-.codehilite pre .ow { font-weight: bold } /* Operator.Word */
-.codehilite pre .w { color: #bbbbbb } /* Text.Whitespace */
-.codehilite pre .mb { color: #009999 } /* Literal.Number.Bin */
-.codehilite pre .mf { color: #009999 } /* Literal.Number.Float */
-.codehilite pre .mh { color: #009999 } /* Literal.Number.Hex */
-.codehilite pre .mi { color: #009999 } /* Literal.Number.Integer */
-.codehilite pre .mo { color: #009999 } /* Literal.Number.Oct */
-.codehilite pre .sb { color: #dd1144 } /* Literal.String.Backtick */
-.codehilite pre .sc { color: #dd1144 } /* Literal.String.Char */
-.codehilite pre .sd { color: #dd1144 } /* Literal.String.Doc */
-.codehilite pre .s2 { color: #dd1144 } /* Literal.String.Double */
-.codehilite pre .se { color: #dd1144 } /* Literal.String.Escape */
-.codehilite pre .sh { color: #dd1144 } /* Literal.String.Heredoc */
-.codehilite pre .si { color: #dd1144 } /* Literal.String.Interpol */
-.codehilite pre .sx { color: #dd1144 } /* Literal.String.Other */
-.codehilite pre .sr { color: #009926 } /* Literal.String.Regex */
-.codehilite pre .s1 { color: #dd1144 } /* Literal.String.Single */
-.codehilite pre .ss { color: #990073 } /* Literal.String.Symbol */
-.codehilite pre .bp { color: #999999 } /* Name.Builtin.Pseudo */
-.codehilite pre .vc { color: #008080 } /* Name.Variable.Class */
-.codehilite pre .vg { color: #008080 } /* Name.Variable.Global */
-.codehilite pre .vi { color: #008080 } /* Name.Variable.Instance */
-.codehilite pre .il { color: #009999 } /* Literal.Number.Integer.Long */</style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-MathJax.Hub.Config({
-  config: ["MMLorHTML.js"],
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX"],
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-    processEscapes: false
-  },
-  TeX: {
-    extensions: ["AMSmath.js", "AMSsymbols.js"],
-    TagSide: "right",
-    TagIndent: ".8em",
-    MultLineWidth: "85%",
-    equationNumbers: {
-      autoNumber: "AMS",
-    },
-    unicode: {
-      fonts: "STIXGeneral,'Arial Unicode MS'"
-    }
-  },
-  showProcessingMessages: false
-});
-</script>
-<title>FileToCode_PHP</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>文件与源码对应表</h1>
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>文件与源码对应表</h1>
 <hr />
-<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>一、基础教程</h2>
-<h3 id="11-php"><a href="http://www.w3school.com.cn/php/php_syntax.asp">1.1. PHP 语法</a></h3>
+<h2>一、基础教程</h2>
 <hr />
-<h4 id="111-php"><a name="user-content-111-php" href="#111-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.1. 基础 PHP 语法</h4>
+<h3><a href="http://www.w3cschool.cc/php/php-syntax.html">1.1. PHP 语法</a></h3>
+<hr />
+<h4>1.1.1. 基础 PHP 语法</h4>
 <p>我的第一张 PHP 页面<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php">demo_php_syntax.php</a></p>
-<h4 id="112"><a name="user-content-112" href="#112" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.2. 注释</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax.php">demo_php_syntax.php</a></p>
+<h4>1.1.2. 注释</h4>
 <p>PHP 支持三种注释<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php">demo_php_syntax_comments.php</a></p>
-<h4 id="113-php"><a name="user-content-113-php" href="#113-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.3. PHP 大小写敏感</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_comments.php">demo_php_syntax_comments.php</a></p>
+<h4>1.1.3. PHP 大小写敏感</h4>
 <p>在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_case1.php</a><br />
-<strong>变量对大小写敏感。</strong><br />
-  在 PHP 中，所有变量都对大小写敏感。<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php">demo_php_syntax_case2.php</a>  </p>
-<h4 id="114-php"><a name="user-content-114-php" href="#114-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.1.4. PHP 大小写敏感</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_case1.php</a>  </p>
+<p><strong>变量对大小写敏感。</strong>  </p>
+<p>在 PHP 中，所有变量都对大小写敏感。<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case2.php">demo_php_syntax_case2.php</a>  </p>
+<h4>1.1.4. PHP 大小写敏感</h4>
 <p>在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<strong>所有变量都对大小写敏感。</strong><br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_comments.php</a><br />
-<br></p>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_syntax_case1.php">demo_php_syntax_comments.php</a>  </p>
+<p><br></p>
 <hr />
-<h3 id="12-php"><a href="http://www.w3school.com.cn/php/php_variables.asp">1.2. PHP变量</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-variables.html">1.2. PHP变量</a></h3>
 <hr />
-<h4 id="121"><a name="user-content-121" href="#121" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.1. 类似代数</h4>
+<h4>1.2.1. 类似代数</h4>
 <p>请把变量视为存储数据的容器。<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php">demo_php_var1.php</a></p>
-<h4 id="122-php"><a name="user-content-122-php" href="#122-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.2. 创建 PHP 变量</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var1.php">demo_php_var1.php</a></p>
+<h4>1.2.2. 创建 PHP 变量</h4>
 <p>PHP 没有创建变量的命令。变量会在首次为其赋值时被创建：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php">demo_php_var2.php</a></p>
-<h4 id="123-local-global"><a name="user-content-123-local-global" href="#123-local-global" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.3. Local 和 Global 作用域</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var2.php">demo_php_var2.php</a></p>
+<h4>1.2.3. Local 和 Global 作用域</h4>
 <p>函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php">demo_php_var_local.php</a>  </p>
-<h4 id="124-php-global"><a name="user-content-124-php-global" href="#124-php-global" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.4. PHP global 关键词</h4>
-<p>global 关键词用于访问函数内的全局变量。<br />
-  要做到这一点，请在（函数内部）变量前面使用 global 关键词：  <br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php">demo_php_var_global.php</a><br />
-  PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php">demo_php_var_global2.php</a>  </p>
-<h4 id="125-php-static"><a name="user-content-125-php-static" href="#125-php-static" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.2.5. PHP static 关键词</h4>
-<p>通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。<br />
-  要完成这一点，请在您首次声明变量时使用 static 关键词  <br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php">demo_php_var_static.php</a><br />
-<br></p>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_local.php">demo_php_var_local.php</a>  </p>
+<h4>1.2.4. PHP global 关键词</h4>
+<p>global 关键词用于访问函数内的全局变量。  </p>
+<p>要做到这一点，请在（函数内部）变量前面使用 global 关键词：  <br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global.php">demo_php_var_global.php</a>  </p>
+<p>PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_global2.php">demo_php_var_global2.php</a>  </p>
+<h4>1.2.5. PHP static 关键词</h4>
+<p>通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。  </p>
+<p>要完成这一点，请在您首次声明变量时使用 static 关键词  <br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_var_static.php">demo_php_var_static.php</a>  </p>
+<p><br></p>
 <hr />
-<h3 id="13-php-echo-print"><a href="http://www.w3school.com.cn/php/php_echo_print.asp">1.3. PHP Echo / Print</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-echo-print.html">1.3. PHP Echo / Print</a></h3>
 <hr />
-<p>在 PHP 中，有两种基本的输出方法：<strong>echo</strong> 和 <strong>print</strong>。  </p>
+<p>在 PHP 中，有两种基本的输出方法：<strong>echo</strong> 和 <strong>print</strong>。  </p>
 <blockquote>
-<p><strong><em>echo 和 print 之间的差异：</em></strong><br />
-&nbsp;&nbsp;&nbsp;&nbsp;echo - 能够输出一个以上的字符串<br />
-&nbsp;&nbsp;&nbsp;&nbsp;print - 只能输出一个字符串，并始终返回 1<br />
-提示：echo 比 print 稍快，因为它不返回任何值。</p>
+<p><strong><em>echo 和 print 之间的差异：</em></strong>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;echo - 能够输出一个以上的字符串  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;print - 只能输出一个字符串，并始终返回 1  
+</p>
+<p>提示：echo 比 print 稍快，因为它不返回任何值。</p>
 </blockquote>
-<h4 id="131-php-echo"><a name="user-content-131-php-echo" href="#131-php-echo" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.3.1. PHP echo 语句</h4>
-<p>echo 是一个语言结构，有无括号均可使用：echo 或 echo()。<br />
-<strong>echo显示字符串</strong><br />
-  下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php">demo_php_echo1.php</a><br />
-<strong>echo显示变量</strong><br />
-  下面的例子展示如何用 echo 命令来显示字符串和变量：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php">demo_php_echo2.php</a>  </p>
-<h4 id="132-php-print"><a name="user-content-132-php-print" href="#132-php-print" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.3.2. PHP print 语句</h4>
-<p>print 也是语言结构，有无括号均可使用：print 或 print()。<br />
-<strong>print显示字符串</strong><br />
-  下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php">demo_php_print.php</a><br />
-<strong>print显示变量</strong><br />
-  下面的例子展示如何用 print 命令来显示字符串和变量：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php">demo_php_print2.php</a><br />
-<br></p>
+<h4>1.3.1. PHP echo 语句</h4>
+<p>echo 是一个语言结构，有无括号均可使用：echo 或 echo()。  </p>
+<p><strong>echo显示字符串</strong>  </p>
+<p>下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo1.php">demo_php_echo1.php</a>  </p>
+<p><strong>echo显示变量</strong>  </p>
+<p>下面的例子展示如何用 echo 命令来显示字符串和变量：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_echo2.php">demo_php_echo2.php</a>  </p>
+<h4>1.3.2. PHP print 语句</h4>
+<p>print 也是语言结构，有无括号均可使用：print 或 print()。  </p>
+<p><strong>print显示字符串</strong>  </p>
+<p>下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print.php">demo_php_print.php</a>  </p>
+<p><strong>print显示变量</strong>  </p>
+<p>下面的例子展示如何用 print 命令来显示字符串和变量：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_print2.php">demo_php_print2.php</a>  </p>
+<p><br></p>
 <hr />
-<h3 id="14-php"><a href="http://www.w3school.com.cn/php/php_datatypes.asp">1.4. PHP 数据类型</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-datatypes.html">1.4. PHP 数据类型</a></h3>
 <hr />
 <p>字符串、整数、浮点数、逻辑、数组、对象、NULL。</p>
-<h4 id="141-php"><a name="user-content-141-php" href="#141-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.1. PHP 字符串</h4>
-<p>字符串是字符序列，比如 &ldquo;Hello world!&rdquo;。字符串可以是引号内的任何文本。您可以使用单引号或双引号：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php">demo_php_datatypes_string.php</a></p>
-<h4 id="142-php"><a name="user-content-142-php" href="#142-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.2. PHP 整数</h4>
-<p>整数是没有小数的数字。  </p>
+<h4>1.4.1. PHP 字符串</h4>
+<p>字符串是字符序列，比如 &quot;Hello world!&quot;。字符串可以是引号内的任何文本。您可以使用单引号或双引号：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_string.php">demo_php_datatypes_string.php</a></p>
+<h4>1.4.2. PHP 整数</h4>
+<p>整数是没有小数的数字。  </p>
 <blockquote>
-<p><strong>整数规则：</strong><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>整数必须有至少一个数字（0-9）</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能包含逗号或空格</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能有小数点</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>整数正负均可</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<em>可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）</em>  </p>
+<p><strong>整数规则：</strong>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>整数必须有至少一个数字（0-9）</em>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能包含逗号或空格</em>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>整数不能有小数点</em>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>整数正负均可</em>  
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）</em>  
+</p>
 </blockquote>
 <p>在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php">demo_php_datatypes_integer.php</a></p>
-<h4 id="143-php"><a name="user-content-143-php" href="#143-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.3. PHP 浮点数</h4>
-<p>浮点数是有小数点或指数形式的数字。<br />
-  在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php">demo_php_datatypes_float.php</a></p>
-<h4 id="144-php"><a name="user-content-144-php" href="#144-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.4. PHP逻辑</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_integer.php">demo_php_datatypes_integer.php</a></p>
+<h4>1.4.3. PHP 浮点数</h4>
+<p>浮点数是有小数点或指数形式的数字。  </p>
+<p>在下面的例子中，我们将测试不同的数字。PHP var_dump() 会返回变量的数据类型和值：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_float.php">demo_php_datatypes_float.php</a></p>
+<h4>1.4.4. PHP逻辑</h4>
 <p>逻辑是 true 或 false。逻辑常用于条件测试。</p>
-<h4 id="145-php"><a name="user-content-145-php" href="#145-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.5. PHP数组</h4>
-<p>数组在一个变量中存储多个值。<br />
-  在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php">demo_php_datatypes_array.php</a></p>
-<h4 id="146-php"><a name="user-content-146-php" href="#146-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.6. <strong>PHP 对象</strong></h4>
-<p>对象是存储数据和有关如何处理数据的信息的数据类型。<br />
-  在 PHP 中，必须明确地声明对象。<br />
-  首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。<br />
-  然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php">demo_php_datatypes_object.php</a></p>
-<h4 id="147-php-null"><a name="user-content-147-php-null" href="#147-php-null" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.4.7. PHP NULL 值</h4>
-<p>特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。<br />
-  NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。<br />
-  可以通过把值设置为 NULL，将变量清空：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php">demo_php_datatypes_null.php</a><br />
+<h4>1.4.5. PHP数组</h4>
+<p>数组在一个变量中存储多个值。  </p>
+<p>在下面的例子中，我们将测试不同的数组。PHP var_dump() 会返回变量的数据类型和值：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_array.php">demo_php_datatypes_array.php</a></p>
+<h4>1.4.6. <strong>PHP 对象</strong></h4>
+<p>对象是存储数据和有关如何处理数据的信息的数据类型。  </p>
+<p>在 PHP 中，必须明确地声明对象。  </p>
+<p>首先我们必须声明对象的类。对此，我们使用 class 关键词。类是包含属性和方法的结构。  </p>
+<p>然后我们在对象类中定义数据类型，然后在该类的实例中使用此数据类型：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_object.php">demo_php_datatypes_object.php</a></p>
+<h4>1.4.7. PHP NULL 值</h4>
+<p>特殊的 NULL 值表示变量无值。NULL 是数据类型 NULL 唯一可能的值。  </p>
+<p>NULL 值标示变量是否为空。也用于区分空字符串与空值数据库。  </p>
+<p>可以通过把值设置为 NULL，将变量清空：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_null.php">demo_php_datatypes_null.php</a><br />
 <br></p>
 <hr />
-<h3 id="15php"><a href="http://www.w3school.com.cn/php/php_string.asp">1.5.PHP字符串函数</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-string.html">1.5.PHP字符串函数</a></h3>
 <hr />
-<h4 id="151-php-strlen"><a name="user-content-151-php-strlen" href="#151-php-strlen" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.5.1. PHP strlen() 函数</h4>
-<p>strlen() 函数返回字符串的长度，以字符计。<br />
-  下例返回字符串 &ldquo;Hello world!&rdquo; 的长度：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php">demo_php_datatypes_length.php</a></p>
-<h4 id="152-php-strpos"><a name="user-content-152-php-strpos" href="#152-php-strpos" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.5.2. PHP strpos() 函数</h4>
-<p>strpos() 函数用于检索字符串内指定的字符或文本。<br />
-  如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。<br />
-  下例检索字符串 &ldquo;Hello world!&rdquo; 中的文本 &ldquo;world&rdquo;：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php">demo_php_datatypes_pos.php</a><br />
-<br></p>
+<h4>1.5.1. PHP strlen() 函数</h4>
+<p>strlen() 函数返回字符串的长度，以字符计。  </p>
+<p>下例返回字符串 &quot;Hello world!&quot; 的长度：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_length.php">demo_php_datatypes_length.php</a></p>
+<h4>1.5.2. PHP strpos() 函数</h4>
+<p>strpos() 函数用于检索字符串内指定的字符或文本。  </p>
+<p>如果找到匹配，则会返回首个匹配的字符位置。如果未找到匹配，则将返回 FALSE。  </p>
+<p>下例检索字符串 &quot;Hello world!&quot; 中的文本 &quot;world&quot;：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_datatypes_pos.php">demo_php_datatypes_pos.php</a>  </p>
+<p><br></p>
 <hr />
-<h3 id="16-php"><a href="http://www.w3school.com.cn/php/php_constants.asp">1.6. PHP参量</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-constants.html">1.6. PHP参量</a></h3>
 <hr />
-<p><strong>设置PHP常量</strong><br />
-  如需设置常量，请使用 define() 函数 - 它使用三个参数：<br />
-  * &nbsp;&nbsp;&nbsp;&nbsp;<em>首个参数定义常量的名称</em><br />
-  * &nbsp;&nbsp;&nbsp;&nbsp;<em>第二个参数定义常量的值</em><br />
-  * &nbsp;&nbsp;&nbsp;&nbsp;<em>可选的第三个参数规定常量名是否对大小写敏感。默认是 false。</em><br />
-  下例创建了一个对大小写敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php">demo_php_constant1.php</a><br />
-  下例创建了一个对大小写不敏感的常量，值为 <font color="green">&ldquo;Welcome to W3School.com.cn!&rdquo;：</font><br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php">demo_php_constant2.php</a><br />
-<br></p>
+<p><strong>设置PHP常量</strong>  </p>
+<p>如需设置常量，请使用 define() 函数 - 它使用三个参数：  </p>
+<ul>
+<li>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>首个参数定义常量的名称</em>  
+</p>
+</li>
+<li>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>第二个参数定义常量的值</em>  
+</p>
+</li>
+<li>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>可选的第三个参数规定常量名是否对大小写敏感。默认是 false。</em>  
+</p>
+</li>
+</ul>
+<p>下例创建了一个对大小写敏感的常量，值为 <font color="green">&quot;Welcome to W3School.com.cn!&quot;：</font><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant1.php">demo_php_constant1.php</a>  </p>
+<p>下例创建了一个对大小写不敏感的常量，值为 <font color="green">&quot;Welcome to W3School.com.cn!&quot;：</font><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_constant2.php">demo_php_constant2.php</a>  </p>
+<p><br></p>
 <hr />
-<h3 id="17-php"><a href="http://www.w3school.com.cn/php/php_operators.asp">1.7. PHP运算符</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-operators.html">1.7. PHP运算符</a></h3>
 <hr />
-<h4 id="171-php"><a name="user-content-171-php" href="#171-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.1. PHP算数运算符</h4>
+<h4>1.7.1. PHP算数运算符</h4>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">例子</th>
-<th align="left">结果</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">例子</th>
+	<th align="left">结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">+</td>
-<td align="left">加法</td>
-<td align="left">$x + $y</td>
-<td align="left">$x与$y求和</td>
+	<td align="left">+</td>
+	<td align="left">加法</td>
+	<td align="left">$x + $y</td>
+	<td align="left">$x与$y求和</td>
 </tr>
 <tr>
-<td align="left">-</td>
-<td align="left">减法</td>
-<td align="left">$x - $y</td>
-<td align="left">$x与$y的差数</td>
+	<td align="left">-</td>
+	<td align="left">减法</td>
+	<td align="left">$x - $y</td>
+	<td align="left">$x与$y的差数</td>
 </tr>
 <tr>
-<td align="left">*</td>
-<td align="left">乘法</td>
-<td align="left">$x * $y</td>
-<td align="left">$x与$y乘积</td>
+	<td align="left">*</td>
+	<td align="left">乘法</td>
+	<td align="left">$x * $y</td>
+	<td align="left">$x与$y乘积</td>
 </tr>
 <tr>
-<td align="left">/</td>
-<td align="left">除法</td>
-<td align="left">$x / $y</td>
-<td align="left">$x与$y商数</td>
+	<td align="left">/</td>
+	<td align="left">除法</td>
+	<td align="left">$x / $y</td>
+	<td align="left">$x与$y商数</td>
 </tr>
 <tr>
-<td align="left">%</td>
-<td align="left">模数</td>
-<td align="left">$x % $y</td>
-<td align="left">$x与$y余数</td>
+	<td align="left">%</td>
+	<td align="left">模数</td>
+	<td align="left">$x % $y</td>
+	<td align="left">$x与$y余数</td>
 </tr>
 <tr>
-<td align="left">下例展示了使用不同算数运算符的不同结果：</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php">demo_php_operator_arithmetic.php</a></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+	<td align="left">-</td>
+	<td align="left">取反</td>
+	<td align="left">-$x</td>
+	<td align="left">$x取反</td>
 </tr>
 </tbody>
 </table>
-<h4 id="172-php"><a name="user-content-172-php" href="#172-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.2. PHP赋值运算符</h4>
-<p>PHP 赋值运算符用于向变量写值。<br />
-  PHP 中基础的赋值运算符是 &ldquo;=&rdquo;。这意味着右侧赋值表达式会为左侧运算数设置值。  </p>
+<p>下例展示了使用不同算数运算符的不同结果：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_arithmetic.php">demo_php_operator_arithmetic.php</a></p>
+<h4>1.7.2. PHP赋值运算符</h4>
+<p>PHP 赋值运算符用于向变量写值。  </p>
+<p>PHP 中基础的赋值运算符是 &quot;=&quot;。这意味着右侧赋值表达式会为左侧运算数设置值。  </p>
 <table>
 <thead>
 <tr>
-<th align="left">赋值</th>
-<th align="left">等同于</th>
-<th align="left">描述</th>
+	<th align="left">赋值</th>
+	<th align="left">等同于</th>
+	<th align="left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">x = y</td>
-<td align="left">x = y</td>
-<td align="left">右侧表达式为左侧运算数设置值。</td>
+	<td align="left">x = y</td>
+	<td align="left">x = y</td>
+	<td align="left">右侧表达式为左侧运算数设置值。</td>
 </tr>
 <tr>
-<td align="left">x += y</td>
-<td align="left">x = x + y</td>
-<td align="left">加</td>
+	<td align="left">x += y</td>
+	<td align="left">x = x + y</td>
+	<td align="left">加</td>
 </tr>
 <tr>
-<td align="left">x -= y</td>
-<td align="left">x = x - y</td>
-<td align="left">减</td>
+	<td align="left">x -= y</td>
+	<td align="left">x = x - y</td>
+	<td align="left">减</td>
 </tr>
 <tr>
-<td align="left">x *= y</td>
-<td align="left">x = x * y</td>
-<td align="left">乘</td>
+	<td align="left">x *= y</td>
+	<td align="left">x = x * y</td>
+	<td align="left">乘</td>
 </tr>
 <tr>
-<td align="left">x /= y</td>
-<td align="left">x = x / y</td>
-<td align="left">除</td>
+	<td align="left">x /= y</td>
+	<td align="left">x = x / y</td>
+	<td align="left">除</td>
 </tr>
 <tr>
-<td align="left">x %= y</td>
-<td align="left">x = x % y</td>
-<td align="left">模数</td>
+	<td align="left">x %= y</td>
+	<td align="left">x = x % y</td>
+	<td align="left">模数</td>
 </tr>
 </tbody>
 </table>
 <p>下例展示了使用不同赋值运算符的不同结果：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_assignment.php">demo_php_operator_assignment.php</a></p>
-<h4 id="173-php"><a name="user-content-173-php" href="#173-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.3. PHP字符串运算符</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_assignment.php">demo_php_operator_assignment.php</a></p>
+<h4>1.7.3. PHP字符串运算符</h4>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">例子</th>
-<th align="left">结果</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">例子</th>
+	<th align="left">结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">.</td>
-<td align="left">串接</td>
-<td align="left">$txt1=&rdquo;Hello&rdquo; $txt2=$txt1.&rdquo;world!&rdquo;</td>
-<td align="left">现在$txt2包含“Hello World”</td>
+	<td align="left">.</td>
+	<td align="left">串接</td>
+	<td align="left">$txt1=&quot;Hello&quot; $txt2=$txt1.&quot;world!&quot;</td>
+	<td align="left">现在$txt2包含“Hello World”</td>
 </tr>
 <tr>
-<td align="left">.=</td>
-<td align="left">串接赋值</td>
-<td align="left">$txt1=&rdquo;Hello&rdquo; $txt1 .=&rdquo;world!&rdquo;</td>
-<td align="left">现在$txt1包含“Hello World”</td>
-</tr>
-<tr>
-<td align="left">下例展示了使用字符串运算符的结果：</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_string.php">demo_php_operator_string.php</a></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+	<td align="left">.=</td>
+	<td align="left">串接赋值</td>
+	<td align="left">$txt1=&quot;Hello&quot; $txt1 .=&quot;world!&quot;</td>
+	<td align="left">现在$txt1包含“Hello World”</td>
 </tr>
 </tbody>
 </table>
-<h4 id="174-php"><a name="user-content-174-php" href="#174-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.4. PHP递增/递减运算符</h4>
+<p>下例展示了使用字符串运算符的结果：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_string.php">demo_php_operator_string.php</a></p>
+<h4>1.7.4. PHP递增/递减运算符</h4>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">描述</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">++$x</td>
-<td align="left">前递增</td>
-<td align="left">$x加一递增，然后返回$x</td>
+	<td align="left">++$x</td>
+	<td align="left">前递增</td>
+	<td align="left">$x加一递增，然后返回$x</td>
 </tr>
 <tr>
-<td align="left">$x++</td>
-<td align="left">后递增</td>
-<td align="left">返回$x,然后$x加一递增</td>
+	<td align="left">$x++</td>
+	<td align="left">后递增</td>
+	<td align="left">返回$x,然后$x加一递增</td>
 </tr>
 <tr>
-<td align="left">&ndash;$x</td>
-<td align="left">前递减</td>
-<td align="left">$x减一递减，然后返回$x</td>
+	<td align="left">--$x</td>
+	<td align="left">前递减</td>
+	<td align="left">$x减一递减，然后返回$x</td>
 </tr>
 <tr>
-<td align="left">$x&ndash;</td>
-<td align="left">后递减</td>
-<td align="left">返回$x，然后$x减一递减</td>
+	<td align="left">$x--</td>
+	<td align="left">后递减</td>
+	<td align="left">返回$x，然后$x减一递减</td>
 </tr>
 </tbody>
 </table>
 <p>下例展示了使用不同递增/递减运算符的不同结果：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_increment.php">demo_php_operator_increment.php</a></p>
-<h4 id="175-php"><a name="user-content-175-php" href="#175-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.5. PHP比较运算符</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_increment.php">demo_php_operator_increment.php</a></p>
+<h4>1.7.5. PHP比较运算符</h4>
 <p>PHP 比较运算符用于比较两个值（数字或字符串）：</p>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">例子</th>
-<th align="left">结果</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">例子</th>
+	<th align="left">结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">==</td>
-<td align="left">等于</td>
-<td align="left">$x == $y</td>
-<td align="left">如果 $x 等于 $y，则返回true</td>
+	<td align="left">==</td>
+	<td align="left">等于</td>
+	<td align="left">$x == $y</td>
+	<td align="left">如果 $x 等于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">===</td>
-<td align="left">全等于（完全相同）</td>
-<td align="left">$x===$y</td>
-<td align="left">如果$x等于$y,且它们类型相同，则返回ture</td>
+	<td align="left">===</td>
+	<td align="left">全等于（完全相同）</td>
+	<td align="left">$x === $y</td>
+	<td align="left">如果$x等于$y,且它们类型相同，则返回ture</td>
 </tr>
 <tr>
-<td align="left">!=</td>
-<td align="left">不等于</td>
-<td align="left">$x != $y</td>
-<td align="left">如果 $x 不等于 $y，则返回true</td>
+	<td align="left">!=</td>
+	<td align="left">不等于</td>
+	<td align="left">$x != $y</td>
+	<td align="left">如果 $x 不等于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">&lt;&gt;</td>
-<td align="left">不等于</td>
-<td align="left">$x &lt;&gt; $y</td>
-<td align="left">如果$x 不等于 $y，则返回true</td>
+	<td align="left">&lt;&gt;</td>
+	<td align="left">不等于</td>
+	<td align="left">$x &lt;&gt; $y</td>
+	<td align="left">如果$x 不等于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">!==</td>
-<td align="left">不全等（完全不同）</td>
-<td align="left">$x !== $y</td>
-<td align="left">如果 $x 不等于 $y，且他们类型不相同，则返回true</td>
+	<td align="left">!==</td>
+	<td align="left">不全等（完全不同）</td>
+	<td align="left">$x !== $y</td>
+	<td align="left">如果 $x 不等于 $y，且他们类型不相同，则返回true</td>
 </tr>
 <tr>
-<td align="left">&gt;</td>
-<td align="left">大于</td>
-<td align="left">$x &gt; $y</td>
-<td align="left">如果 $x 大于 $y，则返回true</td>
+	<td align="left">&gt;</td>
+	<td align="left">大于</td>
+	<td align="left">$x &gt; $y</td>
+	<td align="left">如果 $x 大于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">&lt;</td>
-<td align="left">小于</td>
-<td align="left">$x &lt; $y</td>
-<td align="left">如果 $x 小于 $y，则返回true</td>
+	<td align="left">&lt;</td>
+	<td align="left">小于</td>
+	<td align="left">$x &lt; $y</td>
+	<td align="left">如果 $x 小于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">&gt;=</td>
-<td align="left">大于或等于</td>
-<td align="left">$x &gt;= $y</td>
-<td align="left">如果 $x 大于或者等于 $y，则返回true</td>
+	<td align="left">&gt;=</td>
+	<td align="left">大于或等于</td>
+	<td align="left">$x &gt;= $y</td>
+	<td align="left">如果 $x 大于或者等于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">&lt;=</td>
-<td align="left">小于或等于</td>
-<td align="left">$x &lt;= $y</td>
-<td align="left">如果 $x 小于或者等于 $y，则返回true</td>
+	<td align="left">&lt;=</td>
+	<td align="left">小于或等于</td>
+	<td align="left">$x &lt;= $y</td>
+	<td align="left">如果 $x 小于或者等于 $y，则返回true</td>
 </tr>
 </tbody>
 </table>
 <p>下例展示了使用某些比较运算符的不同结果：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_comparison.php">demo_php_operator_comparison.php</a></p>
-<h4 id="176-php"><a name="user-content-176-php" href="#176-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.6. PHP逻辑运算符</h4>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_comparison.php">demo_php_operator_comparison.php</a></p>
+<h4>1.7.6. PHP逻辑运算符</h4>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">例子</th>
-<th align="left">结果</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">例子</th>
+	<th align="left">结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">and</td>
-<td align="left">与</td>
-<td align="left">$x and $y</td>
-<td align="left">如果 $x 和 $y 都为true，则返回true</td>
+	<td align="left">and</td>
+	<td align="left">与</td>
+	<td align="left">$x and $y</td>
+	<td align="left">如果 $x 和 $y 都为true，则返回true</td>
 </tr>
 <tr>
-<td align="left">or</td>
-<td align="left">或</td>
-<td align="left">$x or $y</td>
-<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
+	<td align="left">or</td>
+	<td align="left">或</td>
+	<td align="left">$x or $y</td>
+	<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
 </tr>
 <tr>
-<td align="left">xor</td>
-<td align="left">异或</td>
-<td align="left">$x xor $y</td>
-<td align="left">如果 $x 和 $y 有且仅有一个为true，则返回true</td>
+	<td align="left">xor</td>
+	<td align="left">异或</td>
+	<td align="left">$x xor $y</td>
+	<td align="left">如果 $x 和 $y 有且仅有一个为true，则返回true</td>
 </tr>
 <tr>
-<td align="left">&amp;&amp;</td>
-<td align="left">与</td>
-<td align="left">$x &amp;&amp; $y</td>
-<td align="left">如果 $x 和 $y 都为true，则返回true</td>
+	<td align="left">&amp;&amp;</td>
+	<td align="left">与</td>
+	<td align="left">$x &amp;&amp; $y</td>
+	<td align="left">如果 $x 和 $y 都为true，则返回true</td>
 </tr>
 <tr>
-<td align="left">&ldquo;双竖线&rdquo;</td>
-<td align="left">或</td>
-<td align="left">$x &ldquo;双竖线&rdquo; $y</td>
-<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
+	<td align="left">&quot;双竖线&quot;</td>
+	<td align="left">或</td>
+	<td align="left">$x &quot;双竖线&quot; $y</td>
+	<td align="left">如果 $x 和 $y 至少有一个为true，则返回true</td>
 </tr>
 <tr>
-<td align="left">!</td>
-<td align="left">非</td>
-<td align="left">!$x</td>
-<td align="left">如果 $x 不为 true，则返回true</td>
+	<td align="left">!</td>
+	<td align="left">非</td>
+	<td align="left">!$x</td>
+	<td align="left">如果 $x 不为 true，则返回true</td>
 </tr>
 </tbody>
 </table>
-<h4 id="177-php"><a name="user-content-177-php" href="#177-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.7.7. PHP数组运算符</h4>
+<h4>1.7.7. PHP数组运算符</h4>
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">名称</th>
-<th align="left">例子</th>
-<th align="left">结果</th>
+	<th align="left">运算符</th>
+	<th align="left">名称</th>
+	<th align="left">例子</th>
+	<th align="left">结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">+</td>
-<td align="left">联合</td>
-<td align="left">$x + $y</td>
-<td align="left">$x 和 $y 的联合（但不覆盖重复的键）</td>
+	<td align="left">+</td>
+	<td align="left">联合</td>
+	<td align="left">$x + $y</td>
+	<td align="left">$x 和 $y 的联合（但不覆盖重复的键）</td>
 </tr>
 <tr>
-<td align="left">==</td>
-<td align="left">相等</td>
-<td align="left">$x == $y</td>
-<td align="left">如果 $x 和 $y 拥有相同的键/值对，则返回true</td>
+	<td align="left">==</td>
+	<td align="left">相等</td>
+	<td align="left">$x == $y</td>
+	<td align="left">如果 $x 和 $y 拥有相同的键/值对，则返回true</td>
 </tr>
 <tr>
-<td align="left">===</td>
-<td align="left">全等</td>
-<td align="left">$x === $y</td>
-<td align="left">如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回true</td>
+	<td align="left">===</td>
+	<td align="left">全等</td>
+	<td align="left">$x === $y</td>
+	<td align="left">如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回true</td>
 </tr>
 <tr>
-<td align="left">!=</td>
-<td align="left">不相等</td>
-<td align="left">$x != $y</td>
-<td align="left">如果 $x 不等于 $y，则返回true</td>
+	<td align="left">!=</td>
+	<td align="left">不相等</td>
+	<td align="left">$x != $y</td>
+	<td align="left">如果 $x 不等于 $y，则返回true</td>
 </tr>
 <tr>
-<td align="left">&lt;&gt;</td>
-<td align="left">不相等</td>
-<td align="left">$x &lt;&gt; $y</td>
-<td align="left">如果 $x 不等于 $y,则返回true</td>
+	<td align="left">&lt;&gt;</td>
+	<td align="left">不相等</td>
+	<td align="left">$x &lt;&gt; $y</td>
+	<td align="left">如果 $x 不等于 $y,则返回true</td>
 </tr>
 <tr>
-<td align="left">！==</td>
-<td align="left">不全等</td>
-<td align="left">$x !== $y</td>
-<td align="left">如果 $x 与 $y 完全不同，则返回true</td>
+	<td align="left">!==</td>
+	<td align="left">不全等</td>
+	<td align="left">$x !== $y</td>
+	<td align="left">如果 $x 与 $y 完全不同，则返回true</td>
 </tr>
 </tbody>
 </table>
 <p>下例展示了使用不同数组运算符的不同结果：<br />
-  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php">demo_php_operator_array.php</a>  </p>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_operator_array.php">demo_php_operator_array.php</a>  </p>
 <hr />
-<h3 id="18-php-ifelse"><a href="http://www.w3school.com.cn/php/php_if_else.asp">1.8. PHP If&hellip;Else</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-if-else.html">1.8. PHP If...Else</a></h3>
 <hr />
 <p>条件语用于基于不同条件执行不同的动作</p>
-<h4 id="181-php-if"><a name="user-content-181-php-if" href="#181-php-if" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.1. PHP - if语句</h4>
-<p>if 语句用于<strong>在指定条件为 true 时</strong>执行代码。  </p>
+<h4>1.8.1. PHP - if语句</h4>
+<p>if 语句用于<strong>在指定条件为 true 时</strong>执行代码。  </p>
 <p><strong>语法</strong></p>
-<div class="codehilite"><pre><span class="vg">if</span><span class="p">(</span><span class="vg">条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">当条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span>
-</pre></div>
+<pre><code>if(条件) {
+    当条件为 true 时执行的代码；
+}
+</code></pre>
 
-
-<p>下面将输出&rdquo;Have a good day!&rdquo;，如果当前时间（HOUR）小于20：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if.php">demo_php_if.php</a>  </p>
-<h4 id="182-php-ifelse"><a name="user-content-182-php-ifelse" href="#182-php-ifelse" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.2. PHP - if&hellip;else</h4>
+<p>下面将输出&quot;Have a good day!&quot;，如果当前时间（HOUR）小于20：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if.php">demo_php_if.php</a>  </p>
+<h4>1.8.2. PHP - if...else</h4>
 <p>请使用 if....else 语句<strong>在条件为 true 时执行代码，在条件为 false 时执行另一段代码。</strong></p>
 <p><strong>语法</strong></p>
-<div class="codehilite"><pre><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">条件</span><span class="err">）</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span><span class="w"> </span><span class="vg">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">false</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span>
-</pre></div>
+<pre><code>if (条件) {
+    条件为 true 时执行的代码；
+} else {
+    条件为 false 时执行的代码；
+}
+</code></pre>
 
-
-<p>下例将输出 &ldquo;Have a good day!&rdquo;，如果当前时间 (HOUR) 小于 20，否则输出 &ldquo;Have a good night!&rdquo;：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_else.php">demo_php_if_else.php</a>  </p>
-<h4 id="183-php-ifelseifelse"><a name="user-content-183-php-ifelseifelse" href="#183-php-ifelseifelse" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.8.3. PHP - if&hellip;elseif&hellip;else</h4>
-<p>请使用 if....elseif&hellip;else 语句来选择若干代码块之一来执行。</p>
+<p>下例将输出 &quot;Have a good day!&quot;，如果当前时间 (HOUR) 小于 20，否则输出 &quot;Have a good night!&quot;：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_else.php">demo_php_if_else.php</a>  </p>
+<h4>1.8.3. PHP - if...elseif...else</h4>
+<p>请使用 if....elseif...else 语句来选择若干代码块之一来执行。</p>
 <p><strong>语法</strong></p>
-<div class="codehilite"><pre><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span><span class="w"> </span><span class="vg">elseif</span><span class="w"> </span><span class="p">(</span><span class="vg">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span><span class="w"> </span><span class="vg">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">条件为</span><span class="w"> </span><span class="vg">false</span><span class="w"> </span><span class="vg">时执行的代码</span><span class="err">；</span>
-<span class="p">}</span>
-</pre></div>
+<pre><code>if (条件) {
+    条件为 true 时执行的代码；
+} elseif (condition) {
+    条件为 true 时执行的代码；
+} else {
+    条件为 false 时执行的代码；
+}
+</code></pre>
 
-
-<p>下例将输出 &ldquo;Have a good morning!&rdquo;，如果当前时间 (HOUR) 小于 10，如果当前时间小于 20，则输出 &ldquo;Have a good day!&rdquo;。否则将输出 &ldquo;Have a good night!&rdquo;：<br />
+<p>下例将输出 &quot;Have a good morning!&quot;，如果当前时间 (HOUR) 小于 10，如果当前时间小于 20，则输出 &quot;Have a good day!&quot;。否则将输出 &quot;Have a good night!&quot;：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_if_elseif.php">demo_php_if_elseif.php</a></p>
 <hr />
-<h3 id="19-php-switch"><a href="http://www.w3school.com.cn/php/php_switch.asp">1.9. PHP Switch</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-switch.html">1.9. PHP Switch</a></h3>
 <hr />
 <p>switch 语句用于基于不同条件执行不同动作。</p>
-<h4 id="191-switch"><a name="user-content-191-switch" href="#191-switch" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.9.1 Switch 语句</h4>
+<h4>1.9.1 Switch 语句</h4>
 <p>如果您希望有选择地执行若干代码块之一，请使用 Switch 语句。使用 Switch 语句可以避免冗长的 if..elseif..else 代码块。</p>
 <p><strong>工作原理</strong></p>
 <blockquote>
 <ol>
-<li>对表达式（通常是变量）进行一次计算；</li>
-<li>把表达式的值与结构中 case 的值进行比较；</li>
-<li>如果存在匹配，则执行与 case 关联的代码；</li>
-<li>代码执行后，<strong>break语句</strong>阻止代码跳入下一个 case 中继续执行；</li>
-<li>如果没有 case 为真，则使用default语句。</li>
+<li>
+<p>对表达式（通常是变量）进行一次计算；</p>
+</li>
+<li>
+<p>把表达式的值与结构中 case 的值进行比较；</p>
+</li>
+<li>
+<p>如果存在匹配，则执行与 case 关联的代码；</p>
+</li>
+<li>
+<p>代码执行后，<strong>break语句</strong>阻止代码跳入下一个 case 中继续执行；</p>
+</li>
+<li>
+<p>如果没有 case 为真，则使用default语句。</p>
+</li>
 </ol>
 </blockquote>
 <p><strong>实例</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_switch.php">demo_php_switch.php</a></p>
 <hr />
-<h3 id="110-php-while"><a href="http://www.w3school.com.cn/php/php_looping.asp">1.10. PHP While 循环</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-looping.html">1.10. PHP While 循环</a></h3>
 <hr />
 <p>在 PHP 中，我们有以下循环语句：</p>
 <ul>
-<li>while - 只要制定条件为真，则循环代码块；</li>
-<li>do&hellip;while - 先执行一次代码块，然后只要制定条件为真则重复循环</li>
-<li>for - 循环代码块制定次数</li>
-<li>foreach - 遍历数组中的每个元素并循环代码块</li>
+<li>
+<p>while - 只要制定条件为真，则循环代码块；</p>
+</li>
+<li>
+<p>do...while - 先执行一次代码块，然后只要制定条件为真则重复循环</p>
+</li>
+<li>
+<p>for - 循环代码块制定次数</p>
+</li>
+<li>
+<p>foreach - 遍历数组中的每个元素并循环代码块</p>
+</li>
 </ul>
-<h4 id="1101-php-while"><a name="user-content-1101-php-while" href="#1101-php-while" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.10.1. PHP while循环</h4>
+<h4>1.10.1. PHP while循环</h4>
 <p>只要指定的条件为真，while循环就会执行代码块。</p>
 <p><strong>语句</strong></p>
-<div class="codehilite"><pre><span class="vg">while</span><span class="w"> </span><span class="p">(</span><span class="vg">条件为真</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="vg">要执行的代码</span><span class="err">；</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code>while (条件为真) {
+    要执行的代码；
+}
+</code></pre>
 
 <p>下例首先把变量 $x 设置为 1（$x=1）。然后执行 while 循环，只要 $x 小于或等于 5。循环每运行一次，$x 将递增 1：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_while.php">demo_php_loop_while.php</a></p>
-<h4 id="1102-php-dowhile"><a name="user-content-1102-php-dowhile" href="#1102-php-dowhile" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.10.2 PHP do&hellip;while循环</h4>
-<p>do&hellip;while 循环首先会执行一次代码块，然后检查条件，如果指定条件为真，则重复循环。</p>
+<h4>1.10.2 PHP do...while循环</h4>
+<p>do...while 循环首先会执行一次代码块，然后检查条件，如果指定条件为真，则重复循环。</p>
 <p><strong>语法</strong></p>
-<div class="codehilite"><pre><span class="vg">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="vg">要执行的代码</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="vg">while</span><span class="w"> </span><span class="p">(</span><span class="vg">条件为真</span><span class="p">);</span>
-</pre></div>
-
+<pre><code>do {
+  要执行的代码;
+} while (条件为真);
+</code></pre>
 
 <p><strong>实例1</strong></p>
 <p>下面的例子首先把变量 $x 设置为 1（$x=1）。然后，do while 循环输出一段字符串，然后对变量 $x 递增 1。随后对条件进行检查（$x 是否小于或等于 5）。只要 $x 小于或等于 5，循环将会继续运行：  ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_do_while.php">demo_php_loop_do_while.php</a></p>
 <p><em>请注意，do while 循环只在执行循环内的语句之后才对条件进行测试。这意味着 do while 循环至少会执行一次语句，即使条件测试在第一次就失败了。</em></p>
 <p><strong>实例2</strong></p>
-<p>下面的例子把 $x 设置为 6，然后运行循环，随后对条件进行检查：<br />
+<p>下面的例子把 $x 设置为 6，然后运行循环，随后对条件进行检查：
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_do_while2.php">demo_php_loop_do_while2.php</a></p>
 <hr />
-<h3 id="111-php-for"><a href="http://www.w3school.com.cn/php/php_looping_for.asp">1.11. PHP for 循环</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-looping-for.html">1.11. PHP for 循环</a></h3>
 <hr />
 <p>PHP for 循环执行代码块指定的次数。</p>
-<h4 id="1111-php-for"><a name="user-content-1111-php-for" href="#1111-php-for" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.11.1. PHP for 循环</h4>
+<h4>1.11.1. PHP for 循环</h4>
 <p>如果您已经提前确定脚本运行的次数，可以使用 for 循环。</p>
 <p><strong>语法:</strong></p>
-<div class="codehilite"><pre><span class="vg">for</span><span class="w"> </span><span class="p">(</span><span class="vg">init</span><span class="w"> </span><span class="vg">counter</span><span class="p">;</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">counter</span><span class="p">;</span><span class="w"> </span><span class="vg">increment</span><span class="w"> </span><span class="vg">counter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="vg">code</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="vg">executed</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code>for (init counter; test counter; increment counter) {
+  code to be executed;
+}
+</code></pre>
 
 <p><em>参数:</em></p>
 <ul>
-<li>init counter: 初始化循环计数器的值</li>
-<li>test counter:评估每个循环迭代。如果值为TRUE，继续循环。如果它的值为FALSE，循环结束。</li>
-<li>increment counter:增加循环计数器的值</li>
+<li>
+<p>init counter: 初始化循环计数器的值</p>
+</li>
+<li>
+<p>test counter:评估每个循环迭代。如果值为TRUE，继续循环。如果它的值为FALSE，循环结束。</p>
+</li>
+<li>
+<p>increment counter:增加循环计数器的值</p>
+</li>
 </ul>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_for.php">demo_php_loop_for.php</a></p>
-<h4 id="1111-php-foreach"><a name="user-content-1111-php-foreach" href="#1111-php-foreach" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.11.1. PHP foreach 循环</h4>
+<h4>1.11.1. PHP foreach 循环</h4>
 <p>foreach 循环只适用于数组，并用于遍历数组中的每个键/值对。</p>
 <p><strong>语法:</strong></p>
-<div class="codehilite"><pre><span class="vg">foreach</span><span class="w"> </span><span class="p">(</span><span class="err">$</span><span class="vg">array</span><span class="w"> </span><span class="vg">as</span><span class="w"> </span><span class="err">$</span><span class="vg">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="vg">code</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="vg">executed</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<pre><code>foreach ($array as $value) {
+  code to be executed;
+}
+</code></pre>
 
-
-<p>每进行一次循环迭代，当前数组元素的值就会被赋值给 $value 变量，并且数组指针会逐一地移动，直到到达最后一个数组元素。<br />
+<p>每进行一次循环迭代，当前数组元素的值就会被赋值给 $value 变量，并且数组指针会逐一地移动，直到到达最后一个数组元素。
 下面的例子演示的循环将输出给定数组（$colors）的值：</p>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_loop_foreach.php">demo_php_loop_foreach.php</a></p>
 <hr />
-<h3 id="112-php"><a href="http://www.w3school.com.cn/php/php_functions.asp">1.12. PHP函数</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-functions.html">1.12. PHP函数</a></h3>
 <hr />
 <p><font color="red"><strong>PHP 的真正力量来自它的函数：它拥有超过 1000 个内建的函数。</strong></font></p>
-<h4 id="1121-php"><a name="user-content-1121-php" href="#1121-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.1. PHP 用户定义函数</h4>
+<h4>1.12.1. PHP 用户定义函数</h4>
 <ul>
-<li>除了内建的 PHP 函数，我们可以创建我们自己的函数。</li>
-<li>函数是可以在程序中重复使用的语句块。</li>
-<li>页面加载时函数不会立即执行。</li>
-<li>函数只有在被调用时才会执行。</li>
+<li>
+<p>除了内建的 PHP 函数，我们可以创建我们自己的函数。</p>
+</li>
+<li>
+<p>函数是可以在程序中重复使用的语句块。</p>
+</li>
+<li>
+<p>页面加载时函数不会立即执行。</p>
+</li>
+<li>
+<p>函数只有在被调用时才会执行。</p>
+</li>
 </ul>
-<h4 id="1122-php"><a name="user-content-1122-php" href="#1122-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.2 在 PHP 创建用户定义函数</h4>
+<h4>1.12.2 在 PHP 创建用户定义函数</h4>
 <p>用户定义的函数声明以关键字 “function” 开头：</p>
 <p><strong>语法</strong>：</p>
-<div class="codehilite"><pre><span class="vg">function</span><span class="w"> </span><span class="vg">functionName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="vg">被执行的代码</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<pre><code>function functionName() {
+  被执行的代码;
+}
+</code></pre>
 
-
-<p><em><font color="green">注释：函数名能够以字母或下划线开头（而非数字）。</em></font></p>
-<p><em><font color="green">注释：函数名对大小写不敏感。</em></font></p>
+<p><em><font color="green">注释：函数名能够以字母或下划线开头（而非数字）。</font></em></p>
+<p><em><font color="green">注释：函数名对大小写不敏感。</font></em></p>
 <p><strong><font color="blue">提示:</font></strong> 函数名应该能够反映函数所执行的任务</p>
 <p><strong>实例</strong></p>
-<p>在下面的例子中，我们创建名为 &ldquo;writeMsg()&rdquo; 的函数。打开的花括号（{）指示函数代码的开始，而关闭的花括号（}）指示函数的结束。此函数输出 &ldquo;Hello world!&rdquo;。如需调用该函数，只要使用函数名即可：<br />
+<p>在下面的例子中，我们创建名为 &quot;writeMsg()&quot; 的函数。打开的花括号（{）指示函数代码的开始，而关闭的花括号（}）指示函数的结束。此函数输出 &quot;Hello world!&quot;。如需调用该函数，只要使用函数名即可：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function1.php">demo_php_function1.php</a></p>
-<h4 id="1123-php"><a name="user-content-1123-php" href="#1123-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.3 PHP 函数参数</h4>
+<h4>1.12.3 PHP 函数参数</h4>
 <ul>
-<li>可以通过参数向函数传递信息。参数类似变量。</li>
-<li>参数被定义在函数名之后，括号内部。您可以添加任意多参数，只要用逗号隔开即可。</li>
+<li>
+<p>可以通过参数向函数传递信息。参数类似变量。</p>
+</li>
+<li>
+<p>参数被定义在函数名之后，括号内部。您可以添加任意多参数，只要用逗号隔开即可。</p>
+</li>
 </ul>
 <p><strong>实例1：</strong></p>
 <p>下面的例子中的函数有一个参数（$fname）。当调用 familyName() 函数时，我们同时要传递一个名字（例如 Bill），这样会输出不同的名字，但是姓氏相同：<br />
@@ -1741,120 +977,1423 @@ MathJax.Hub.Config({
 <p><strong>实例2：</strong></p>
 <p>下面的例子中的函数有两个参数（$fname 和 $year）：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function3.php">demo_php_function3.php</a></p>
-<h4 id="1124-php"><a name="user-content-1124-php" href="#1124-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.4 PHP 默认参数值</h4>
+<h4>1.12.4 PHP 默认参数值</h4>
 <p><strong>实例：</strong></p>
 <p>下面的例子展示了如何使用默认参数。如果我们调用没有参数的 setHeight() 函数，它的参数会取默认值：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function4.php">demo_php_function4.php</a></p>
-<h4 id="1125-php-"><a name="user-content-1125-php-" href="#1125-php-" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.12.5 PHP 函数 - 返回值</h4>
+<h4>1.12.5 PHP 函数 - 返回值</h4>
 <p>如需使函数返回值，请使用 return 语句：</p>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_function5.php">demo_php_function5.php</a></p>
 <hr />
-<h3 id="113-php_1"><a href="http://www.w3school.com.cn/php/php_arrays.asp">1.13 PHP 数组</a></h3>
+<h3><a href="http://www.w3cschool.cc/php/php-arrays.html">1.13 PHP 数组</a></h3>
 <hr />
 <p><strong>数组能够在单独的变量名中存储一个或多个值</strong></p>
 <p><strong>实例</strong></p>
 <p>数组在单个变量中存储多个值：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num.php">demo_php_array_num.php</a></p>
-<h4 id="1131"><a name="user-content-1131" href="#1131" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.1. 什么是数组？</h4>
+<h4>1.13.1. 什么是数组？</h4>
 <p>数组是特殊的变量，它可以同时保存一个以上的值。</p>
 <p>如果您有一个项目列表（例如汽车品牌列表），在单个变量中存储这些品牌名称是这样的：</p>
-<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars1</span><span class="o">=</span><span class="s2">&quot;Volvo&quot;</span><span class="p">;</span>
-<span class="err">$</span><span class="vg">cars2</span><span class="o">=</span><span class="s2">&quot;BMW&quot;</span><span class="p">;</span>
-<span class="err">$</span><span class="vg">cars3</span><span class="o">=</span><span class="s2">&quot;SAAB&quot;</span><span class="p">;</span>
-</pre></div>
-
+<pre><code>$cars1=&quot;Volvo&quot;;
+$cars2=&quot;BMW&quot;;
+$cars3=&quot;SAAB&quot;;
+</code></pre>
 
 <p>不过，假如您希望对变量进行遍历并找出特定的那个值？或者如果您需要存储 300 个汽车品牌，而不是 3 个呢？</p>
 <p>解决方法是创建数组！</p>
 <p>数组能够在单一变量名中存储许多值，并且您能够通过引用下标号来访问某个值。</p>
-<h4 id="1132-php"><a name="user-content-1132-php" href="#1132-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.2 在 PHP 中创建数组</h4>
+<h4>1.13.2 在 PHP 中创建数组</h4>
 <p>在 PHP 中，array()函数用于创建数组：</p>
-<div class="codehilite"><pre><span class="vg">array</span><span class="p">();</span>
-</pre></div>
-
+<pre><code>array();
+</code></pre>
 
 <p>在PHP中，有三种数组类型：</p>
 <ul>
-<li><strong>索引数组</strong> - 带有数字索引的数组</li>
-<li><strong>关联数组</strong> - 带有指定键的数组</li>
-<li><strong>多维数组</strong> - 包含一个或多个数组的数组</li>
+<li>
+<p><strong>索引数组</strong> - 带有数字索引的数组</p>
+</li>
+<li>
+<p><strong>关联数组</strong> - 带有指定键的数组</p>
+</li>
+<li>
+<p><strong>多维数组</strong> - 包含一个或多个数组的数组</p>
+</li>
 </ul>
-<h4 id="1133-php"><a name="user-content-1133-php" href="#1133-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.3. PHP 索引数组</h4>
+<h4>1.13.3. PHP 索引数组</h4>
 <p>有两种创建索引数组的方法：</p>
 <p>索引是自动分配的（索引从0开始）：</p>
-<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">array</span><span class="p">(</span><span class="s2">&quot;Volvo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;BMW&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SAAB&quot;</span><span class="p">);</span>
-</pre></div>
-
+<pre><code>$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;SAAB&quot;);
+</code></pre>
 
 <p>或者也可以手动分配索引：</p>
-<div class="codehilite"><pre><span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Volvo&quot;</span><span class="p">;</span>
-<span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;BMW&quot;</span><span class="p">;</span>
-<span class="err">$</span><span class="vg">cars</span><span class="p">[</span><span class="il">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SAAB&quot;</span><span class="p">;</span>
-</pre></div>
-
+<pre><code>$cars[0] = &quot;Volvo&quot;;
+$cars[1] = &quot;BMW&quot;;
+$cars[2] = &quot;SAAB&quot;;
+</code></pre>
 
 <p>下面的例子创建名为 $cars 的索引数组，为其分配三个元素，然后输出包含数组值的一段文本：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num.php">demo_php_array_num.php</a></p>
-<h4 id="1134-count"><a name="user-content-1134-count" href="#1134-count" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.4. 获得数组的长度 - count() 函数</h4>
+<h4>1.13.4. 获得数组的长度 - count() 函数</h4>
 <p>count() 函数用于返回数组的长度（元素数）：</p>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_length.php">demo_php_array_length.php</a></p>
-<h4 id="1135"><a name="user-content-1135" href="#1135" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.5. 遍历索引数组</h4>
-<p>如需遍历并输出索引数组的所有制，您可以使用 for 循环，就像这样：<br />
+<h4>1.13.5. 遍历索引数组</h4>
+<p>如需遍历并输出索引数组的所有制，您可以使用 for 循环，就像这样：
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_num_loop.php">demo_php_array_num_loop.php</a></p>
-<h4 id="1136-php"><a name="user-content-1136-php" href="#1136-php" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.6. PHP 关联数组</h4>
+<h4>1.13.6. PHP 关联数组</h4>
 <p>关联数组是使用您分配给数组的指定键的数组。</p>
 <p>有两种创建关联数组的方法：</p>
-<div class="codehilite"><pre><span class="err">$</span><span class="vg">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">array</span><span class="p">(</span><span class="s2">&quot;Peter&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ben&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;37&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Joe&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;43&quot;</span><span class="p">);</span>
-</pre></div>
-
+<pre><code>$age = array(&quot;Peter&quot; =&gt; &quot;35&quot;, &quot;Ben&quot; =&gt; &quot;37&quot;, &quot;Joe&quot; =&gt; &quot;43&quot;);
+</code></pre>
 
 <p>或者：</p>
-<div class="codehilite"><pre><span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Peter&#39;]=&quot;35&quot;;</span>
-<span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Ben&#39;]=&quot;37&quot;;</span>
-<span class="err">$</span><span class="vg">age</span><span class="p">[</span><span class="c1">&#39;Joe&#39;]=&quot;43&quot;;</span>
-</pre></div>
-
+<pre><code>$age['Peter']=&quot;35&quot;;
+$age['Ben']=&quot;37&quot;;
+$age['Joe']=&quot;43&quot;;
+</code></pre>
 
 <p>随后可以在脚本中使用指定键：</p>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_assoc.php">demo_php_array_assoc.php</a></p>
-<h4 id="1137"><a name="user-content-1137" href="#1137" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.13.7. 遍历关联数组</h4>
+<h4>1.13.7. 遍历关联数组</h4>
 <p>如需遍历并输出关联数组的所有值，您可以使用 foreach 循环，就像这样：</p>
 <p><strong>实例：</strong><br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_assoc_loop.php">demo_php_array_assoc_loop.php</a></p>
-<h3 id="114"><a href="http://www.w3school.com.cn/php/php_arrays_sort.asp">1.14 数组排序</a></h3>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-arrays-sort.html">1.14 数组排序</a></h3>
+<hr />
 <p><strong>数组中的元素能够以字母或数字顺序进行升序或降序排序。</strong></p>
-<h4 id="1141-php-"><a name="user-content-1141-php-" href="#1141-php-" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.1. PHP - 数组的排序函数</h4>
+<h4>1.14.1. PHP - 数组的排序函数</h4>
 <p>在本节中，我们将学习如下 PHP 数组排序函数：</p>
 <ul>
-<li>sort() - 以升序对数组排序</li>
-<li>rsort() - 以降序对数组排序</li>
-<li>asort() - 根据值，以升序对关联数组进行排序</li>
-<li>ksort() - 根据键，以升序对关联数组进行排序</li>
-<li>arsort() - 根据值，以降序对关联数组进行排序</li>
-<li>krsort() - 根据键，以降序对关联数组进行排序</li>
+<li>
+<p>sort() - 以升序对数组排序</p>
+</li>
+<li>
+<p>rsort() - 以降序对数组排序</p>
+</li>
+<li>
+<p>asort() - 根据值，以升序对关联数组进行排序</p>
+</li>
+<li>
+<p>ksort() - 根据键，以升序对关联数组进行排序</p>
+</li>
+<li>
+<p>arsort() - 根据值，以降序对关联数组进行排序</p>
+</li>
+<li>
+<p>krsort() - 根据键，以降序对关联数组进行排序</p>
+</li>
 </ul>
-<h4 id="1142-sort"><a name="user-content-1142-sort" href="#1142-sort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.2 对数组进行升序排序 - sort()</h4>
+<h4>1.14.2. 对数组进行升序排序 - sort()</h4>
 <p>下面的例子按照字母升序对数组 $cars 中的元素进行排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_alpha.php">demo_php_array_sort_alpha.php</a></p>
 <p>下面的例子按照数字升序对数组 $numbers 中的元素进行排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_sort_num.php">demo_php_array_sort_num.php</a></p>
-<h4 id="1143-rsort"><a name="user-content-1143-rsort" href="#1143-rsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.3 对数组进行降序排序 - rsort()</h4>
+<h4>1.14.3. 对数组进行降序排序 - rsort()</h4>
 <p>下面的例子按照字母降序对数组 $cars 中的元素进行排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_alpha.php">demo_php_array_rsort_alpha.php</a></p>
 <p>下面的例子按照数字降序对数组 $numbers 中的元素进行排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_rsort_num.php">demo_php_array_rsort_num.php</a></p>
-<h4 id="1144-asort"><a name="user-content-1144-asort" href="#1144-asort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.4 根据值对数组进行升序排序 - asort()</h4>
+<h4>1.14.4. 根据值对数组进行升序排序 - asort()</h4>
 <p>下面的例子根据值对关联数组进行升序排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_asort.php">demo_php_array_asort.php</a></p>
-<h4 id="1145-ksort"><a name="user-content-1145-ksort" href="#1145-ksort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.5 根据键对数组进行升序排序 - ksort()</h4>
+<h4>1.14.5. 根据键对数组进行升序排序 - ksort()</h4>
 <p>下面的例子根据键对关联数组进行升序排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_ksort.php">demo_php_array_ksort.php</a></p>
-<h4 id="1146-arsort"><a name="user-content-1146-arsort" href="#1146-arsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.6 根据值对数组进行降序排序 - arsort()</h4>
+<h4>1.14.6. 根据值对数组进行降序排序 - arsort()</h4>
 <p>下面的例子根据值对关联数组进行降序排序：<br />
 ┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_arsort.php">demo_php_array_arsort.php</a></p>
-<h4 id="1146-krsort"><a name="user-content-1146-krsort" href="#1146-krsort" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>1.14.6 根据键对数组进行降序排序 - krsort()</h4>
+<h4>1.14.7. 根据键对数组进行降序排序 - krsort()</h4>
 <p>下面的例子根据键对关联数组进行降序排序：<br />
-┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_krsort.php">demo_php_array_krsort.php</a></p></article></body></html>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_array_krsort.php">demo_php_array_krsort.php</a></p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-superglobals.html">1.15 PHP 全局变量 - 超全局变量</a></h3>
+<hr />
+<p><strong>超全局变量在 PHP 4.1.0 中引入，是在全部作用域中始终可用的内置变量。</strong></p>
+<h4>1.15.1. PHP 全局变量 - 超全局变量</h4>
+<p>PHP 中许多预定义变量都是“超全局的”，这意味着它们在一个脚本的全部作用域中都可用。在函数或方法中无需执行 global $variable;就可以访问他们。</p>
+<p>这些超全局变量是：</p>
+<ul>
+<li>
+<p>$GLOBALS</p>
+</li>
+<li>
+<p>$_SERVER</p>
+</li>
+<li>
+<p>$_REQUEST</p>
+</li>
+<li>
+<p>$_POST</p>
+</li>
+<li>
+<p>$_GET</p>
+</li>
+<li>
+<p>$_FILES</p>
+</li>
+<li>
+<p>$_ENV</p>
+</li>
+<li>
+<p>$_COOKIE</p>
+</li>
+<li>
+<p>$_SESSION</p>
+</li>
+</ul>
+<p>本节会介绍一些超全局变量，并会在稍后的章节讲解其他的超全局变量。</p>
+<h4>1.15.2. $GLOBALS -- 引用全局作用域中可用 的全部变量</h4>
+<p>$GLOBALS 这种全局变量用于在PHP脚本中的任意位置访问全局变量（从函数或方法中均可）。</p>
+<p>PHP 在名为 $GLOBALS[index] 的数组中存储了所有全局变量。变量的名字就是数组的键。</p>
+<p>下面的例子展示了如何使用超级全局变量 $GLOBALS:</p>
+<p><strong>实例</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_global.php">demo_php_global_global.php</a></p>
+<h4>1.15.3. PHP $_SERVER</h4>
+<p>$_SERVER 这种超全局变量保存关于包头、路径和脚本位置的信息。</p>
+<p>下面的例子展示了如何使用 $_SERVER中的某些元素：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_server.php">demo_php_global_server.php</a></p>
+<h4>1.15.4. PHP $_REQUEST</h4>
+<p>PHP $_REQUEST 用于收集 HTML 表单提交的数据。</p>
+<p>下面的例子展示了一个包含输入字段及提交按钮的表单。当用户通过点击提交按钮来提交表单数据时, 表单数据将发送到 <form> 标签的 action 属性中指定的脚本文件。在这个例子中，我们指定文件本身来处理表单数据。如果您需要使用其他的 PHP 文件来处理表单数据，请修改为您选择的文件名即可。然后，我们可以使用超级全局变量 $_REQUEST 来收集 input 字段的值：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_request.php">demo_php_global_request.php</a></p>
+<h4>1.15.5. PHP $_POST</h4>
+<p>PHP $_POST 广泛用于收集提交 method=&quot;post&quot; 的 HTML 表单后的表单数据。</p>
+<p>$_POST 也常用于传递变量。</p>
+<p>下面的例子展示了一个包含输入字段和提交按钮的表单。当用户点击提交按钮来提交数据后，表单数据会发送到 <form> 标签的 action 属性中指定的文件。在本例中，我们指定文件本身来处理表单数据。如果您希望使用另一个 PHP 页面来处理表单数据，请用更改为您选择的文件名。然后，我们可以使用超全局变量 $_POST 来收集输入字段的值：</p>
+<p><strong>实例：</strong><br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_post.php">demo_php_global_post.php</a></p>
+<h4>1.15.6. PHP $_GET</h4>
+<p>PHP $_GET 也可用于收集提交 HTML 表单 (method=&quot;get&quot;) 之后的表单数据。</p>
+<p>$_GET 也可以收集 URL 中的发送的数据。</p>
+<p>假设我们有一张页面含有带参数的超链接：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Base/demo_php_global_get.php">demo_php_global_get.php</a></p>
+<hr />
+<h2>二、PHP 表单处理</h2>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-forms.html">2.1. PHP 表单处理</a></h3>
+<hr />
+<p>PHP 超全局变量 $<code>_</code>GET 和 $<code>_</code>POST 用于收集表单数据（form-data)。</p>
+<h4>2.1.1. PHP - 一个简单的HTML表单</h4>
+<p><strong>POST实例：</strong></p>
+<p>下面的例子显示了一个简单的 HTML 表单，它包含两个输入字段和一个提交按钮：<br />
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_post.php">demo_php_form_post.php</a></p>
+<p>当用户填写此表单并点击提交按钮后，表单数据会发送到名为 &quot;welcome.php&quot; 的 PHP 文件供处理。表单数据是通过 HTTP POST 方法发送的。</p>
+<p><strong>GET实例：</strong></p>
+<p>使用 HTTP GET 方法也能得到相同的结果：
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_get.php">demo_php_form_get.php</a></p>
+<p>上面的代码很简单。不过，最重要的内容被漏掉了。您需要对表单数据进行验证，以防止脚本出现漏洞。</p>
+<p><font color="red"><strong>注意：</strong></font>在处理 PHP 表单时请关注安全！</p>
+<p>本页未包含任何表单验证程序，它只向我们展示如何发送并接收表单数据。</p>
+<h4>2.1.2. GET vs. POST</h4>
+<p>GET 和 POST 都创建数组（例如，array( key =&gt; value, key2 =&gt; value2, key3 =&gt; value3, ...)）。此数组包含键/值对，其中的键是表单控件的名称，而值是来自用户的输入数据。</p>
+<p>GET 和 POST 被视作 $_GET 和 $_POST。它们是超全局变量，这意味着对它们的访问无需考虑作用域 - 无需任何特殊代码，您能够从任何函数、类或文件访问它们。</p>
+<p>$_GET 是通过 URL 参数传递到当前脚本的变量数组。</p>
+<p>$_POST 是通过 HTTP POST 传递到当前脚本的变量数组。</p>
+<h4>2.1.3. 何时使用GET？</h4>
+<p>通过 GET 方法从表单发送的信息 <strong>对任何人都是可见的</strong>（所有变量名和值都显示在 URL 中）。GET 对所发送信息的数量也有限制。限制在大于 2000 个字符。</p>
+<p><font color="blue">不过，由于变量显示在 URL 中，把页面添加到书签中也更为方便。</font></p>
+<p>GET 可用于发送非敏感的数据。</p>
+<p><strong>注释：</strong>绝不能使用 GET 来发送密码或其他敏感信息！</p>
+<h4>2.1.4. 何时使用POST？</h4>
+<p>通过 POST 方法从表单发送的信息对 <strong>其他人是不可见的</strong>（所有名称/值会被嵌入 HTTP 请求的主体中），并且对所发送信息的数量也 <strong>无限制。</strong></p>
+<p>此外 POST 支持高阶功能，比如在向服务器上传文件时进行 multi-part 二进制输入。</p>
+<p>不过，由于变量未显示在 URL 中，也就无法将页面添加到书签。</p>
+<p><strong>提示：</strong>开发者偏爱 POST 来发送表单数据。</p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-form-validation.html">2.2. 表单验证</a></h3>
+<hr />
+<p><strong>本节和下一节讲解如何使用 PHP 来验证表单数据。</strong></p>
+<h4>2.2.1. PHP 表单验证</h4>
+<p><font color="orange">提示：</font>在处理 PHP 表单时请重视安全性！</p>
+<p>这些页面将展示如何安全地处理 PHP 表单。对 HTML 表单数据进行适当的验证对于防范黑客和垃圾邮件很重要！</p>
+<p>首先，这个表单的纯 HTML 代码：</p>
+<p><strong>文本字段</strong></p>
+<p>name、email 和 website 属于文本输入元素，comment 字段是文本框。HTML 代码是这样的：</p>
+<pre><code>Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;
+Website: &lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;
+Comment: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+
+<p><strong>单选按键</strong></p>
+<p>gender 字段是单选按钮，HTML 代码是这样的：</p>
+<pre><code>Gender:
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;Female
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;Male
+</code></pre>
+
+<p><strong>表单元素</strong></p>
+<p>表单的 HTML 代码是这样的：</p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;&gt;
+</code></pre>
+
+<p>当提交此表单时，通过 method=&quot;post&quot; 发送表单数据。</p>
+<p><strong>什么是 $_SERVER[&quot;PHP_SELF&quot;]变量</strong></p>
+<p>$_SERVER[&quot;PHP_SELF&quot;] 是一种超全局变量，它返回当前执行脚本的文件名。</p>
+<p>因此，$_SERVER[&quot;PHP_SELF&quot;] 将表单数据发送到页面本身，而不是跳转到另一张页面。这样，用户就能够在表单页面获得错误提示信息。</p>
+<p><strong>什么是 htmlspecialchars() 函数</strong></p>
+<p>htmlspecialchars()函数把特殊字符转换为HTML实体。这意味着 &lt; 和 &gt; 之类的 HTML 字符会被替换为 <code>&amp;lt;</code> 和 <code>&amp;gt;</code> 。这样可防止攻击者通过在表单中注入 HTML 或 JavaScript 代码（跨站点脚本攻击）对代码进行利用。</p>
+<p><strong>通过 PHP 验证表单数据</strong></p>
+<p>我们要做的第一件事是通过 PHP 的 htmlspecialchars() 函数传递所有变量。</p>
+<p>在我们使用 htmlspecialchars() 函数后，如果用户试图在文本字段中提交以下内容：</p>
+<pre><code>&lt;script&gt;location.href('http://www.hacked.com')&lt;/script&gt;
+</code></pre>
+
+<p>代码不会执行，因为会被保存为转义代码，就像这样：</p>
+<pre><code>&amp;lt;script&amp;gt;location.href('http://www.hacked.com')&amp;lt;/script&amp;gt; 
+</code></pre>
+
+<p>现在这条代码显示在页面上或 e-mail 中是安全的。</p>
+<p>在用户提交该表单时，我们还要做两件事：</p>
+<ul>
+<li>
+<p>（通过 PHP trim() 函数）去除用户输入数据中不必要的字符（多余的空格、制表符、换行）</p>
+</li>
+<li>
+<p>（通过 PHP stripslashes() 函数）删除用户输入数据中的反斜杠（\）</p>
+</li>
+</ul>
+<p>接下来我们创建一个检查函数（相比一遍遍地写代码，这样效率更好）。</p>
+<p>我们把函数命名为 test_input()。</p>
+<p>现在，我们能够通过 test_input() 函数检查每个 $_POST 变量，脚本是这样的：</p>
+<pre><code>&lt;?php
+// 定义变量并设置为空值
+$name = $email = $gender = $comment = $website = &quot;&quot;;
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {
+  $name = test_input($_POST[&quot;name&quot;]);
+  $email = test_input($_POST[&quot;email&quot;]);
+  $website = test_input($_POST[&quot;website&quot;]);
+  $comment = test_input($_POST[&quot;comment&quot;]);
+  $gender = test_input($_POST[&quot;gender&quot;]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?&gt;
+</code></pre>
+
+<p><strong>实例</strong>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_php_form_validation_escapechar.php">demo_php_form_validation_escapechar.php</a></p>
+<p>请注意在脚本开头，我们检查表单是否使用 $_SERVER[&quot;REQUEST_METHOD&quot;] 进行提交。如果 REQUEST_METHOD 是 POST，那么表单已被提交 - 并且应该对其进行验证。如果未提交，则跳过验证并显示一个空白表单。</p>
+<p>不过，在上面的例子中，所有输入字段都是可选的。即使用户未输入任何数据，脚本也能正常工作。</p>
+<p>下一步是制作必填输入字段，并创建需要时使用的错误消息。</p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-form-required.html">2.3. 表单 - 必需字段</a></h3>
+<hr />
+<p><strong>本节展示如何制作必填输入字段，并创建需要时所用的错误信息。</strong></p>
+<p><strong>PHP - 必需字段</strong></p>
+<p>在上一章节我们已经介绍了表的验证规则，我们可以看到&quot;Name&quot;, &quot;E-mail&quot;, 和 &quot;Gender&quot; 字段是必须的，各字段不能为空。</p>
+<table>
+<thead>
+<tr>
+	<th align="left">字段</th>
+	<th align="left">验证规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Name</td>
+	<td align="left">必需。 + 只能包含字母和空格</td>
+</tr>
+<tr>
+	<td align="left">E-mail</td>
+	<td align="left">必需。 + 必需包含一个有效的电子邮件地址（包含&quot;@&quot;和&quot;.&quot;）</td>
+</tr>
+<tr>
+	<td align="left">Website</td>
+	<td align="left">可选。 如果存在，它必须包含一个有效的URL</td>
+</tr>
+<tr>
+	<td align="left">Comment</td>
+	<td align="left">可选。多行字段（文本域）。</td>
+</tr>
+<tr>
+	<td align="left">Gender</td>
+	<td align="left">必需。 Must select one</td>
+</tr>
+</tbody>
+</table>
+<p>如果在前面的章节中，所有输入字段都是可选的。</p>
+<p>在以下代码中我们加入了一些新的变量: $nameErr, $emailErr, $genderErr, 和 $websiteErr.。这些错误变量将显示在必须字段上。 我们还为每个$_POST变量增加了一个if else语句。 这些语句将检查 $_POST 变量是 否为空（使用php的 empty() 函数）。如果为空，将显示对应的错误信息。 如果不为空，数据将传递给test_input() 函数：</p>
+<pre><code>&lt;?php
+// 定义变量并默认设为空值
+$nameErr = $emailErr = $genderErr = $websiteErr = &quot;&quot;;
+$name = $email = $gender = $comment = $website = &quot;&quot;;
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;)
+{
+
+  if (empty($_POST[&quot;name&quot;]))
+    {$nameErr = &quot;Name is required&quot;;}
+  else
+    {$name = test_input($_POST[&quot;name&quot;]);}
+
+  if (empty($_POST[&quot;email&quot;]))
+    {$emailErr = &quot;Email is required&quot;;}
+  else
+    {$email = test_input($_POST[&quot;email&quot;]);}
+
+  if (empty($_POST[&quot;website&quot;]))
+    {$website = &quot;&quot;;}
+  else
+    {$website = test_input($_POST[&quot;website&quot;]);}
+
+  if (empty($_POST[&quot;comment&quot;]))
+    {$comment = &quot;&quot;;}
+  else
+    {$comment = test_input($_POST[&quot;comment&quot;]);}
+
+  if (empty($_POST[&quot;gender&quot;]))
+    {$genderErr = &quot;Gender is required&quot;;}
+  else
+    {$gender = test_input($_POST[&quot;gender&quot;]);}
+}
+?&gt;
+</code></pre>
+
+<p><strong>PHP - 显示错误信息</strong></p>
+<p>在以下的HTML实例表单中，我们为每个字段中添加了一些脚本， 各个脚本会在信息输入错误时显示错误信息。(如果用户未填写信息就提交表单则会输出错误信息):
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_required.php">demo_form_validation_required.php</a></p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-form-url-email.html">2.4. PHP表单 - 验证邮件和URL</a></h3>
+<hr />
+<h4>2.4.1. PHP - 验证名称</h4>
+<p>以下代码将通过简单的方式来检测 name 字段是否包含字母和空格，如果 name 字段值不合法，将输出错误信息：</p>
+<pre><code>$name = test_input($_POST[&quot;name&quot;]);
+if (!preg_match(&quot;/^[a-zA-Z ]*$/&quot;,$name))
+  {
+  $nameErr = &quot;只允许字母及空格&quot;; 
+  }
+
+preg_match — 进行正则表达式匹配。
+
+语法：
+int preg_match ( string $pattern , string $subject [, array $matches [, int $flags ]] )
+
+在 subject 字符串中搜索与 pattern 给出的正则表达式相匹配的内容。如果提供了 matches ，则其会被搜索的结果所填充。$matches[0] 将包含与整个模式匹配的文本，$matches[1] 将包含与第一个捕获的括号中的子模式所匹配的文本，以此类推。
+</code></pre>
+
+<h4>2.4.2. PHP - 验证邮件</h4>
+<p>以下代码将通过简单的方式来检测 e-mail 地址是否合法。如果 e-mail 地址不合法，将输出错误信息：</p>
+<pre><code>$email = test_input($_POST[&quot;email&quot;]);
+if (!preg_match(&quot;/([\w\-]+\@[\w\-]+\.[\w\-]+)/&quot;,$email))
+  {
+  $emailErr = &quot;非法邮件地址&quot;; 
+  }
+</code></pre>
+
+<h4>2.4.3. PHP - 验证URL</h4>
+<p>以下代码将检测URL地址是否合法 (以下正则表达式运行URL中含有破折号:&quot;-&quot;)， 如果 URL 地址不合法，将输出错误信息：</p>
+<pre><code>$website = test_input($_POST[&quot;website&quot;]);
+if (!preg_match(&quot;/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&amp;@#\/%?=~_|!:,.;]*[-a-z0-9+&amp;@#\/%=~_|]/i&quot;,$website))
+  {
+  $websiteErr = &quot;不合法的 URL&quot;; 
+  }
+</code></pre>
+
+<h4>2.4.4. PHP - 验证 Name, E-mail, 和 URL</h4>
+<p>┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_special.php">demo_form_validation_special.php</a></p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-form-complete.html">2.5. PHP完整表单实例</a></h3>
+<hr />
+<p>本章节将介绍如何让用户在点击“提交（submit）”按钮提交数据前保证所有字段正确输入。</p>
+<h4>2.5.1. PHP - 在表单中确保输入值</h4>
+<p>在用户点击提交按钮后，为确保字段值是否输入正确，我们在HTML的input元素中插添加PHP脚本， 各字段名为: name, email, 和 website。 在评论的 textarea 字段中，我们将脚本放于 <textarea> 和 </textarea> 标签之间。 PHP脚本输出值为： $name, $email, $website, 和 $comment 变量。 </p>
+<p>然后，我们同样需要检查被选中的单选按钮， 对于这一点，我们 必须设置好checked属性(不是radio按钮的 value 属性) :</p>
+<pre><code>Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&lt;?php echo $name;?&gt;&quot;&gt;
+E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot; value=&quot;&lt;?php echo $email;?&gt;&quot;&gt;
+Website: &lt;input type=&quot;text&quot; name=&quot;website&quot; value=&quot;&lt;?php echo $website;?&gt;&quot;&gt;
+Comment: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;?php echo $comment;?&gt;&lt;/textarea&gt;
+Gender:
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot;
+&lt;?php if (isset($gender) &amp;&amp; $gender==&quot;female&quot;) echo &quot;checked&quot;;?&gt;
+value=&quot;female&quot;&gt;Female
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot;
+&lt;?php if (isset($gender) &amp;&amp; $gender==&quot;male&quot;) echo &quot;checked&quot;;?&gt;
+value=&quot;male&quot;&gt;Male
+</code></pre>
+
+<h4>2.5.1. PHP - 完整表单实例</h4>
+<p>┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_form_validation_complete.php">demo_form_validation_complete.php</a></p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-get.html">2.4. PHP表单 - $_GET变量</a></h3>
+<hr />
+<p>在 PHP 中，预定义的 $_GET 变量用于收集来自 method=&quot;get&quot; 的表单中的值。</p>
+<h4>2.4.1. $_GET 变量</h4>
+<p>预定义的 $_GET 变量用于收集来自 method=&quot;get&quot; 的表单中的值。</p>
+<p>从带有 GET 方法的表单发送的信息，对任何人都是可见的（会显示在浏览器的地址栏），并且对发送信息的量也有限制。</p>
+<p><strong>实例</strong></p>
+<pre><code>&lt;form action=&quot;welcome.php&quot; method=&quot;get&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>当用户点击 &quot;Submit&quot; 按钮时，发送到服务器的 URL 如下所示：</p>
+<pre><code>http://www.w3cschool.cc/welcome.php?fname=Peter&amp;age=37
+</code></pre>
+
+<p>&quot;welcome.php&quot; 文件现在可以通过 $_GET 变量来收集表单数据了（请注意，表单域的名称会自动成为 $_GET 数组中的键）：</p>
+<pre><code>Welcome &lt;?php echo $_GET[&quot;fname&quot;]; ?&gt;.&lt;br&gt;
+You are &lt;?php echo $_GET[&quot;age&quot;]; ?&gt; years old!
+</code></pre>
+
+<h4>2.4.2. 何时使用 method=&quot;get&quot;？</h4>
+<p>在 HTML 表单中使用 method=&quot;get&quot; 时，所有的变量名和值都会显示在 URL 中。</p>
+<p><strong>注释：</strong>所以在发送密码或其他敏感信息时，不应该使用这个方法！</p>
+<p>然而，正因为变量显示在 URL 中，因此可以在收藏夹中收藏该页面。在某些情况下，这是很有用的。</p>
+<p><strong>注释：</strong>HTTP GET 方法不适合大型的变量值。它的值是不能超过 2000 个字符的。</p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-post.html">2.5. PHP表单 - $_POST变量</a></h3>
+<hr />
+<p>在 PHP 中，预定义的 $_POST 变量用于收集来自 method=&quot;post&quot; 的表单中的值。</p>
+<h4>2.5.1. $_POST 变量</h4>
+<p>预定义的 $_POST 变量用于收集来自 method=&quot;post&quot; 的表单中的值。</p>
+<p>从带有 POST 方法的表单发送的信息，对任何人都是不可见的（不会显示在浏览器的地址栏），并且对发送信息的量也没有限制。</p>
+<p><strong>注释：</strong>然而，默认情况下，POST 方法的发送信息的量最大值为 8 MB（可通过设置 php.ini 文件中的 post_max_size 进行更改）。</p>
+<p><strong>实例</strong></p>
+<pre><code>&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>当用户点击 &quot;Submit&quot; 按钮时，URL 如下所示：</p>
+<pre><code>http://www.w3cschool.cc/welcome.php
+</code></pre>
+
+<p>&quot;welcome.php&quot; 文件现在可以通过 $_POST 变量来收集表单数据了（请注意，表单域的名称会自动成为 $_POST 数组中的键）：</p>
+<pre><code>Welcome &lt;?php echo $_POST[&quot;fname&quot;]; ?&gt;!&lt;br&gt;
+You are &lt;?php echo $_POST[&quot;age&quot;]; ?&gt; years old.
+</code></pre>
+
+<h4>2.5.2. 何时使用 method=&quot;post&quot;？</h4>
+<p>从带有 POST 方法的表单发送的信息，对任何人都是不可见的，并且对发送信息的量也没有限制。</p>
+<p>然而，由于变量不显示在 URL 中，所以无法把页面加入书签。</p>
+<h4>2.5.3. PHP $_REQUEST 变量</h4>
+<p>预定义的 $_REQUEST 变量包含了 $_GET、$_POST 和 $_COOKIE 的内容。</p>
+<p>$_REQUEST 变量可用来收集通过 GET 和 POST 方法发送的表单数据。</p>
+<p>Welcome &lt;?php echo $_REQUEST[&quot;fname&quot;]; ?&gt;!<br>
+You are &lt;?php echo $_REQUEST[&quot;age&quot;]; ?&gt; years old.</p>
+<hr />
+<h2>三、PHP 高级教程</h2>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-arrays-multi.html">3.1. PHP 多维数组</a></h3>
+<hr />
+<p>一个数组中的值可以是另一个数组，另一个数组的值也可以是一个数组。依照这种方式，我们可以创建二维或者三维数组：</p>
+<p><strong>实例：</strong>
+┖<a href="http://192.168.215.116/w3c_web_test/PHP/Form/demo_array_multi.php">demo_array_multi.php</a></p>
+<p>多维数组是包含一个或多个数组的数组。</p>
+<p>在多维数组中，主数组中的每一个元素也可以是一个数组，子数组中的每一个元素也可以是一个数组。</p>
+<p><strong>实例</strong></p>
+<p>在这个实例中，我们创建了一个自动分配 ID 键的多维数组：</p>
+<pre><code>$families = array
+(
+&quot;Griffin&quot;=&gt;array
+(
+&quot;Peter&quot;,
+&quot;Lois&quot;,
+&quot;Megan&quot;
+),
+&quot;Quagmire&quot;=&gt;array
+(
+&quot;Glenn&quot;
+),
+&quot;Brown&quot;=&gt;array
+(
+&quot;Cleveland&quot;,
+&quot;Loretta&quot;,
+&quot;Junior&quot;
+)
+);
+</code></pre>
+
+<p>上面的数组将输出如下：</p>
+<pre><code>Array
+(
+[Griffin] =&gt; Array
+(
+[0] =&gt; Peter
+[1] =&gt; Lois
+[2] =&gt; Megan
+)
+[Quagmire] =&gt; Array
+(
+[0] =&gt; Glenn
+)
+[Brown] =&gt; Array
+(
+[0] =&gt; Cleveland
+[1] =&gt; Loretta
+[2] =&gt; Junior
+)
+)
+</code></pre>
+
+<p>让我们试着显示上面数组中的某个值：</p>
+<pre><code>echo &quot;Is &quot; . $families['Griffin'][2] . 
+&quot; a part of the Griffin family?&quot;;
+</code></pre>
+
+<p>上面的代码将输出：</p>
+<pre><code>Is Megan a part of the Griffin family?
+</code></pre>
+
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-date.html">3.2. PHP Date()函数</a></h3>
+<hr />
+<p>PHP date() 函数用于格式化时间/日期。</p>
+<h4>3.2.1. PHP Date() 函数</h4>
+<p>PHP date() 函数可把时间戳格式化为可读性更好的日期和时间。</p>
+<p>时间戳是一个字符序列，表示一定的事件发生的日期/时间。</p>
+<p><strong>语法</strong></p>
+<pre><code>date(format,timestamp)
+</code></pre>
+
+<table>
+<thead>
+<tr>
+	<th align="left">参数</th>
+	<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">format</td>
+	<td align="left">必需。规定时间戳的格式。</td>
+</tr>
+<tr>
+	<td align="left">timestamp</td>
+	<td align="left">可选。规定时间戳。默认是当期的日期和时间。</td>
+</tr>
+</tbody>
+</table>
+<h4>3.2.2. PHP Date() - 格式化日期</h4>
+<p>date() 函数的第一个必需参数 format 规定了如何格式化日期/时间。</p>
+<p>这里列出了一些可用的字符：</p>
+<ul>
+<li>
+<p>d - 代表月中的天（01 - 31）</p>
+</li>
+<li>
+<p>m - 代表月（01 - 12）</p>
+</li>
+<li>
+<p>Y - 代表年（四位数）</p>
+</li>
+</ul>
+<p>可以在字母之间插入其他字符，比如&quot;/&quot;、&quot;.&quot; 或者 &quot;-&quot;，这样就可以增加附加格式了：</p>
+<pre><code>&lt;?php
+echo date(&quot;Y/m/d&quot;) . &quot;&lt;br&gt;&quot;;
+echo date(&quot;Y.m.d&quot;) . &quot;&lt;br&gt;&quot;;
+echo date(&quot;Y-m-d&quot;);
+?&gt;
+</code></pre>
+
+<p>上面的代码的输出如下所示：</p>
+<pre><code>2009/05/11
+2009.05.11
+2009-05-11
+</code></pre>
+
+<h4>3.2.3. PHP Date() - 添加时间戳</h4>
+<p>date() 函数的第二个可选参数 timestamp 规定了一个时间戳。如果您没有提供时间戳，将使用当前的日期和时间。</p>
+<p>mktime() 函数可为指定的日期返回 Unix 时间戳。</p>
+<p>Unix 时间戳包含了 Unix 纪元（1970-01-01 00:00:00 GMT）和指定时间之间的秒数。</p>
+<p><strong>mktime() 语法</strong></p>
+<p>mktime(hour,minute,second,month,day,year,is_dst)</p>
+<pre><code>&lt;?php
+$tomorrow = mktime(0,0,0,date(&quot;m&quot;),date(&quot;d&quot;)+1,date(&quot;Y&quot;));
+echo &quot;Tomorrow is &quot;.date(&quot;Y/m/d&quot;, $tomorrow);
+?&gt;
+</code></pre>
+
+<p>上面代码的输出如下所示：</p>
+<pre><code>Tomorrow is 2009/05/12
+</code></pre>
+
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-includes.html">3.3. PHP 包含文件</a></h3>
+<hr />
+<h4>3.3.1. PHP include 和 require 语句</h4>
+<p>在 PHP 中，您可以在服务器执行 PHP 文件之前在该文件中插入一个文件的内容。</p>
+<p>include 和 require 语句用于在执行流中插入写在其他文件中的有用的代码。</p>
+<p><strong>include 和 require 除了处理错误的方式不同之外，在其他方面都是相同的：</strong></p>
+<ul>
+<li>
+<p>require 生成一个致命错误（E_COMPILE_ERROR），在错误发生后脚本会停止执行。</p>
+</li>
+<li>
+<p>include 生成一个警告（E_WARNING），在错误发生后脚本会继续执行。</p>
+</li>
+</ul>
+<p>因此，如果您希望继续执行，并向用户输出结果，即使包含文件已丢失，那么请使用 include。否则，在框架、CMS 或者复杂的 PHP 应用程序编程中，请始终使用 require 向执行流引用关键文件。这有助于提高应用程序的安全性和完整性，在某个关键文件意外丢失的情况下。</p>
+<p>包含文件省去了大量的工作。这意味着您可以为所有网页创建标准页头、页脚或者菜单文件。然后，在页头需要更新时，您只需更新这个页头包含文件即可。</p>
+<p><strong>语法</strong></p>
+<pre><code>include 'filename';
+
+或者
+
+require 'filename';
+</code></pre>
+
+<p><strong>基础实例</strong></p>
+<p>假设您有一个标准的页头文件，名为 &quot;header.php&quot;。如需在页面中引用这个页头文件，请使用 include/require：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php include 'header.php'; ?&gt;
+&lt;h1&gt;Welcome to my home page!&lt;/h1&gt;
+&lt;p&gt;Some text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>实例2</strong></p>
+<p>假设我们有一个在所有页面中使用的标准菜单文件。</p>
+<p>&quot;menu.php&quot;:</p>
+<pre><code>echo '&lt;a href=&quot;/default.php&quot;&gt;Home&lt;/a&gt;
+&lt;a href=&quot;/tutorials.php&quot;&gt;Tutorials&lt;/a&gt;
+&lt;a href=&quot;/references.php&quot;&gt;References&lt;/a&gt;
+&lt;a href=&quot;/examples.php&quot;&gt;Examples&lt;/a&gt; 
+&lt;a href=&quot;/about.php&quot;&gt;About Us&lt;/a&gt; 
+&lt;a href=&quot;/contact.php&quot;&gt;Contact Us&lt;/a&gt;';
+</code></pre>
+
+<p>网站中的所有页面均应引用该菜单文件。以下是具体的做法：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;leftmenu&quot;&gt;
+&lt;?php include 'menu.php'; ?&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;Welcome to my home page.&lt;/h1&gt;
+&lt;p&gt;Some text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>实例3</strong></p>
+<p>假设我们有一个定义变量的包含文件（&quot;vars.php&quot;）：</p>
+<pre><code>&lt;?php
+$color='red';
+$car='BMW';
+?&gt;
+</code></pre>
+
+<p>这些变量可用在调用文件中：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Welcome to my home page.&lt;/h1&gt;
+&lt;?php include 'vars.php';
+echo &quot;I have a $color $car&quot;; // I have a red BMW
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-file.html">3.4. PHP 文件处理</a></h3>
+<hr />
+<p>fopen() 函数用于在 PHP 中打开文件。</p>
+<h4>3.4.1. 打开文件</h4>
+<p>fopen() 函数用于在 PHP 中打开文件。</p>
+<p>此函数的第一个参数含有要打开的文件的名称，第二个参数规定了使用哪种模式来打开文件：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+$file=fopen(&quot;welcome.txt&quot;,&quot;r&quot;);
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>文件可能通过下列模式来打开：</p>
+<table>
+<thead>
+<tr>
+	<th align="left">模式</th>
+	<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">r</td>
+	<td align="left">只读。在文件的开头开始。</td>
+</tr>
+<tr>
+	<td align="left">r+</td>
+	<td align="left">读/写。在文件的开头开始。</td>
+</tr>
+<tr>
+	<td align="left">w</td>
+	<td align="left">只写。打开并清空文件的内容；如果文件不存在，则创建新文件。</td>
+</tr>
+<tr>
+	<td align="left">w+</td>
+	<td align="left">读/写。打开并清空文件的内容；如果文件不存在，则创建新文件。</td>
+</tr>
+<tr>
+	<td align="left">a</td>
+	<td align="left">追加。打开并向文件末尾进行写操作，如果文件不存在，则创建新文件。</td>
+</tr>
+<tr>
+	<td align="left">a+</td>
+	<td align="left">读/追加。通过向文件末尾写内容，来保持文件内容。</td>
+</tr>
+<tr>
+	<td align="left">x</td>
+	<td align="left">只写。创建新文件。如果文件已存在，则返回 FALSE 和一个错误。</td>
+</tr>
+<tr>
+	<td align="left">x+</td>
+	<td align="left">读/写。创建新文件。如果文件已存在，则返回 FALSE 和一个错误。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注释：</strong>如果 fopen() 函数无法打开指定文件，则返回 0 (false)。</p>
+<p><strong>实例</strong></p>
+<p>如果 fopen() 函数不能打开指定的文件，下面的实例会生成一段消息：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+$file=fopen(&quot;welcome.txt&quot;,&quot;r&quot;) or exit(&quot;Unable to open file!&quot;);
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4>3.4.2. 关闭文件</h4>
+<p>fclose() 函数用于关闭打开的文件：</p>
+<pre><code>&lt;?php
+$file = fopen(&quot;test.txt&quot;,&quot;r&quot;);
+
+//some code to be executed
+
+fclose($file);
+?&gt;
+</code></pre>
+
+<h4>3.4.3. 检测 End-of-file</h4>
+<p>feof() 函数检测是否已到达文件末尾（EOF）。</p>
+<p>在循环遍历未知长度的数据时，feof() 函数很有用。</p>
+<p><strong>注释：</strong>在 w 、a 和 x 模式下，您无法读取打开的文件！</p>
+<pre><code>if (feof($file)) echo &quot;End of file&quot;;
+</code></pre>
+
+<h4>3.4.4. 逐行读取文件</h4>
+<p>fgets() 函数用于从文件中逐行读取文件。</p>
+<p><strong>注释：</strong>在调用该函数之后，文件指针会移动到下一行。</p>
+<p><strong>实例</strong></p>
+<p>下面的实例逐行读取文件，直到文件末尾为止：</p>
+<pre><code>&lt;?php
+$file = fopen(&quot;welcome.txt&quot;, &quot;r&quot;) or exit(&quot;Unable to open file!&quot;);
+//Output a line of the file until the end is reached
+while(!feof($file))
+{
+echo fgets($file). &quot;&lt;br&gt;&quot;;
+}
+fclose($file);
+?&gt;
+</code></pre>
+
+<h4>3.4.5. 逐字符读取文件</h4>
+<p>fgetc() 函数用于从文件中逐字符地读取文件。</p>
+<p><strong>注释：</strong>在调用该函数之后，文件指针会移动到下一个字符。</p>
+<p><strong>实例</strong></p>
+<p>下面的实例逐字符地读取文件，直到文件末尾为止：</p>
+<pre><code>&lt;?php
+$file=fopen(&quot;welcome.txt&quot;,&quot;r&quot;) or exit(&quot;Unable to open file!&quot;);
+while (!feof($file))
+{
+echo fgetc($file);
+}
+fclose($file);
+?&gt;
+</code></pre>
+
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-file-upload.html">3.5. PHP 文件上传</a></h3>
+<hr />
+<p>通过 PHP ,可以把文件上传到服务器</p>
+<h4>3.5.1. 创建一个文件上传表单</h4>
+<p>允许用户从表单上传文件是非常有用的。</p>
+<p>请看下面这个供上传文件的 HTML 表单：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;upload_file.php&quot; method=&quot;post&quot;
+enctype=&quot;multipart/form-data&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+&lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>有关上面的 HTML 表单的一些注意项列举如下：</p>
+<ul>
+<li>
+<p><code>&lt;form&gt;</code> 标签的 enctype 属性规定了在提交表单时要使用哪种内容类型。在表单需要二进制数据时，比如文件内容，请使用 &quot;multipart/form-data&quot;。</p>
+</li>
+<li>
+<p><code>&lt;input&gt;</code> 标签的 type=&quot;file&quot; 属性规定了应该把输入作为文件来处理。举例来说，当在浏览器中预览时，会看到输入框旁边有一个浏览按钮。</p>
+</li>
+</ul>
+<p><strong>注释：</strong>允许用户上传文件是一个巨大的安全风险。请仅仅允许可信的用户执行文件上传操作。</p>
+<h4>3.5.2. 创建上传脚本</h4>
+<p>&quot;upload_file.php&quot; 文件含有供上传文件的代码：</p>
+<pre><code>&lt;?php
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+{
+echo &quot;Error: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br&gt;&quot;;
+}
+else
+{
+echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; kB&lt;br&gt;&quot;;
+echo &quot;Stored in: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;];
+}
+?&gt;
+</code></pre>
+
+<p>通过使用 PHP 的全局数组 $_FILES，你可以从客户计算机向远程服务器上传文件。</p>
+<p>第一个参数是表单的 input name，第二个下标可以是 &quot;name&quot;、&quot;type&quot;、&quot;size&quot;、&quot;tmp_name&quot; 或 &quot;error&quot;。如下所示：</p>
+<ul>
+<li>
+<p>$_FILES[&quot;file&quot;][&quot;name&quot;] - 被上传文件的名称</p>
+</li>
+<li>
+<p>$_FILES[&quot;file&quot;][&quot;type&quot;] - 被上传文件的类型</p>
+</li>
+<li>
+<p>$_FILES[&quot;file&quot;][&quot;size&quot;] - 被上传文件的大小，以<strong>字节</strong>计</p>
+</li>
+<li>
+<p>$_FILES[&quot;file&quot;][&quot;tmp_name&quot;] - 存储在服务器的文件的临时副本的名称</p>
+</li>
+<li>
+<p>$_FILES[&quot;file&quot;][&quot;error&quot;] - 由文件上传导致的错误代码</p>
+</li>
+</ul>
+<p>这是一种非常简单文件上传方式。基于安全方面的考虑，您应当增加有关允许哪些用户上传文件的限制。</p>
+<h4>3.5.3. 上传限制</h4>
+<p>在这个脚本中，我们增加了对文件上传的限制。用户只能上传 .gif 和 .jpeg 文件，文件大小必须小于 20 kB：</p>
+<pre><code>&lt;?php
+$allowedExts = array(&quot;gif&quot;, &quot;jpeg&quot;, &quot;jpg&quot;, &quot;png&quot;);
+$temp = explode(&quot;.&quot;, $_FILES[&quot;file&quot;][&quot;name&quot;]);
+$extension = end($temp);
+if ((($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/gif&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpeg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/pjpeg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/x-png&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/png&quot;))
+&amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+&amp;&amp; in_array($extension, $allowedExts))
+{
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+{
+echo &quot;Error: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br&gt;&quot;;
+}
+else
+{
+echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; kB&lt;br&gt;&quot;;
+echo &quot;Stored in: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;];
+}
+}
+else
+{
+echo &quot;Invalid file&quot;;
+}
+?&gt;
+</code></pre>
+
+<h4>3.5.4. 保存被上传的文件</h4>
+<p>上面的实例在服务器的 PHP 临时文件夹中创建了一个被上传文件的临时副本。</p>
+<p>这个临时的副本文件会在脚本结束时消失。要保存被上传的文件，我们需要把它拷贝到另外的位置：</p>
+<pre><code>&lt;?php
+$allowedExts = array(&quot;gif&quot;, &quot;jpeg&quot;, &quot;jpg&quot;, &quot;png&quot;);
+$temp = explode(&quot;.&quot;, $_FILES[&quot;file&quot;][&quot;name&quot;]);
+$extension = end($temp);
+if ((($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/gif&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpeg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/pjpeg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/x-png&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/png&quot;))
+&amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+&amp;&amp; in_array($extension, $allowedExts))
+{
+if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+{
+echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br&gt;&quot;;
+}
+else
+{
+echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br&gt;&quot;;
+echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; kB&lt;br&gt;&quot;;
+echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br&gt;&quot;;
+
+if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+{
+echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+}
+else
+{
+move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);
+echo &quot;Stored in: &quot; . &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;];
+}
+}
+}
+else
+{
+echo &quot;Invalid file&quot;;
+}
+?&gt;
+</code></pre>
+
+<p>上面的脚本检测了文件是否已存在，如果不存在，则把文件拷贝到名为 &quot;upload&quot; 的文件夹。</p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-cookies.html">3.6. PHP Cookies</a></h3>
+<hr />
+<p>cookie 常用于识别用户。</p>
+<h4>3.6.1. Cookies 是什么？</h4>
+<p>cookie 常用于识别用户。cookie 是一种服务器留在用户计算机上的小文件。每当同一台计算机通过浏览器请求页面时，这台计算机将会发送 cookie。通过 PHP，您能够创建并取回 cookie 的值。</p>
+<h4>3.6.2. 如何创建Cookie？</h4>
+<p>setcookie() 函数用于设置 cookie。</p>
+<p><strong>注释：</strong><font color="red">setcookie() 函数必须位于 <code>&lt;html&gt;</code> 标签之前。</font></p>
+<p><strong>语法</strong></p>
+<pre><code>setcookie(name, value, expire, path, domain);
+</code></pre>
+
+<p><strong>实例1</strong></p>
+<p>在下面的例子中，我们将创建名为 &quot;user&quot; 的 cookie，并为它赋值 &quot;Alex Porter&quot;。我们也规定了此 cookie 在一小时后过期：</p>
+<pre><code>&lt;?php
+setcookie(&quot;user&quot;, &quot;Alex Porter&quot;, time()+3600);
+?&gt;
+
+&lt;html&gt;
+.....
+</code></pre>
+
+<p><strong>注释：</strong>在发送 cookie 时，cookie 的值会自动进行 URL 编码，在取回时进行自动解码。（为防止 URL 编码，请使用 setrawcookie() 取而代之。）</p>
+<p><strong>实例2</strong></p>
+<p>您还可以通过另一种方式设置 cookie 的过期时间。这也许比使用秒表示的方式简单。</p>
+<pre><code>&lt;?php
+$expire=time()+60*60*24*30;
+setcookie(&quot;user&quot;, &quot;Alex Porter&quot;, $expire);
+?&gt;
+
+&lt;html&gt;
+.....
+</code></pre>
+
+<p>在上面的实例中，过期时间被设置为一个月（60 秒 * 60 分 * 24 小时 * 30 天）。</p>
+<h4>3.6.3. 如何取回Cookie的值？</h4>
+<p>PHP 的 $_COOKIE 变量用于取回 cookie 的值。</p>
+<p>在下面的实例中，我们取回了名为 &quot;user&quot; 的 cookie 的值，并把它显示在了页面上：</p>
+<pre><code>&lt;?php
+// Print a cookie
+echo $_COOKIE[&quot;user&quot;];
+
+// A way to view all cookies
+print_r($_COOKIE);
+?&gt;
+</code></pre>
+
+<p>在下面的实例中，我们使用 isset() 函数来确认是否已设置了 cookie：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+if (isset($_COOKIE[&quot;user&quot;]))
+echo &quot;Welcome &quot; . $_COOKIE[&quot;user&quot;] . &quot;!&lt;br&gt;&quot;;
+else
+echo &quot;Welcome guest!&lt;br&gt;&quot;;
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4>3.6.4. 如何删除 Cookie？</h4>
+<p>当删除 cookie 时，您应当使过期日期变更为过去的时间点。</p>
+<p>删除的实例：</p>
+<pre><code>&lt;?php
+// set the expiration date to one hour ago
+setcookie(&quot;user&quot;, &quot;&quot;, time()-3600);
+?&gt;
+</code></pre>
+
+<h4>3.6.5. 如果浏览器不支持 Cookie 该怎么办？</h4>
+<p>如果您的应用程序需要与不支持 cookie 的浏览器打交道，那么您不得不使用其他的办法在您的应用程序中的页面之间传递信息。一种方式是通过表单传递数据（有关表单和用户输入的内容，在本教程的前面章节中我们已经介绍过了）。</p>
+<p>下面的表单在用户单点击 &quot;Submit&quot; 按钮时，向 &quot;welcome.php&quot; 提交了用户输入：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>取回 &quot;welcome.php&quot; 文件中的值，如下所示：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+Welcome &lt;?php echo $_POST[&quot;name&quot;]; ?&gt;.&lt;br&gt;
+You are &lt;?php echo $_POST[&quot;age&quot;]; ?&gt; years old.
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-sessions.html">3.7. PHP Sessions</a></h3>
+<hr />
+<p>PHP session 变量用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。Session 变量存储单一用户的信息，并且对于应用程序中的所有页面都是可用的。</p>
+<h4>3.7.1. PHP Session 变量</h4>
+<p>您在计算机上操作某个应用程序时，您打开它，做些更改，然后关闭它。这很像一次对话（Session）。计算机知道您是谁。它清楚您在何时打开和关闭应用程序。然而，在因特网上问题出现了：由于 HTTP 地址无法保持状态，Web 服务器并不知道您是谁以及您做了什么。</p>
+<p>PHP session 解决了这个问题，它通过在服务器上存储用户信息以便随后使用（比如用户名称、购买商品等）。然而，会话信息是临时的，在用户离开网站后将被删除。如果您需要永久存储信息，可以把数据存储在数据库中。</p>
+<p>Session 的工作机制是：为每个访客创建一个唯一的 id (UID)，并基于这个 UID 来存储变量。UID 存储在 cookie 中，或者通过 URL 进行传导。</p>
+<h4>3.7.2. 开始 PHP Session</h4>
+<p>在您把用户信息存储在 PHP session 中之前，首先必须启动回话。</p>
+<p><strong>注释：</strong><font color="red">session_start() 函数必须位于 <code>&lt;html&gt;</code> 标签之前：</font></p>
+<pre><code>&lt;?php session_start(); ?&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>上面的代码会向服务器注册用户的会话，以便您可以开始保存用户信息，同时会为用户会话分配一个 UID。</p>
+<h4>3.7.3. 存储 Session 变量</h4>
+<p>存储和取回 session 变量的正确方法是使用 PHP $_SESSION 变量：</p>
+<pre><code>&lt;?php
+session_start();
+// store session data
+$_SESSION['views']=1;
+?&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+//retrieve session data
+echo &quot;Pageviews=&quot;. $_SESSION['views'];
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>输出：</p>
+<pre><code>Pageviews=1
+</code></pre>
+
+<p>在下面的实例中，我们创建了一个简单的 page-view 计数器。isset() 函数检测是否已设置 &quot;views&quot; 变量。如果已设置 &quot;views&quot; 变量，我们累加计数器。如果 &quot;views&quot; 不存在，则创建 &quot;views&quot; 变量，并把它设置为 1：</p>
+<pre><code>&lt;?php
+session_start();
+
+if(isset($_SESSION['views']))
+$_SESSION['views']=$_SESSION['views']+1;
+else
+$_SESSION['views']=1;
+echo &quot;Views=&quot;. $_SESSION['views'];
+?&gt;
+</code></pre>
+
+<h4>3.7.4. 销毁 Session</h4>
+<p>如果您希望删除某些 session 数据，可以使用 unset() 或 session_destroy() 函数。</p>
+<p>unset() 函数用于释放指定的 session 变量：</p>
+<pre><code>&lt;?php
+session_start();
+if(isset($_SESSION['views']))
+unset($_SESSION['views']);
+?&gt;
+</code></pre>
+
+<p>您也可以通过调用 session_destroy() 函数彻底销毁 session：</p>
+<pre><code>&lt;?php
+session_destroy();
+?&gt;
+</code></pre>
+
+<p><strong>注释：</strong>session_destroy() 将重置 session，您将失去所有已存储的 session 数据。</p>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-mail.html">3.8. PHP E-mail</a></h3>
+<hr />
+<p>PHP 允许您从脚本直接发送电子邮件。</p>
+<h4>3.8.1. PHP mail()函数</h4>
+<p>PHP mail() 函数用于从脚本中发送电子邮件。</p>
+<p><strong>语法</strong></p>
+<p>mail(to,subject,message,headers,parameters)</p>
+<table>
+<thead>
+<tr>
+	<th align="left">参数</th>
+	<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">to</td>
+	<td align="left">必需。规定email接收者。</td>
+</tr>
+<tr>
+	<td align="left">subject</td>
+	<td align="left">必需。规定email的主题。<strong>注释：</strong>该参数不能包含任何新行字符。</td>
+</tr>
+<tr>
+	<td align="left">message</td>
+	<td align="left">必需。定义要发送的消息。应使用LF(\n)来分隔各行。每行应该限制在70个字符内。</td>
+</tr>
+<tr>
+	<td align="left">headers</td>
+	<td align="left">可选。规定附加的标题，比如 From、Cc和Bcc。应当使用CRLF（\r\n）分隔附加的标题。</td>
+</tr>
+<tr>
+	<td align="left">parameters</td>
+	<td align="left">可选。对邮件发送程序规定额外的参数。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注释：</strong>PHP 需要一个已安装且正在运行的邮件系统，以便使邮件函数可用。所用的程序通过在 php.ini 文件中的配置设置进行定义。</p>
+<h4>3.8.2. PHP 简易 E-Mail</h4>
+<p>通过 PHP 发送电子邮件的最简单的方式是发送一份文本email。</p>
+<p>在下面的实例中，我们首先声明变量($to, $subject, $message, $from, $headers)，然后我们在 mail() 函数中使用这些变量来发送了一封 e-mail：</p>
+<pre><code>&lt;?php
+$to = &quot;someone@example.com&quot;;
+$subject = &quot;Test mail&quot;;
+$message = &quot;Hello! This is a simple email message.&quot;;
+$from = &quot;someonelse@example.com&quot;;
+$headers = &quot;From:&quot; . $from;
+mail($to,$subject,$message,$headers);
+echo &quot;Mail Sent.&quot;;
+?&gt;
+</code></pre>
+
+<h4>3.8.3. PHP Mail 表单</h4>
+<p>通过 PHP，您能够在自己的站点制作一个反馈表单。下面的实例向指定的 e-mail 地址发送了一条文本消息：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+if (isset($_REQUEST['email']))
+//if &quot;email&quot; is filled out, send email
+{
+//send email
+$email = $_REQUEST['email'] ;
+$subject = $_REQUEST['subject'] ;
+$message = $_REQUEST['message'] ;
+mail(&quot;someone@example.com&quot;, $subject,
+$message, &quot;From:&quot; . $email);
+echo &quot;Thank you for using our mail form&quot;;
+}
+else
+//if &quot;email&quot; is not filled out, display the form
+{
+echo &quot;&lt;form method='post' action='mailform.php'&gt;
+Email: &lt;input name='email' type='text'&gt;&lt;br&gt;
+Subject: &lt;input name='subject' type='text'&gt;&lt;br&gt;
+Message:&lt;br&gt;
+&lt;textarea name='message' rows='15' cols='40'&gt;
+&lt;/textarea&gt;&lt;br&gt;
+&lt;input type='submit'&gt;
+&lt;/form&gt;&quot;;
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>实例解释：</p>
+<ul>
+<li>
+<p>首先，检查是否填写了邮件输入框</p>
+</li>
+<li>
+<p>如果未填写（比如在页面被首次访问时），输出 HTML 表单</p>
+</li>
+<li>
+<p>如果已填写（在表单被填写后），从表单发送电子邮件</p>
+</li>
+<li>
+<p>当填写完表单点击提交按钮后，页面重新载入，可以看到邮件输入被重置，同时显示邮件发送成功的消息</p>
+</li>
+</ul>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-secure-mail.html">3.9. PHP Secure E-mails</a></h3>
+<hr />
+<p>在上一节中的 PHP e-mail 脚本中，存在着一个漏洞。</p>
+<h4>3.8.3. PHP E-mail 注入</h4>
+<p>首先，请看上一章中的 PHP 代码：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+if (isset($_REQUEST['email']))
+//if &quot;email&quot; is filled out, send email
+{
+//send email
+$email = $_REQUEST['email'] ;
+$subject = $_REQUEST['subject'] ;
+$message = $_REQUEST['message'] ;
+mail(&quot;someone@example.com&quot;, &quot;Subject: $subject&quot;,
+$message, &quot;From: $email&quot; );
+echo &quot;Thank you for using our mail form&quot;;
+}
+else
+//if &quot;email&quot; is not filled out, display the form
+{
+echo &quot;&lt;form method='post' action='mailform.php'&gt;
+Email: &lt;input name='email' type='text'&gt;&lt;br&gt;
+Subject: &lt;input name='subject' type='text'&gt;&lt;br&gt;
+Message:&lt;br&gt;
+&lt;textarea name='message' rows='15' cols='40'&gt;
+&lt;/textarea&gt;&lt;br&gt;
+&lt;input type='submit'&gt;
+&lt;/form&gt;&quot;;
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>以上代码存在的问题是，未经授权的用户可通过输入表单在邮件头部插入数据。</p>
+<p>假如用户在表单中的输入框内加入如下文本到电子邮件中，会出现什么情况呢？</p>
+<pre><code>someone@example.com%0ACc:person2@example.com
+%0ABcc:person3@example.com,person3@example.com,
+anotherperson4@example.com,person5@example.com
+%0ABTo:person6@example.com
+</code></pre>
+
+<p>与往常一样，mail() 函数把上面的文本放入邮件头部，那么现在头部有了额外的 Cc:、Bcc: 和 To: 字段。当用户点击提交按钮时，这封 e-mail 会被发送到上面所有的地址！</p>
+<h4>3.8.3. PHP 防止 E-mail 注入</h4>
+<p>防止 e-mail 注入的最好方法是对输入进行验证。</p>
+<p>下面的代码与上一章中的类似，不过这里我们已经增加了检测表单中 email 字段的输入验证程序：</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;?php
+function spamcheck($field)
+{
+//filter_var() sanitizes the e-mail
+//address using FILTER_SANITIZE_EMAIL
+$field=filter_var($field, FILTER_SANITIZE_EMAIL);
+
+//filter_var() validates the e-mail
+//address using FILTER_VALIDATE_EMAIL
+if(filter_var($field, FILTER_VALIDATE_EMAIL))
+{
+return TRUE;
+}
+else
+{
+return FALSE;
+}
+}
+
+if (isset($_REQUEST['email']))
+{//if &quot;email&quot; is filled out, proceed
+
+//check if the email address is invalid
+$mailcheck = spamcheck($_REQUEST['email']);
+if ($mailcheck==FALSE)
+{
+echo &quot;Invalid input&quot;;
+}
+else
+{//send email
+$email = $_REQUEST['email'] ;
+$subject = $_REQUEST['subject'] ;
+$message = $_REQUEST['message'] ;
+mail(&quot;someone@example.com&quot;, &quot;Subject: $subject&quot;,
+$message, &quot;From: $email&quot; );
+echo &quot;Thank you for using our mail form&quot;;
+}
+}
+else
+{//if &quot;email&quot; is not filled out, display the form
+echo &quot;&lt;form method='post' action='mailform.php'&gt;
+Email: &lt;input name='email' type='text'&gt;&lt;br&gt;
+Subject: &lt;input name='subject' type='text'&gt;&lt;br&gt;
+Message:&lt;br&gt;
+&lt;textarea name='message' rows='15' cols='40'&gt;
+&lt;/textarea&gt;&lt;br&gt;
+&lt;input type='submit'&gt;
+&lt;/form&gt;&quot;;
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>在上面的代码中，我们使用了 PHP 过滤器来对输入进行验证：</p>
+<ul>
+<li>
+<p>FILTER_SANITIZE_EMAIL 过滤器从字符串中删除电子邮件的非法字符</p>
+</li>
+<li>
+<p>FILTER_VALIDATE_EMAIL 过滤器验证电子邮件地址的值</p>
+</li>
+</ul>
+<hr />
+<h3><a href="http://www.w3cschool.cc/php/php-error.html">3.10. PHP 错误处理</a></h3>
+<hr />
+<p>在 PHP 中，默认的错误处理很简单。一条错误消息会被发送到浏览器，这条消息带有文件名、行号以及描述错误的消息。</p>
+<h4>3.10.1. PHP 错误处理</h4>
+<p>在创建脚本和 Web 应用程序时，错误处理是一个重要的部分。如果您的代码缺少错误检测编码，那么程序看上去很不专业，也为安全风险敞开了大门。</p>
+<p>以下是不同的错误处理方法：</p>
+<ul>
+<li>
+<p>简单的 &quot;die()&quot; 语句</p>
+</li>
+<li>
+<p>自定义错误和错误触发器</p>
+</li>
+<li>
+<p>错误报告</p>
+</li>
+</ul>
+<h4>3.10.2. 基本的错误处理：使 用die()函数</h4>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

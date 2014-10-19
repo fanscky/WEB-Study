@@ -9,7 +9,7 @@
 由于禅道系统框架采用PHP模式，涉及到*HTML、CSS、PHP、MYSQL*等多方面技术领域。且以上四个技
 术领域未曾深入学习过，故开始一系列自学实践活动。
 
-入门阶段选定[__W3School__](http://www.w3cschool.cc/)作为入门教材。
+入门阶段选定[__W3CSchool__](http://www.w3cschool.cc/)作为入门教材。
 
 >**学习安排**
 
