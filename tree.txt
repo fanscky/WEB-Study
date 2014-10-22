@@ -83,6 +83,12 @@ E:.
     │  
     ├─Advance
     │      demo_array_multi.php
+    │      demo_error.php
+    │      demo_error_log.php
+    │      demo_set_error.php
+    │      demo_trigger_error.php
+    │      demo_trigger_error1.php
+    │      welcome.txt
     │      
     ├─Base
     │  │  .buildpath
