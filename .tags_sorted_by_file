@@ -1,8 +1,38 @@
+cars	PHP\Advance\demo_array_multi.php	/^    $cars = array ($/;"	v
+customException	PHP\Advance\demo_diy_exception.php	/^class customException extends Exception$/;"	c
+email	PHP\Advance\demo_diy_exception.php	/^$email = "someone@example...com";$/;"	v
+errorMessage	PHP\Advance\demo_diy_exception.php	/^    public function errorMessage()$/;"	f
+errorMsg	PHP\Advance\demo_diy_exception.php	/^        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ': <b>' . $this->getMessage() . '<\/b> is not a valid E-Mail address';$/;"	v
+file	PHP\Advance\demo_error.php	/^    $file=fopen("welcome.txt","r");$/;"	v
+customError	PHP\Advance\demo_error_log.php	/^    function customError($errno, $errstr)$/;"	f
+test	PHP\Advance\demo_error_log.php	/^    $test = 2;$/;"	v
+checkNum	PHP\Advance\demo_exception_base.php	/^    function checkNum($number)$/;"	f
+with	PHP\Advance\demo_exception_base.php	/^    \/\/ create function with an exception$/;"	f
+customException	PHP\Advance\demo_many_exception.php	/^class customException extends exception$/;"	c
+email	PHP\Advance\demo_many_exception.php	/^$email = "someone@example.com";$/;"	v
+errorMessage	PHP\Advance\demo_many_exception.php	/^    public function errorMessage()$/;"	f
+errorMsg	PHP\Advance\demo_many_exception.php	/^        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ':<b>' . $this->getMessage() . '<\/b> is not a valid E-Mail address';$/;"	v
+customError	PHP\Advance\demo_set_error.php	/^        function customError($errno, $errstr)$/;"	f
+customException	PHP\Advance\demo_throw_exception_again.php	/^        class customException extends exception$/;"	c
+email	PHP\Advance\demo_throw_exception_again.php	/^        $email = "someone@example.com";$/;"	v
+errorMessage	PHP\Advance\demo_throw_exception_again.php	/^            public function errorMessage()$/;"	f
+errorMsg	PHP\Advance\demo_throw_exception_again.php	/^                $errorMsg = $this->getMessage().' is not a valid E-Mail address.';$/;"	v
+test	PHP\Advance\demo_trigger_error.php	/^    $test = 2;$/;"	v
+customError	PHP\Advance\demo_trigger_error1.php	/^    function customError($errno, $errstr)$/;"	f
+test	PHP\Advance\demo_trigger_error1.php	/^    $test = 2;$/;"	v
+checkNum	PHP\Advance\demo_trigger_exception.php	/^        function checkNum($number)$/;"	f
+with	PHP\Advance\demo_trigger_exception.php	/^        \/\/ create function with an exception$/;"	f
+age	PHP\Base\demo_php_array_arsort.php	/^$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");$/;"	v
+x	PHP\Base\demo_php_array_arsort.php	/^foreach($age as $x=>$x_value)$/;"	v
 age	PHP\Base\demo_php_array_asort.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter"=> "43");$/;"	v
 x	PHP\Base\demo_php_array_asort.php	/^foreach ($age as $x => $x_value) {$/;"	v
 age	PHP\Base\demo_php_array_assoc.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 age	PHP\Base\demo_php_array_assoc_loop.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 x	PHP\Base\demo_php_array_assoc_loop.php	/^foreach ($age as $x => $x_value) {$/;"	v
+age	PHP\Base\demo_php_array_krsort.php	/^$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");$/;"	v
+x	PHP\Base\demo_php_array_krsort.php	/^foreach($age as $x=>$x_value)$/;"	v
+age	PHP\Base\demo_php_array_ksort.php	/^    $age=array("Bill"=>"35", "Steve"=>"37","Peter"=>"43");$/;"	v
+x	PHP\Base\demo_php_array_ksort.php	/^    foreach ($age as $x => $x_value) {$/;"	v
 cars	PHP\Base\demo_php_array_length.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 cars	PHP\Base\demo_php_array_num.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 arrlength	PHP\Base\demo_php_array_num_loop.php	/^$arrlength = count($cars);$/;"	v
@@ -46,6 +76,11 @@ familyName	PHP\Base\demo_php_function3.php	/^function familyName($fname, $year)$
 setHeight	PHP\Base\demo_php_function4.php	/^function setHeight($minheigh=50)$/;"	f
 sum	PHP\Base\demo_php_function5.php	/^function sum($x, $y)$/;"	f
 z	PHP\Base\demo_php_function5.php	/^    $z = $x + $y;$/;"	v
+addition	PHP\Base\demo_php_global_global.php	/^    function addition()$/;"	f
+x	PHP\Base\demo_php_global_global.php	/^    $x = 30;$/;"	v
+y	PHP\Base\demo_php_global_global.php	/^    $y = 65;$/;"	v
+name	PHP\Base\demo_php_global_post.php	/^    $name = $_POST['fname'];$/;"	v
+name	PHP\Base\demo_php_global_request.php	/^$name = $_REQUEST('fname');$/;"	v
 t	PHP\Base\demo_php_if.php	/^$t = date("H");$/;"	v
 t	PHP\Base\demo_php_if_else.php	/^$t = date("H");$/;"	v
 t	PHP\Base\demo_php_if_elseif.php	/^$t = date("H");$/;"	v
@@ -98,6 +133,55 @@ x	PHP\Base\demo_php_var_local.php	/^    $x=5; \/\/ global scope;$/;"	v
 y	PHP\Base\demo_php_var_local.php	/^        $y=10;  \/\/ local scope;$/;"	v
 myTest	PHP\Base\demo_php_var_static.php	/^    function myTest() {$/;"	f
 x	PHP\Base\demo_php_var_static.php	/^        static $x=0;$/;"	v
+data	PHP\Form\demo_form_validation_complete.php	/^     $data = htmlspecialchars($data);$/;"	v
+data	PHP\Form\demo_form_validation_complete.php	/^     $data = stripslashes($data);$/;"	v
+data	PHP\Form\demo_form_validation_complete.php	/^     $data = trim($data);$/;"	v
+email	PHP\Form\demo_form_validation_complete.php	/^     $email = test_input($_POST["email"]);$/;"	v
+emailErr	PHP\Form\demo_form_validation_complete.php	/^       $emailErr = "Invalid email format"; $/;"	v
+gender	PHP\Form\demo_form_validation_complete.php	/^   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?>  value="female">Female$/;"	v
+gender	PHP\Form\demo_form_validation_complete.php	/^   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?>  value="male">Male$/;"	v
+name	PHP\Form\demo_form_validation_complete.php	/^     $name = test_input($_POST["name"]);$/;"	v
+name	PHP\Form\demo_form_validation_complete.php	/^$name = $email = $gender = $comment = $website = "";$/;"	v
+nameErr	PHP\Form\demo_form_validation_complete.php	/^       $nameErr = "Only letters and white space allowed"; $/;"	v
+nameErr	PHP\Form\demo_form_validation_complete.php	/^$nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+test_input	PHP\Form\demo_form_validation_complete.php	/^function test_input($data)$/;"	f
+website	PHP\Form\demo_form_validation_complete.php	/^     $website = test_input($_POST["website"]);$/;"	v
+websiteErr	PHP\Form\demo_form_validation_complete.php	/^       $websiteErr = "Invalid URL"; $/;"	v
+data	PHP\Form\demo_form_validation_required.php	/^     $data = htmlspecialchars($data);$/;"	v
+data	PHP\Form\demo_form_validation_required.php	/^     $data = stripslashes($data);$/;"	v
+data	PHP\Form\demo_form_validation_required.php	/^     $data = trim($data);$/;"	v
+name	PHP\Form\demo_form_validation_required.php	/^$name = $email = $gender = $comment = $website = "";$/;"	v
+nameErr	PHP\Form\demo_form_validation_required.php	/^$nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+test_input	PHP\Form\demo_form_validation_required.php	/^function test_input($data)$/;"	f
+comment	PHP\Form\demo_form_validation_special.php	/^            $comment = "";$/;"	v
+comment	PHP\Form\demo_form_validation_special.php	/^            $comment = test_input($_POST["comment"]);$/;"	v
+data	PHP\Form\demo_form_validation_special.php	/^        $data = htmlspecialchars($data);$/;"	v
+data	PHP\Form\demo_form_validation_special.php	/^        $data = stripslashes($data);$/;"	v
+data	PHP\Form\demo_form_validation_special.php	/^        $data = trim($data);$/;"	v
+email	PHP\Form\demo_form_validation_special.php	/^            $email = test_input($_POST["email"]);$/;"	v
+emailErr	PHP\Form\demo_form_validation_special.php	/^                $emailErr = "Invalid email format";$/;"	v
+emailErr	PHP\Form\demo_form_validation_special.php	/^            $emailErr = "Email is required";$/;"	v
+gender	PHP\Form\demo_form_validation_special.php	/^            $gender = test_input($_POST["gender"]);$/;"	v
+genderErr	PHP\Form\demo_form_validation_special.php	/^            $genderErr = "Gender is required";$/;"	v
+name	PHP\Form\demo_form_validation_special.php	/^            $name = test_input($_POST["name"]);$/;"	v
+name	PHP\Form\demo_form_validation_special.php	/^    $name = $email = $gender = $comment = $website = "";$/;"	v
+nameErr	PHP\Form\demo_form_validation_special.php	/^                $nameErr = "Only letters and white space allowed";$/;"	v
+nameErr	PHP\Form\demo_form_validation_special.php	/^            $nameErr = "Name is required";$/;"	v
+nameErr	PHP\Form\demo_form_validation_special.php	/^    $nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+test_input	PHP\Form\demo_form_validation_special.php	/^    function test_input($data)$/;"	f
+website	PHP\Form\demo_form_validation_special.php	/^            $website = "";$/;"	v
+website	PHP\Form\demo_form_validation_special.php	/^            $website = test_input($_POST["website"]);$/;"	v
+websiteErr	PHP\Form\demo_form_validation_special.php	/^                $websiteErr = "Invalid URL";$/;"	v
+comment	PHP\Form\demo_php_form_validation_escapechar.php	/^        $comment = test_input($_POST["comment"]);$/;"	v
+data	PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = htmlspecialchars($data);$/;"	v
+data	PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = stripslashes($data);$/;"	v
+data	PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = trim($data);$/;"	v
+email	PHP\Form\demo_php_form_validation_escapechar.php	/^        $email = test_input($_POST["email"]);$/;"	v
+gender	PHP\Form\demo_php_form_validation_escapechar.php	/^        $gender = test_input($_POST["gender"]);$/;"	v
+name	PHP\Form\demo_php_form_validation_escapechar.php	/^        $name = test_input($_POST["name"]);$/;"	v
+name	PHP\Form\demo_php_form_validation_escapechar.php	/^    $name = $email = $gender = $comment = $website = "";$/;"	v
+test_input	PHP\Form\demo_php_form_validation_escapechar.php	/^    function test_input($data)$/;"	f
+website	PHP\Form\demo_php_form_validation_escapechar.php	/^        $website = test_input($_POST["website"]);$/;"	v
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//

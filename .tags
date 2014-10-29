@@ -10,14 +10,19 @@ GREETING	.\PHP\Base\demo_php_constant1.php	/^define("GREETING", "Welcome to W3Sc
 GREETING	.\PHP\Base\demo_php_constant2.php	/^define("GREETING", "Welcome to W3School.com.cn!",true);$/;"	d
 a	.\PHP\Base\demo_php_operator_comparison.php	/^$a = 50;$/;"	v
 a	.\PHP\Base\demo_php_operator_string.php	/^$a = "Hello";$/;"	v
+addition	.\PHP\Base\demo_php_global_global.php	/^    function addition()$/;"	f
+age	.\PHP\Base\demo_php_array_arsort.php	/^$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");$/;"	v
 age	.\PHP\Base\demo_php_array_asort.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter"=> "43");$/;"	v
 age	.\PHP\Base\demo_php_array_assoc.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
 age	.\PHP\Base\demo_php_array_assoc_loop.php	/^$age = array("Bill" => "35", "Steve" => "37", "Peter" => "43");$/;"	v
+age	.\PHP\Base\demo_php_array_krsort.php	/^$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");$/;"	v
+age	.\PHP\Base\demo_php_array_ksort.php	/^    $age=array("Bill"=>"35", "Steve"=>"37","Peter"=>"43");$/;"	v
 arrlength	.\PHP\Base\demo_php_array_num_loop.php	/^$arrlength = count($cars);$/;"	v
 arrlength	.\PHP\Base\demo_php_array_rsort_num.php	/^$arrlength = count($numbers);$/;"	v
 arrlength	.\PHP\Base\demo_php_array_sort_num.php	/^$arrlength = count($numbers);$/;"	v
 b	.\PHP\Base\demo_php_operator_comparison.php	/^$b = 90;$/;"	v
 b	.\PHP\Base\demo_php_operator_string.php	/^$b = $a . "world!";$/;"	v
+cars	.\PHP\Advance\demo_array_multi.php	/^    $cars = array ($/;"	v
 cars	.\PHP\Base\demo_php_array_length.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_array_num.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_array_num_loop.php	/^$cars = array("Volvo", "BMW", "SAAB");$/;"	v
@@ -26,15 +31,59 @@ cars	.\PHP\Base\demo_php_array_sort_alpha.php	/^$cars = array("Volvo", "BMW", "S
 cars	.\PHP\Base\demo_php_datatypes_array.php	/^$cars=array("Volvo","BMW","SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_echo2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
 cars	.\PHP\Base\demo_php_print2.php	/^    $cars=array("Volvo","BWM","SAAB");$/;"	v
+checkNum	.\PHP\Advance\demo_exception_base.php	/^    function checkNum($number)$/;"	f
+checkNum	.\PHP\Advance\demo_trigger_exception.php	/^        function checkNum($number)$/;"	f
 clength	.\PHP\Base\demo_php_array_rsort_alpha.php	/^$clength = count($cars);$/;"	v
 clength	.\PHP\Base\demo_php_array_sort_alpha.php	/^$clength = count($cars);$/;"	v
 color	.\PHP\Base\demo_php_datatypes_object.php	/^        $this->color = $color;$/;"	v
 color	.\PHP\Base\demo_php_datatypes_object.php	/^    var $color;$/;"	v
 color	.\PHP\Base\demo_php_loop_foreach.php	/^$color = array("red", "green", "blue", "yellow");$/;"	v
 color	.\PHP\Base\demo_php_syntax_case2.php	/^    $color="red";$/;"	v
+comment	.\PHP\Form\demo_form_validation_special.php	/^            $comment = "";$/;"	v
+comment	.\PHP\Form\demo_form_validation_special.php	/^            $comment = test_input($_POST["comment"]);$/;"	v
+comment	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $comment = test_input($_POST["comment"]);$/;"	v
+customError	.\PHP\Advance\demo_error_log.php	/^    function customError($errno, $errstr)$/;"	f
+customError	.\PHP\Advance\demo_set_error.php	/^        function customError($errno, $errstr)$/;"	f
+customError	.\PHP\Advance\demo_trigger_error1.php	/^    function customError($errno, $errstr)$/;"	f
+customException	.\PHP\Advance\demo_diy_exception.php	/^class customException extends Exception$/;"	c
+customException	.\PHP\Advance\demo_many_exception.php	/^class customException extends exception$/;"	c
+customException	.\PHP\Advance\demo_throw_exception_again.php	/^        class customException extends exception$/;"	c
+data	.\PHP\Form\demo_form_validation_complete.php	/^     $data = htmlspecialchars($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_complete.php	/^     $data = stripslashes($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_complete.php	/^     $data = trim($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_required.php	/^     $data = htmlspecialchars($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_required.php	/^     $data = stripslashes($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_required.php	/^     $data = trim($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_special.php	/^        $data = htmlspecialchars($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_special.php	/^        $data = stripslashes($data);$/;"	v
+data	.\PHP\Form\demo_form_validation_special.php	/^        $data = trim($data);$/;"	v
+data	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = htmlspecialchars($data);$/;"	v
+data	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = stripslashes($data);$/;"	v
+data	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $data = trim($data);$/;"	v
+email	.\PHP\Advance\demo_diy_exception.php	/^$email = "someone@example...com";$/;"	v
+email	.\PHP\Advance\demo_many_exception.php	/^$email = "someone@example.com";$/;"	v
+email	.\PHP\Advance\demo_throw_exception_again.php	/^        $email = "someone@example.com";$/;"	v
+email	.\PHP\Form\demo_form_validation_complete.php	/^     $email = test_input($_POST["email"]);$/;"	v
+email	.\PHP\Form\demo_form_validation_special.php	/^            $email = test_input($_POST["email"]);$/;"	v
+email	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $email = test_input($_POST["email"]);$/;"	v
+emailErr	.\PHP\Form\demo_form_validation_complete.php	/^       $emailErr = "Invalid email format"; $/;"	v
+emailErr	.\PHP\Form\demo_form_validation_special.php	/^                $emailErr = "Invalid email format";$/;"	v
+emailErr	.\PHP\Form\demo_form_validation_special.php	/^            $emailErr = "Email is required";$/;"	v
+errorMessage	.\PHP\Advance\demo_diy_exception.php	/^    public function errorMessage()$/;"	f
+errorMessage	.\PHP\Advance\demo_many_exception.php	/^    public function errorMessage()$/;"	f
+errorMessage	.\PHP\Advance\demo_throw_exception_again.php	/^            public function errorMessage()$/;"	f
+errorMsg	.\PHP\Advance\demo_diy_exception.php	/^        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ': <b>' . $this->getMessage() . '<\/b> is not a valid E-Mail address';$/;"	v
+errorMsg	.\PHP\Advance\demo_many_exception.php	/^        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ':<b>' . $this->getMessage() . '<\/b> is not a valid E-Mail address';$/;"	v
+errorMsg	.\PHP\Advance\demo_throw_exception_again.php	/^                $errorMsg = $this->getMessage().' is not a valid E-Mail address.';$/;"	v
 familyName	.\PHP\Base\demo_php_function2.php	/^function familyName($fname) {$/;"	f
 familyName	.\PHP\Base\demo_php_function3.php	/^function familyName($fname, $year)$/;"	f
 favcolor	.\PHP\Base\demo_php_switch.php	/^$favcolor = "blue";$/;"	v
+file	.\PHP\Advance\demo_error.php	/^    $file=fopen("welcome.txt","r");$/;"	v
+gender	.\PHP\Form\demo_form_validation_complete.php	/^   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?>  value="female">Female$/;"	v
+gender	.\PHP\Form\demo_form_validation_complete.php	/^   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?>  value="male">Male$/;"	v
+gender	.\PHP\Form\demo_form_validation_special.php	/^            $gender = test_input($_POST["gender"]);$/;"	v
+gender	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $gender = test_input($_POST["gender"]);$/;"	v
+genderErr	.\PHP\Form\demo_form_validation_special.php	/^            $genderErr = "Gender is required";$/;"	v
 herbie	.\PHP\Base\demo_php_datatypes_object.php	/^$herbie = new Car("white");$/;"	v
 i	.\PHP\Base\demo_php_operator_assignment.php	/^    $i = 5;$/;"	v
 i	.\PHP\Base\demo_php_operator_increment.php	/^$i = 5;$/;"	v
@@ -44,6 +93,21 @@ myTest	.\PHP\Base\demo_php_var_global.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_global2.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_local.php	/^    function myTest() {$/;"	f
 myTest	.\PHP\Base\demo_php_var_static.php	/^    function myTest() {$/;"	f
+name	.\PHP\Base\demo_php_global_post.php	/^    $name = $_POST['fname'];$/;"	v
+name	.\PHP\Base\demo_php_global_request.php	/^$name = $_REQUEST('fname');$/;"	v
+name	.\PHP\Form\demo_form_validation_complete.php	/^     $name = test_input($_POST["name"]);$/;"	v
+name	.\PHP\Form\demo_form_validation_complete.php	/^$name = $email = $gender = $comment = $website = "";$/;"	v
+name	.\PHP\Form\demo_form_validation_required.php	/^$name = $email = $gender = $comment = $website = "";$/;"	v
+name	.\PHP\Form\demo_form_validation_special.php	/^            $name = test_input($_POST["name"]);$/;"	v
+name	.\PHP\Form\demo_form_validation_special.php	/^    $name = $email = $gender = $comment = $website = "";$/;"	v
+name	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $name = test_input($_POST["name"]);$/;"	v
+name	.\PHP\Form\demo_php_form_validation_escapechar.php	/^    $name = $email = $gender = $comment = $website = "";$/;"	v
+nameErr	.\PHP\Form\demo_form_validation_complete.php	/^       $nameErr = "Only letters and white space allowed"; $/;"	v
+nameErr	.\PHP\Form\demo_form_validation_complete.php	/^$nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+nameErr	.\PHP\Form\demo_form_validation_required.php	/^$nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+nameErr	.\PHP\Form\demo_form_validation_special.php	/^                $nameErr = "Only letters and white space allowed";$/;"	v
+nameErr	.\PHP\Form\demo_form_validation_special.php	/^            $nameErr = "Name is required";$/;"	v
+nameErr	.\PHP\Form\demo_form_validation_special.php	/^    $nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
 numbers	.\PHP\Base\demo_php_array_rsort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
 numbers	.\PHP\Base\demo_php_array_sort_num.php	/^$numbers = array(3, 5, 1, 22, 11);$/;"	v
 print_vars	.\PHP\Base\demo_php_datatypes_object.php	/^function print_vars($obj) {$/;"	f
@@ -53,15 +117,33 @@ sum	.\PHP\Base\demo_php_function5.php	/^function sum($x, $y)$/;"	f
 t	.\PHP\Base\demo_php_if.php	/^$t = date("H");$/;"	v
 t	.\PHP\Base\demo_php_if_else.php	/^$t = date("H");$/;"	v
 t	.\PHP\Base\demo_php_if_elseif.php	/^$t = date("H");$/;"	v
+test	.\PHP\Advance\demo_error_log.php	/^    $test = 2;$/;"	v
+test	.\PHP\Advance\demo_trigger_error.php	/^    $test = 2;$/;"	v
+test	.\PHP\Advance\demo_trigger_error1.php	/^    $test = 2;$/;"	v
+test_input	.\PHP\Form\demo_form_validation_complete.php	/^function test_input($data)$/;"	f
+test_input	.\PHP\Form\demo_form_validation_required.php	/^function test_input($data)$/;"	f
+test_input	.\PHP\Form\demo_form_validation_special.php	/^    function test_input($data)$/;"	f
+test_input	.\PHP\Form\demo_php_form_validation_escapechar.php	/^    function test_input($data)$/;"	f
 txt	.\PHP\Base\demo_php_var2.php	/^    $txt="Hello World!";$/;"	v
 txt1	.\PHP\Base\demo_php_echo2.php	/^    $txt1="Learn PHP";$/;"	v
 txt1	.\PHP\Base\demo_php_print2.php	/^    $txt1="Learn PHP";$/;"	v
 txt2	.\PHP\Base\demo_php_echo2.php	/^    $txt2="W3School.com.cn";$/;"	v
 txt2	.\PHP\Base\demo_php_print2.php	/^    $txt2="W3School.com.cn";$/;"	v
+website	.\PHP\Form\demo_form_validation_complete.php	/^     $website = test_input($_POST["website"]);$/;"	v
+website	.\PHP\Form\demo_form_validation_special.php	/^            $website = "";$/;"	v
+website	.\PHP\Form\demo_form_validation_special.php	/^            $website = test_input($_POST["website"]);$/;"	v
+website	.\PHP\Form\demo_php_form_validation_escapechar.php	/^        $website = test_input($_POST["website"]);$/;"	v
+websiteErr	.\PHP\Form\demo_form_validation_complete.php	/^       $websiteErr = "Invalid URL"; $/;"	v
+websiteErr	.\PHP\Form\demo_form_validation_special.php	/^                $websiteErr = "Invalid URL";$/;"	v
 what_color	.\PHP\Base\demo_php_datatypes_object.php	/^    function what_color() {$/;"	f
+with	.\PHP\Advance\demo_exception_base.php	/^    \/\/ create function with an exception$/;"	f
+with	.\PHP\Advance\demo_trigger_exception.php	/^        \/\/ create function with an exception$/;"	f
 writeMsg	.\PHP\Base\demo_php_function1.php	/^function writeMsg() {$/;"	f
+x	.\PHP\Base\demo_php_array_arsort.php	/^foreach($age as $x=>$x_value)$/;"	v
 x	.\PHP\Base\demo_php_array_asort.php	/^foreach ($age as $x => $x_value) {$/;"	v
 x	.\PHP\Base\demo_php_array_assoc_loop.php	/^foreach ($age as $x => $x_value) {$/;"	v
+x	.\PHP\Base\demo_php_array_krsort.php	/^foreach($age as $x=>$x_value)$/;"	v
+x	.\PHP\Base\demo_php_array_ksort.php	/^    foreach ($age as $x => $x_value) {$/;"	v
 x	.\PHP\Base\demo_php_datatypes_float.php	/^    $x = 10.365;$/;"	v
 x	.\PHP\Base\demo_php_datatypes_float.php	/^    $x=2.4e3;$/;"	v
 x	.\PHP\Base\demo_php_datatypes_float.php	/^    $x=8E-5;$/;"	v
@@ -73,6 +155,7 @@ x	.\PHP\Base\demo_php_datatypes_null.php	/^$x = "Hello World";$/;"	v
 x	.\PHP\Base\demo_php_datatypes_null.php	/^$x = null;$/;"	v
 x	.\PHP\Base\demo_php_datatypes_string.php	/^        $x = "Hello world!";$/;"	v
 x	.\PHP\Base\demo_php_datatypes_string.php	/^        $x = 'Hello PHP!';$/;"	v
+x	.\PHP\Base\demo_php_global_global.php	/^    $x = 30;$/;"	v
 x	.\PHP\Base\demo_php_loop_do_while.php	/^$x = 1;$/;"	v
 x	.\PHP\Base\demo_php_loop_do_while2.php	/^    $x = 6;$/;"	v
 x	.\PHP\Base\demo_php_loop_while.php	/^$x = 1;$/;"	v
@@ -88,6 +171,7 @@ x	.\PHP\Base\demo_php_var_global.php	/^    $x=5;$/;"	v
 x	.\PHP\Base\demo_php_var_global2.php	/^    $x=5;$/;"	v
 x	.\PHP\Base\demo_php_var_local.php	/^    $x=5; \/\/ global scope;$/;"	v
 x	.\PHP\Base\demo_php_var_static.php	/^        static $x=0;$/;"	v
+y	.\PHP\Base\demo_php_global_global.php	/^    $y = 65;$/;"	v
 y	.\PHP\Base\demo_php_operator_arithmetic.php	/^    $y = 6;$/;"	v
 y	.\PHP\Base\demo_php_operator_array.php	/^$y = array("c" => "blue", "d" => "yellow");$/;"	v
 y	.\PHP\Base\demo_php_operator_assignment.php	/^    $y = 20;$/;"	v
